@@ -1,0 +1,31 @@
+name: Convert Excel to JSON
+
+on:
+  push:
+    paths:
+      - 'if-map/excel_data/**.xlsx'
+
+jobs:
+  convert:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install pandas openpyxl
+
+      - name: Convert Excel to JSON
+        run: python if-map/scripts/excel_to_json.py
+
+      - name: Commit updated JSON
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add if-map/public/data/projects.json
+          git diff --staged --quiet || git commit -m "Auto-update projects.json from Excel"
+          git push

@@ -25,13 +25,7 @@ export default function Legend() {
             </div>
           ))}
 
-          <div className={styles.sectionLabel} style={{ marginTop: 10 }}>Marker size</div>
-          <div className={styles.sizeDemo}>
-            <span className={styles.sizeCircle} style={{ width: 8, height: 8 }}/>
-            <span className={styles.hint}>small CO₂</span>
-            <span className={styles.sizeCircle} style={{ width: 18, height: 18 }}/>
-            <span className={styles.hint}>large CO₂</span>
-          </div>
+        <div className={styles.sectionLabel} style={{ marginTop: 12 }}>Marker size = CO₂ capture capacity</div>   
         </div>
       )}
     </div>

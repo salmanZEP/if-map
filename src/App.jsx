@@ -129,7 +129,7 @@ export default function App() {
         selectedId={selectedProject?.Project}
       />
 
-      <Legend />
+      <Legend hasSelection={!!selectedProject} />
     </>
   )
 }

@@ -127,6 +127,7 @@ export default function App() {
         projects={filteredProjects}
         onProjectClick={handleProjectClick}
         selectedId={selectedProject?.Project}
+        filterOpen={filterOpen}
       />
 
       <Legend hasSelection={!!selectedProject} />

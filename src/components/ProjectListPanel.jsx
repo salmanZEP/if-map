@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { getStatusColor, getCategoryColor, formatEuro } from '../constants.js'
 import styles from './ProjectListPanel.module.css'
 
-export default function ProjectListPanel({ projects, onProjectClick, selectedId }) {
+export default function ProjectListPanel({ projects, onProjectClick, selectedId, filterOpen }) {
   const [open, setOpen] = useState(false)
   const [sort, setSort] = useState('grant')
 
@@ -15,7 +15,7 @@ export default function ProjectListPanel({ projects, onProjectClick, selectedId 
   })
 
   return (
-    <div className={`${styles.panel} ${open ? styles.open : ''}`}>
+    <div className={`${styles.panel} ${open ? styles.open : ''}`} style={{ left: filterOpen ? 'calc(var(--filter-w) + 12px)' : '16px', transition: 'left 0.25s cubic-bezier(0.4, 0, 0.2, 1)',}}>
       <button className={styles.toggle} onClick={() => setOpen(o => !o)}>
         <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
           <rect x="1" y="2" width="12" height="2" rx="1" fill="currentColor"/>

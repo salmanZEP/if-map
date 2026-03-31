@@ -27,7 +27,7 @@ export default function StatsBar({ projects, total }) {
         <div className={styles.divider} />
         <div>
           <div className={styles.title}>EU Innovation Fund Projects</div>
-          <div className={styles.sub}>CCS/CCU Project Databse</div>
+          <div className={styles.sub}>CCS/CCU Project Database</div>
         </div>
       </div>
 

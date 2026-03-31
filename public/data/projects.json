@@ -3,7 +3,7 @@
     "Scale": "large-scale",
     "Project": "Kairos-at-C",
     "Sector": "Chemicals",
-    "Category": "CO2 T&S",
+    "Category": "CCS",
     "Country": "Belgium",
     "Coordinator": "Air Liquide",
     "Site Owner": "BASF Antwerpen + Air Liquide Antwerpen/Antwerp site",
@@ -101,7 +101,7 @@
   {
     "Scale": "large-scale",
     "Project": "H2BE",
-    "Sector": "No direct CO₂ source",
+    "Sector": "Other",
     "Category": "Low-carbon hydrogen production",
     "Country": "Belgium",
     "Coordinator": "ELECTRABEL",
@@ -219,16 +219,16 @@
     "Call": "IF21",
     "Grant (€)": 189694949,
     "Total Invest. (€)": 400000000,
-    "Latitude": 43.437,
-    "Longitude": 4.944,
+    "Latitude": 43.2328309959566,
+    "Longitude": 27.5943872349724,
     "Confidence": "Medium",
-    "Address": "Zone Industrielle de Fos-sur-Mer, 13270 Fos-sur-Mer, France",
+    "Address": "E70 Индустриална зона, 9162 Devnya, Bulgaria",
     "Facility Type": "Emitter (Cement CCS)",
     "Short Description": "ANRAV will establish Eastern Europe’s first full CCS chain, capturing CO₂ from Devnya cement plant and storing it offshore in the Black Sea, achieving ~95% emission reduction.",
     "Link": "https://climate.ec.europa.eu/document/download/7eb6d2d5-c109-4c33-ba50-c065beb654d7_en?filename=if_pf_2022_anrav_en.pdf ",
     "Full Description": "ANRAV will establish Eastern Europe’s first full CCS chain, capturing CO₂ from Devnya cement plant and storing it offshore in the Black Sea, achieving ~95% emission reduction.",
-    "Technology Type": "Post-combustion amine scrubbing CO₂ capture at Devnya cement plant, Bulgaria; pipeline transport to onshore geological storage (depleted gas field); first CCUS cluster Eastern Europe",
-    "Status": "Development / Design"
+    "Technology Type": "Post-combustion amine scrubbing CO₂ capture at Devnya cement plant, Bulgaria; pipeline transport to offshore storage",
+    "Status": "Grant Prep"
   },
   {
     "Scale": "large-scale",
@@ -299,7 +299,7 @@
   {
     "Scale": "medium-scale",
     "Project": "Greensand Future",
-    "Sector": "CCS T&S",
+    "Sector": "CO2 T&S",
     "Category": "CO2 T&S",
     "Country": "Denmark",
     "Coordinator": "INEOS E&P A/S",
@@ -332,7 +332,7 @@
   {
     "Scale": "large-scale",
     "Project": "ENDOR",
-    "Sector": "No direct CO₂ source",
+    "Sector": "Other",
     "Category": "Power-to-X (e-fuels / hydrogen)",
     "Country": "Denmark",
     "Coordinator": "Arcadia eFuels",
@@ -958,7 +958,7 @@
   },
   {
     "Scale": "large-scale",
-    "Project": "IFESTOS Titan",
+    "Project": "IFESTOS",
     "Sector": "Cement",
     "Category": "CCS",
     "Country": "Greece",
@@ -1058,7 +1058,7 @@
   {
     "Scale": "medium-scale",
     "Project": "Thermolysis",
-    "Sector": "No direct CO₂ source",
+    "Sector": "Other",
     "Category": "CCU",
     "Country": "Greece",
     "Coordinator": "Thermo Lysi S.A.",
@@ -1124,7 +1124,7 @@
   {
     "Scale": "small-scale",
     "Project": "Silverstone",
-    "Sector": "other",
+    "Sector": "Other",
     "Category": "Carbon Removal (CDR / Mineralisation)",
     "Country": "Iceland",
     "Coordinator": "Carbfix",
@@ -1256,7 +1256,7 @@
   {
     "Scale": "medium-scale",
     "Project": "Marcegaglia AdriatiCO2",
-    "Sector": "Iron & steel",
+    "Sector": "Steel",
     "Category": "CCS",
     "Country": "Italy",
     "Coordinator": "MARCEGAGLIA RAVENNA S.P.A..",
@@ -1289,7 +1289,7 @@
   {
     "Scale": "large-scale",
     "Project": "DREAM",
-    "Sector": "Cement & lime",
+    "Sector": "Cement",
     "Category": "Industrial CO2 Capture",
     "Country": "Italy",
     "Coordinator": "Not available",
@@ -1322,7 +1322,7 @@
   {
     "Scale": "large-scale",
     "Project": "CFCPILOT4CCS",
-    "Sector": "No direct CO₂ source",
+    "Sector": "Other",
     "Category": "Other",
     "Country": "Netherlands",
     "Coordinator": "Esso Nederland BV",
@@ -1421,7 +1421,7 @@
   {
     "Scale": "large-scale",
     "Project": "E-fuel Pilot",
-    "Sector": "No direct CO₂ source",
+    "Sector": "Other",
     "Category": "Refineries",
     "Country": "Norway",
     "Coordinator": "Nordic Electrofuel",
@@ -1553,7 +1553,7 @@
   {
     "Scale": "medium-scale",
     "Project": "VIPER",
-    "Sector": "No direct CO₂ source",
+    "Sector": "Other",
     "Category": "Carbon Removal (CDR)",
     "Country": "Norway",
     "Coordinator": "Vow Green Metals AS",
@@ -1619,8 +1619,8 @@
   {
     "Scale": "large-scale",
     "Project": "GO4ECOPLANET",
-    "Sector": "Cement & lime",
-    "Category": "Cement & lime",
+    "Sector": "Cement",
+    "Category": "CCS",
     "Country": "Poland",
     "Coordinator": "Lafarge Cement",
     "Site Owner": "Holcim",
@@ -1751,8 +1751,8 @@
   {
     "Scale": "small-scale",
     "Project": "AGGREGACO2",
-    "Sector": "Glass, ceramics & construction material",
-    "Category": "Glass, ceramics & construction material",
+    "Sector": "Cement",
+    "Category": "CCU (mineralisation)",
     "Country": "Spain",
     "Coordinator": "PETRONOR",
     "Site Owner": "PETRONOR",
@@ -1916,7 +1916,7 @@
   {
     "Scale": "large-scale",
     "Project": "Beccs Stockholm",
-    "Sector": "other",
+    "Sector": "Other",
     "Category": "Other",
     "Country": "Sweden",
     "Coordinator": "Stockholm Exergi",
@@ -1949,7 +1949,7 @@
   {
     "Scale": "large-scale",
     "Project": "AIR",
-    "Sector": "No direct CO₂ source",
+    "Sector": "Other",
     "Category": "Power-to-X (e-fuels / hydrogen)",
     "Country": "Sweden",
     "Coordinator": "Perstorp Group",

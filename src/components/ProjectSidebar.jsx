@@ -83,7 +83,7 @@ export default function ProjectSidebar({ project, onClose }) {
         {/* Description */}
         {project['Full Description'] && (
           <div className={styles.section}>
-            <div className={styles.sectionTitle}>About</div>
+            <div className={styles.sectionTitle}>Description</div>
             <p className={styles.description}>{project['Full Description']}</p>
           </div>
         )}

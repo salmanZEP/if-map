@@ -1,6 +1,7 @@
 import pandas as pd
 import json
 import os
+from datetime import datetime, timezone
 
 INPUT  = os.path.join(os.path.dirname(__file__), '../excel_data/Innovation_Fund_Projects_data - 290326.xlsx')
 OUTPUT = os.path.join(os.path.dirname(__file__), '../public/data/projects.json')
@@ -59,6 +60,16 @@ print(f'  {len(added)} new      : {added if added else "none"}')
 print(f'  {len(updated)} updated  : {updated if updated else "none"}')
 print(f'  {len(unchanged)} unchanged')
 
+meta = {
+    'lastUpdated': datetime.now(timezone.utc).strftime('%B %Y'),
+    'lastUpdatedFull': datetime.now(timezone.utc).strftime('%d %B %Y'),
+    'projectCount': len(records),
+}
+
+META_OUTPUT = os.path.join(os.path.dirname(__file__), '../public/data/meta.json')
+with open(META_OUTPUT, 'w', encoding='utf-8') as f:
+    json.dump(meta, f, indent=2)
+    
 if missing_coords:
     print(f'\nWARNING — {len(missing_coords)} projects missing coordinates (will not appear on map):')
     for name in missing_coords:

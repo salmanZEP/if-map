@@ -119,8 +119,8 @@ export default function ProjectSidebar({ project, onClose }) {
           <div className={styles.sectionTitle}>Timeline</div>
           <div className={styles.timeline}>
             {project['Start Date'] && <TimeNode label="Start" year={project['Start Date']}/>}
-            {project['Op. Year'] && <TimeNode label="Operational" year={project['Op. Year']} highlight/>}
-            {project['End Year'] && <TimeNode label="End" year={project['End Year']}/>}
+            {project['Operational Year'] && <TimeNode label="Operational" year={project['Operational Year']} highlight/>}
+            {project['Evaluation End Year'] && <TimeNode label={<>End of Evaluation</>} year={project['Evaluation End Year']}/>}
           </div>
         </div>
 

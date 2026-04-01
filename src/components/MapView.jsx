@@ -213,7 +213,10 @@ function setMarkerStyle(el, size, color, isSelected) {
 
 function formatEuroShort(v) {
   if (!v) return '—'
-  if (v >= 1e9) return `€${(v / 1e9).toFixed(1)}B`
-  if (v >= 1e6) return `€${(v / 1e6).toFixed(0)}M`
-  return `€${(v / 1e3).toFixed(0)}K`
+  if (typeof v === 'string' && isNaN(parseFloat(v))) return v
+  const n = parseFloat(v)
+  if (isNaN(n)) return '—'
+  if (n >= 1e9) return `€${(n / 1e9).toFixed(1)}B`
+  if (n >= 1e6) return `€${(n / 1e6).toFixed(0)}M`
+  return `€${(n / 1e3).toFixed(0)}K`
 }

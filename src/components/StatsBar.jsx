@@ -12,8 +12,14 @@ export default function StatsBar({ projects, total }) {
       .catch(() => null)
   }, [])
 
-  const totalGrant  = projects.reduce((s, p) => s + (p['Grant (€)'] || 0), 0)
-  const totalInvest = projects.reduce((s, p) => s + (p['Total Invest. (€)'] || 0), 0)
+  const totalGrant = projects.reduce((s, p) => {
+    const v = parseFloat(p['Grant (€)'])
+    return s + (isNaN(v) ? 0 : v)
+  }, 0)
+  const totalInvest = projects.reduce((s, p) => {
+    const v = parseFloat(p['Total Invest. (€)'])
+    return s + (isNaN(v) ? 0 : v)
+  }, 0)
   const totalCO2    = projects.reduce((s, p) => {
     const v = parseFloat(p['CO₂ Capture (Mt/yr)'])
     return s + (isNaN(v) ? 0 : v)

@@ -32,8 +32,8 @@ export default function StatsBar({ projects, total }) {
         <img src="./Logotype_VerticalBaseline_FullWhite.png" alt="ZEP logo" className={styles.logo} />
         <div className={styles.divider} />
         <div>
-          <div className={styles.title}>EU Innovation Fund Projects</div>
-          <div className={styles.sub}>CCS/CCU Project Database</div>
+          <div className={styles.title}>Industrial Carbon Management Project Database</div>
+          <div className={styles.sub}>Including CCS/CCU/CDR Projects</div>
         </div>
       </div>
 

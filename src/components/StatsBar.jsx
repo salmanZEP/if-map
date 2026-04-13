@@ -47,7 +47,7 @@ export default function StatsBar({ projects, total }) {
 
       <div className={styles.meta}>
         {meta
-          ? `Last updated ${meta.lastUpdatedFull}`
+          ? `Latest update: ${meta.lastUpdatedFull}`
           : 'Loading…'
         }
       </div>

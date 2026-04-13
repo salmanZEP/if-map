@@ -39,9 +39,16 @@ export default function ProjectSidebar({ project, onClose }) {
       <div className={styles.header}>
         <div className={styles.headerTop}>
           <div className={styles.badges}>
-            <Badge color={statusColor}>{project.Status || 'Unknown'}</Badge>
-            <Badge color={callColor}>{project.Call}</Badge>
-            {project.Scale && <Badge color="#6b7280">{project.Scale}</Badge>}
+            <div className={styles.badgeGroup}>
+              <span className={styles.badgeLabel}>Status</span>
+              <Badge color={statusColor}>{project.Status || 'Unknown'}</Badge>
+            </div>
+            {project.Scale && (
+              <div className={styles.badgeGroup}>
+                <span className={styles.badgeLabel}>Scale</span>
+                <Badge color="#6b7280">{project.Scale}</Badge>
+              </div>
+            )}
           </div>
           <button className={styles.closeBtn} onClick={onClose} aria-label="Close">
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -64,16 +71,23 @@ export default function ProjectSidebar({ project, onClose }) {
       <div className={styles.body}>
         {/* Key metrics */}
         <div className={styles.metricsGrid}>
-          {!isNaN(co2Capture) && co2Capture > 0 &&
-            <MetricCard label="CO₂ Capture" value={`${co2Capture.toFixed(2)}`} sub="Mt/yr" color="#3b82f6"/>}
-          {!isNaN(co2Avoid) && co2Avoid > 0 &&
-            <MetricCard label="CO₂ Avoided" value={`${co2Avoid.toFixed(2)}`} sub="Mt/yr" color="#10b981"/>}
-          {!isNaN(co2Seq) && co2Seq > 0 &&
-            <MetricCard label="CO₂ Stored" value={`${co2Seq.toFixed(2)}`} sub="Mt/yr" color="#6366f1"/>}
-          {!isNaN(co2Util) && co2Util > 0 &&
-            <MetricCard label="CO₂ Utilised" value={`${co2Util.toFixed(2)}`} sub="Mt/yr" color="#14b8a6"/>}
-          {!isNaN(co2TotCap) && co2TotCap > 0 &&
-            <MetricCard label="Total Capture" value={`${co2TotCap.toFixed(1)}`} sub="Mt (lifetime)" color="#8b5cf6"/>}
+          {/* Annual metrics */}
+          {!isNaN(parseFloat(project['CO₂ Capture (Mt/yr)'])) && parseFloat(project['CO₂ Capture (Mt/yr)']) > 0 &&
+            <MetricCard label="CO₂ Capture" value={parseFloat(project['CO₂ Capture (Mt/yr)']).toFixed(2)} sub="Mt/yr annual" color="#3b82f6"/>}
+          {!isNaN(parseFloat(project['CO₂ Avoid (Mt/yr)'])) && parseFloat(project['CO₂ Avoid (Mt/yr)']) > 0 &&
+            <MetricCard label="CO₂ Avoided" value={parseFloat(project['CO₂ Avoid (Mt/yr)']).toFixed(2)} sub="Mt/yr annual" color="#10b981"/>}
+          {!isNaN(parseFloat(project['CO₂ Seq (Mt/yr)'])) && parseFloat(project['CO₂ Seq (Mt/yr)']) > 0 &&
+            <MetricCard label="CO₂ Stored" value={parseFloat(project['CO₂ Seq (Mt/yr)']).toFixed(2)} sub="Mt/yr annual" color="#6366f1"/>}
+          {!isNaN(parseFloat(project['CO₂ Util (Mt/yr)'])) && parseFloat(project['CO₂ Util (Mt/yr)']) > 0 &&
+            <MetricCard label="CO₂ Utilised" value={parseFloat(project['CO₂ Util (Mt/yr)']).toFixed(2)} sub="Mt/yr annual" color="#14b8a6"/>}
+
+          {/* Totals */}
+          {!isNaN(parseFloat(project['CO₂ Avoid Total (Mt)'])) && parseFloat(project['CO₂ Avoid Total (Mt)']) > 0 &&
+            <MetricCard label="Total CO₂ Avoided" value={parseFloat(project['CO₂ Avoid Total (Mt)']).toFixed(1)} sub="Mt" color="#10b981"/>}
+          {!isNaN(parseFloat(project['CO₂ Capture Total (Mt)'])) && parseFloat(project['CO₂ Capture Total (Mt)']) > 0 &&
+            <MetricCard label="Total CO₂ Capture" value={parseFloat(project['CO₂ Capture Total (Mt)']).toFixed(1)} sub="Mt" color="#3b82f6"/>}
+
+          {/* Funding */}
           {project['Grant (€)'] &&
             <MetricCard label="EU Grant" value={formatEuro(project['Grant (€)'])} color="#f59e0b"/>}
           {project['Total Invest. (€)'] &&
@@ -100,6 +114,7 @@ export default function ProjectSidebar({ project, onClose }) {
         <div className={styles.section}>
           <div className={styles.sectionTitle}>Project Details</div>
           <div className={styles.detailGrid}>
+            {project.Call && <DetailRow label="Funding Call" value={<span style={{ color: callColor, fontWeight: 600 }}>{project.Call}</span>}/>}
             {project.Coordinator && <DetailRow label="Coordinator" value={project.Coordinator}/>}
             {project['Site Owner'] && <DetailRow label="Site Owner" value={project['Site Owner']}/>}
             {project.Country && <DetailRow label="Country" value={project.Country}/>}
@@ -110,7 +125,7 @@ export default function ProjectSidebar({ project, onClose }) {
               }/>
             )}
             {project['Facility Type'] && <DetailRow label="Facility Type" value={project['Facility Type']}/>}
-            {project.Confidence && <DetailRow label="Data Confidence" value={project.Confidence}/>}
+            {/* {project.Confidence && <DetailRow label="Data Confidence" value={project.Confidence}/>} */}
           </div>
         </div>
 
@@ -126,7 +141,7 @@ export default function ProjectSidebar({ project, onClose }) {
 
         {/* CO2 metrics table */}
         <div className={styles.section}>
-          <div className={styles.sectionTitle}>CO₂ Metrics (Lifetime)</div>
+          <div className={styles.sectionTitle}>CO₂ Metrics</div>
           <table className={styles.table}>
             <thead>
               <tr>

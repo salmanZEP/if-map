@@ -17,6 +17,7 @@ export default function MapView({ projects, onProjectClick, selectedId }) {
   const onClickRef    = useRef(onProjectClick)
   const selectedIdRef = useRef(selectedId)
   const [activeStyle, setActiveStyle] = useState('dark')
+  // const [activeStyle, setActiveStyle] = useState('light')
 
   useEffect(() => { onClickRef.current = onProjectClick }, [onProjectClick])
 
@@ -24,8 +25,9 @@ export default function MapView({ projects, onProjectClick, selectedId }) {
     const map = new mapboxgl.Map({
       container: containerRef.current,
       style: STYLES.dark,
-      center: [12, 52],
-      zoom: 4.2,
+      // style: STYLES.light,
+      center: [13, 52],
+      zoom: 3.2,
       minZoom: 2,
       maxZoom: 18,
       projection: 'mercator',
@@ -205,6 +207,7 @@ function setMarkerStyle(el, size, color, isSelected) {
   el.style.borderRadius = '50%'
   el.style.background   = color
   el.style.border       = `2px solid ${isSelected ? '#ffffff' : color + 'bb'}`
+  el.style.outline   = '1px solid rgba(0,0,0,0.5)'
   el.style.boxShadow    = isSelected
     ? `0 0 0 3px ${color}55, 0 0 16px ${color}88`
     : `0 0 8px ${color}55`

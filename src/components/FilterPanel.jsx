@@ -3,9 +3,14 @@ import { CALL_COLORS, STATUS_COLORS, getStatusColor } from '../constants.js'
 import styles from './FilterPanel.module.css'
 
 const STATUSES = [
-  'Operational', 'Operational / Scaling', 'Operational / Pilot',
-  'Under Construction', 'FEED / Engineering', 'Development / Design',
-  'Grant Prep (IF24)', 'FID Pending / On Hold', 'On Hold / Paused',
+  'Operational',
+  'Under Construction',
+  'FEED & Permitting',
+  'Pre-FID / Advanced Development',
+  'Engineering & Design',
+  'Early Development',
+  'Grant Preparation',
+  'On Hold / Cancelled',
 ]
 
 const SCALES = ['large-scale', 'medium-scale', 'small-scale', 'pilots', 'other']

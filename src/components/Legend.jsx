@@ -25,7 +25,7 @@ export default function Legend({hasSelection}) {
             </div>
           ))}
 
-        <div className={styles.sectionLabel} style={{ marginTop: 12 }}>Marker size = Capacity</div>   
+        <div className={styles.sectionLabel} style={{ marginTop: 12 }}>Marker size = CO₂ avoided (Mt)</div>   
         </div>
       )}
     </div>

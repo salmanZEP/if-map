@@ -1,13 +1,12 @@
 export const STATUS_COLORS = {
-  'Operational':             '#10b981',
-  'Operational / Scaling':   '#10b981',
-  'Operational / Pilot':     '#34d399',
-  'Under Construction':      '#f59e0b',
-  'FEED / Engineering':      '#60a5fa',
-  'Development / Design':    '#818cf8',
-  'Grant Prep (IF24)':       '#a78bfa',
-  'FID Pending / On Hold':   '#f97316',
-  'On Hold / Paused':        '#ef4444',
+  'Operational':                    '#10b981',
+  'Under Construction':             '#f59e0b',
+  'FEED & Permitting':              '#2065d5',
+  'Pre-FID / Advanced Development': '#818cf8',
+  'Engineering & Design':           '#14b8a6',
+  'Early Development':              '#c084fc',
+  'Grant Preparation':              '#deafe5',
+  'On Hold / Cancelled':            '#ef4444',
 }
 
 export const CATEGORY_COLORS = {
@@ -24,11 +23,11 @@ export const CATEGORY_COLORS = {
 }
 
 export const CALL_COLORS = {
-  'IF20': '#3b82f6',
-  'IF21': '#8b5cf6',
-  'IF22': '#10b981',
-  'IF23': '#f59e0b',
-  'IF24': '#ef4444',
+  'IF20': '#9ca1ff',
+  'IF21': '#9ca1ff',
+  'IF22': '#9ca1ff',
+  'IF23': '#9ca1ff',
+  'IF24': '#9ca1ff',
 }
 
 export const SCALE_ICONS = {
@@ -65,9 +64,20 @@ export function formatCO2(v) {
 }
 
 export function markerSize(project) {
-  const cap = parseFloat(project['CO₂ Capture (Mt/yr)'])
-  if (!isNaN(cap) && cap > 0) {
-    return Math.max(8, Math.min(28, 8 + cap * 10))
-  }
-  return 10
+  // Primary: CO₂ Avoid Total (Mt)
+  let val = parseFloat(project['CO₂ Avoid Total (Mt)'])
+
+  // Fallback 1: CO₂ Capture Total (Mt)
+  if (isNaN(val) || val <= 0) val = parseFloat(project['CO₂ Capture Total (Mt)'])
+
+  // Fallback 2: CO₂ Seq Total (Mt)
+  if (isNaN(val) || val <= 0) val = parseFloat(project['CO₂ Seq Total (Mt)'])
+
+  // No data at all
+  if (isNaN(val) || val <= 0) return 10
+
+  // Square root scale — good visual spread, not too extreme
+  // ~0.2 Mt → 10px, ~1 Mt → 14px, ~5 Mt → 20px, ~14 Mt → 26px, ~50 Mt → 34px
+  const size = 7 + Math.sqrt(val) * 4.5
+  return Math.round(Math.min(36, Math.max(10, size)))
 }

@@ -26,7 +26,7 @@ export default function MapView({ projects, onProjectClick, selectedId }) {
       container: containerRef.current,
       style: STYLES.dark,
       // style: STYLES.light,
-      center: [13, 52],
+      center: [9.5, 52],
       zoom: 3.2,
       minZoom: 2,
       maxZoom: 18,

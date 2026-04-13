@@ -73,19 +73,19 @@ export default function ProjectSidebar({ project, onClose }) {
         <div className={styles.metricsGrid}>
           {/* Annual metrics */}
           {!isNaN(parseFloat(project['CO₂ Capture (Mt/yr)'])) && parseFloat(project['CO₂ Capture (Mt/yr)']) > 0 &&
-            <MetricCard label="CO₂ Capture" value={parseFloat(project['CO₂ Capture (Mt/yr)']).toFixed(2)} sub="Mt/yr annual" color="#3b82f6"/>}
+            <MetricCard label="CO₂ Capture" value={parseFloat(project['CO₂ Capture (Mt/yr)']).toFixed(2)} sub="Mt/yr annual" color="#c2d4ef"/>}
           {!isNaN(parseFloat(project['CO₂ Avoid (Mt/yr)'])) && parseFloat(project['CO₂ Avoid (Mt/yr)']) > 0 &&
-            <MetricCard label="CO₂ Avoided" value={parseFloat(project['CO₂ Avoid (Mt/yr)']).toFixed(2)} sub="Mt/yr annual" color="#10b981"/>}
+            <MetricCard label="CO₂ Avoided" value={parseFloat(project['CO₂ Avoid (Mt/yr)']).toFixed(2)} sub="Mt/yr annual" color="#c2d4ef"/>}
           {!isNaN(parseFloat(project['CO₂ Seq (Mt/yr)'])) && parseFloat(project['CO₂ Seq (Mt/yr)']) > 0 &&
-            <MetricCard label="CO₂ Stored" value={parseFloat(project['CO₂ Seq (Mt/yr)']).toFixed(2)} sub="Mt/yr annual" color="#6366f1"/>}
+            <MetricCard label="CO₂ Stored" value={parseFloat(project['CO₂ Seq (Mt/yr)']).toFixed(2)} sub="Mt/yr annual" color="#c2d4ef"/>}
           {!isNaN(parseFloat(project['CO₂ Util (Mt/yr)'])) && parseFloat(project['CO₂ Util (Mt/yr)']) > 0 &&
-            <MetricCard label="CO₂ Utilised" value={parseFloat(project['CO₂ Util (Mt/yr)']).toFixed(2)} sub="Mt/yr annual" color="#14b8a6"/>}
+            <MetricCard label="CO₂ Utilised" value={parseFloat(project['CO₂ Util (Mt/yr)']).toFixed(2)} sub="Mt/yr annual" color="#c2d4ef"/>}
 
           {/* Totals */}
           {!isNaN(parseFloat(project['CO₂ Avoid Total (Mt)'])) && parseFloat(project['CO₂ Avoid Total (Mt)']) > 0 &&
             <MetricCard label="Total CO₂ Avoided" value={parseFloat(project['CO₂ Avoid Total (Mt)']).toFixed(1)} sub="Mt" color="#10b981"/>}
           {!isNaN(parseFloat(project['CO₂ Capture Total (Mt)'])) && parseFloat(project['CO₂ Capture Total (Mt)']) > 0 &&
-            <MetricCard label="Total CO₂ Capture" value={parseFloat(project['CO₂ Capture Total (Mt)']).toFixed(1)} sub="Mt" color="#3b82f6"/>}
+            <MetricCard label="Total CO₂ Capture" value={parseFloat(project['CO₂ Capture Total (Mt)']).toFixed(1)} sub="Mt" color="#10b981"/>}
 
           {/* Funding */}
           {project['Grant (€)'] &&
@@ -173,7 +173,7 @@ export default function ProjectSidebar({ project, onClose }) {
                 <path d="M8.5 1H13v4.5" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
                 <path d="M13 1L7 7" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round"/>
               </svg>
-              View Official Project Page
+              Learn more
             </a>
           </div>
         )}

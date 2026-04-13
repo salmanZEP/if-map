@@ -4,6 +4,7 @@ import FilterPanel      from './components/FilterPanel.jsx'
 import ProjectSidebar   from './components/ProjectSidebar.jsx'
 import StatsBar         from './components/StatsBar.jsx'
 import Legend           from './components/Legend.jsx'
+import Disclaimer       from './components/Disclaimer.jsx'
 import ProjectListPanel from './components/ProjectListPanel.jsx'
 
 const DEFAULT_FILTERS = {
@@ -131,6 +132,7 @@ export default function App() {
       />
 
       <Legend hasSelection={!!selectedProject} />
+      <Disclaimer hasSelection={!!selectedProject} />
     </>
   )
 }

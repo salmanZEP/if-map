@@ -97,6 +97,9 @@ export default function Disclaimer({ hasSelection }) {
               <p>
                 In case of any discrepancies or questions regarding the data, please contact us at <a href="mailto:salman.muhammad@zeplatform.eu" style={{ color: 'var(--accent2)' }}>salman.muhammad@zeplatform.eu</a>.
               </p>
+              <p>
+                The <strong style={{ color: 'var(--text)' }}>sector classification</strong> used in this tool refers to the <strong style={{ color: 'var(--text)' }}>industrial origin of the CO₂</strong> (i.e., the sector from which CO₂ is captured or sourced), rather than the final product or application.
+              </p>
             </div>
 
             <div style={{ marginTop: '24px', paddingTop: '16px', borderTop: '1px solid var(--border)', fontSize: '11px', color: 'var(--text3)' }}>

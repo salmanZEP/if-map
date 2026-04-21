@@ -728,7 +728,7 @@
   {
     "Scale": "large-scale",
     "Project": "DEZiR ",
-    "Sector": "Refineries",
+    "Sector": "Bioenergy",
     "Category": "CCU",
     "Country": "France",
     "Coordinator": "Verso Energy",
@@ -780,10 +780,10 @@
     "Call": "IF24",
     "Grant (€)": 216000000,
     "Total Invest. (€)": "Not Disclosed",
-    "Latitude": 45.6863540814666,
-    "Longitude": 9.46792956169569,
+    "Latitude": 45.5151278948498,
+    "Longitude": 10.343124922954,
     "Confidence": "Low",
-    "Address": "Via Vittorio Emanuele II, 419, 24033 Calusco d'Adda BG, Italy",
+    "Address": "Via Gardesana, 84, 25086 Rezzato BS, Italy",
     "Facility Type": "CO₂ Emitter",
     "Short Description": "Decarbonisation of the Rezzato and Mazzano cement plant",
     "Link": "https://www.heidelbergmaterials.it/it/decarbonizzazione-innovationfund",
@@ -794,7 +794,7 @@
   {
     "Scale": "large-scale",
     "Project": "E-fuel Pilot",
-    "Sector": "Refineries",
+    "Sector": "Fertilisers",
     "Category": "CCU",
     "Country": "Norway",
     "Coordinator": "Nordic Electrofuel",
@@ -808,8 +808,8 @@
     "CO₂ Seq Total (Mt)": "-",
     "CO₂ Util Total (Mt)": "-",
     "Start Date": 2024,
-    "Operational Year": 2028,
-    "Evaluation End Year": 2033,
+    "Operational Year": 2030,
+    "Evaluation End Year": 2040,
     "Call": "IF22",
     "Grant (€)": 40000000,
     "Total Invest. (€)": "Not Disclosed",
@@ -820,14 +820,14 @@
     "Facility Type": "Power-to-X Plant",
     "Short Description": "Innovative and cost-efficient production process for Power-to-Liquid using industrial off-gases",
     "Link": "https://ec.europa.eu/assets/cinea/project_fiches/innovation_fund/101132987.pdf ",
-    "Full Description": "Norwegian e-fuel pilot converting blast furnace gas into synthetic fuels via P2X, achieving >99% GHG reduction.",
-    "Technology Type": "Power-to-Liquid e-fuels: post-combustion amine CO₂ capture from ferro/silicon-manganese plant; PEM electrolysis green H₂; Fischer-Tropsch synthesis → e-SAF/liquid fuels; 22 kt/yr CO₂ input; small refinery pilot",
-    "Status": "FEED & Permitting"
+    "Full Description": "E-Fuel Pilot is a Power-to-Liquid synthetic fuel project developed by Nordic Electrofuel AS at Herøya Industrial Park in Porsgrunn, Norway. The plant uses captured CO₂ from a local ammonia plant, renewable electricity and hydrogen to produce about 8,000 tonnes per year of synthetic hydrocarbons (syncrude) for aviation and other hard-to-abate transport uses. The project is backed by a €40 million Innovation Fund grant and is expected to deliver 228,163 tonnes CO₂e of avoided emissions over its first 10 years of operation.",
+    "Technology Type": "The project applies a Power-to-Liquid route in which captured CO₂ from a local ammonia plant is combined with renewable hydrogen and converted through reverse water-gas shift (RWGS) to synthesis gas, followed by Fischer-Tropsch synthesis to produce approximately 8,000 t/year of synthetic hydrocarbons (syncrude). Public project sources describe carbon utilisation close to 100% and include a Safire reactor / gas-gas syngas cooler concept to improve heat recovery and process efficiency; no geological CO₂ storage component is indicated.",
+    "Status": "Pre-FID / Advanced Development"
   },
   {
     "Scale": "large-scale",
     "Project": "eM-Rhone",
-    "Sector": "Chemicals",
+    "Sector": "Cement",
     "Category": "CCU",
     "Country": "France",
     "Coordinator": "Elyse Energy",
@@ -860,7 +860,7 @@
   {
     "Scale": "large-scale",
     "Project": "ENDOR",
-    "Sector": "Refineries",
+    "Sector": "Other",
     "Category": "Power-to-X",
     "Country": "Denmark",
     "Coordinator": "Arcadia eFuels",
@@ -1058,7 +1058,7 @@
   {
     "Scale": "large-scale",
     "Project": "GREEN MEIGA",
-    "Sector": "Chemicals",
+    "Sector": "Other",
     "Category": "Power-to-X",
     "Country": "Spain",
     "Coordinator": "IBERDROLA Clientes ",
@@ -1487,7 +1487,7 @@
   {
     "Scale": "medium-scale",
     "Project": "PP2XH ",
-    "Sector": "Refineries",
+    "Sector": "Bioenergy",
     "Category": "CCU",
     "Country": "Estonia",
     "Coordinator": "MBH POWER ENERGY (S) PTE. LTD",
@@ -1619,7 +1619,7 @@
   {
     "Scale": "large-scale",
     "Project": "ReSTart",
-    "Sector": "Refineries",
+    "Sector": "Other",
     "Category": "CCU",
     "Country": "France",
     "Coordinator": "Verso Energy",
@@ -1718,7 +1718,7 @@
   {
     "Scale": "pilots",
     "Project": "SLALOM 2.0",
-    "Sector": "Refineries",
+    "Sector": "Metals & Mining",
     "Category": "CCS & CCU",
     "Country": "Norway",
     "Coordinator": "LanzaTech NZ Inc",
@@ -1784,7 +1784,7 @@
   {
     "Scale": "pilots",
     "Project": "TAKE KAIR",
-    "Sector": "Refineries",
+    "Sector": "Cement",
     "Category": "CCU",
     "Country": "France",
     "Coordinator": "Hynamics",
@@ -1850,7 +1850,7 @@
   {
     "Scale": "medium-scale",
     "Project": "Thermolysis",
-    "Sector": "Chemicals",
+    "Sector": "Other",
     "Category": "Other / Industrial Decarbonisation",
     "Country": "Greece",
     "Coordinator": "Thermo Lysi S.A.",
@@ -1883,7 +1883,7 @@
   {
     "Scale": "large-scale",
     "Project": "TRISKELION",
-    "Sector": "Refineries",
+    "Sector": "Bioenergy",
     "Category": "CCU",
     "Country": "Spain",
     "Coordinator": "Forestal del Atlántico, S.A. ",

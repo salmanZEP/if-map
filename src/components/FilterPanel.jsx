@@ -54,7 +54,14 @@ export default function FilterPanel({ projects, filters, onFilterChange, isOpen,
 
   return (
     <>
-      <button className={styles.toggleBtn} onClick={onToggle}>
+      <button
+        className={styles.toggleBtn}
+        onClick={onToggle}
+        style={{
+          left: isOpen ? 'calc(var(--filter-w) + 16px)' : '16px',
+          transition: 'left 0.25s cubic-bezier(0.4, 0, 0.2, 1)',
+        }}
+      >
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
           <path d="M2 4h12M4 8h8M6 12h4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
         </svg>

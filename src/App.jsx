@@ -93,7 +93,12 @@ export default function App() {
         height: '100vh', flexDirection: 'column', gap: 16,
         background: 'var(--bg)', color: 'var(--text2)',
       }}>
-        <div style={{ fontSize: 32 }}>🌍</div>
+        <div style={{
+          width: 40, height: 40, borderRadius: '50%',
+          border: '4px solid var(--surface2)',
+          borderTopColor: 'var(--accent, #3b82f6)',
+          animation: 'spin 0.8s linear infinite',
+        }} />
         <div style={{ fontSize: 14 }}>Loading project data…</div>
       </div>
     )

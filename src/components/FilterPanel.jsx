@@ -20,7 +20,11 @@ const CALLS = ['IF20', 'IF21', 'IF22', 'IF23', 'IF24']
 export default function FilterPanel({ projects, filters, onFilterChange, isOpen, onToggle }) {
   const countries = [...new Set(projects.map(p => p.Country).filter(Boolean))].sort()
   const sectors   = [...new Set(projects.map(p => p.Sector).filter(Boolean))].sort()
-  const categories = [...new Set(projects.map(p => p.Category).filter(Boolean))].sort()
+  const categories = [...new Set(
+    projects.flatMap(p =>
+      (p.Category || '').split('&').map(c => c.trim()).filter(Boolean)
+    )
+  )].sort()
 
   const toggle = (key, value) => {
     const current = filters[key] || []

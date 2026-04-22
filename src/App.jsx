@@ -50,7 +50,16 @@ export default function App() {
       if (scales.length      && !scales.includes((p.Scale || '').toLowerCase().trim()))   return false
       if (calls.length       && !calls.includes(p.Call))                                  return false
       if (sectors.length     && !sectors.includes(p.Sector))                              return false
-      if (categories.length  && !categories.includes(p.Category))                         return false
+      if (categories.length) {
+        const projectCats = (p.Category || '').split('&').map(c => c.trim())
+        const match = categories.some(selected =>
+          projectCats.some(pc =>
+            pc.toLowerCase().includes(selected.toLowerCase()) ||
+            selected.toLowerCase().includes(pc.toLowerCase())
+          )
+        )
+        if (!match) return false
+      }
 
       if (grantMax < 400 && p['Grant (€)']) {
         if ((p['Grant (€)'] / 1e6) > grantMax) return false

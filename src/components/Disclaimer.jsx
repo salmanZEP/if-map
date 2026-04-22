@@ -12,7 +12,7 @@ export default function Disclaimer({ hasSelection }) {
           position:       'fixed',
           bottom:         '12px',
           right:      hasSelection ? 'calc(var(--sidebar-w) + 12px)' : '12px',
-          transition: 'right 0.25s cubic-bezier(0.4, 0, 0.2, 1)',
+          transition: 'right 0.25s cubic-bezier(0.4, 0, 0.2, 1), color 0.15s, border-color 0.15s',
         //   left:           '50%',
         //   transform:      'translateX(-50%)',
           zIndex:         300,
@@ -25,7 +25,6 @@ export default function Disclaimer({ hasSelection }) {
           padding:        '5px 14px',
           cursor:         'pointer',
           backdropFilter: 'blur(8px)',
-          transition:     'all 0.15s',
           letterSpacing:  '0.02em',
         }}
         onMouseEnter={e => { e.currentTarget.style.color = 'var(--text)'; e.currentTarget.style.borderColor = 'var(--accent)' }}

@@ -41,7 +41,7 @@ export default function App() {
       })
   }, [])
 
-  // Filter logic
+  // Filter logic is
   const filteredProjects = useMemo(() => {
     return allProjects.filter(p => {
       const { countries, statuses, scales, calls, sectors, categories, quickFilters,grantMin, grantMax, co2Min, search } = filters

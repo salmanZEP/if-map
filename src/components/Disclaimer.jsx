@@ -94,7 +94,7 @@ export default function Disclaimer({ hasSelection }) {
                 Project metrics such as CO₂ capture capacity, investment figures, and operational timelines are based on reported estimates and are subject to change. This tool is intended for informational and analytical purposes only.
               </p>
               <p>
-                In case of any discrepancies or questions regarding the data, please contact us at <a href="mailto:salman.muhammad@zeplatform.eu" style={{ color: 'var(--accent2)' }}>salman.muhammad@zeplatform.eu</a>.
+                In case of any discrepancies or questions regarding the data, please contact us at <a href="mailto:salman.muhammad@cmeurope.org" style={{ color: 'var(--accent2)' }}>salman.muhammad@cmeurope.org</a>.
               </p>
               <p>
                 The <strong style={{ color: 'var(--text)' }}>sector classification</strong> used in this tool refers to the <strong style={{ color: 'var(--text)' }}>industrial origin of the CO₂</strong> (i.e., the sector from which CO₂ is captured or sourced), rather than the final product or application.

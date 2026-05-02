@@ -14,6 +14,7 @@ const DEFAULT_FILTERS = {
   calls:       [],
   sectors:     [],
   categories:  [],
+  grantMin: 0 ,
   grantMax:    400,
   co2Min:      0,
   search:      '',
@@ -43,7 +44,7 @@ export default function App() {
   // Filter logic
   const filteredProjects = useMemo(() => {
     return allProjects.filter(p => {
-      const { countries, statuses, scales, calls, sectors, categories, grantMax, co2Min, search } = filters
+      const { countries, statuses, scales, calls, sectors, categories, quickFilters,grantMin, grantMax, co2Min, search } = filters
 
       if (countries.length   && !countries.includes(p.Country))                          return false
       if (statuses.length    && !statuses.includes(p.Status))                             return false
@@ -51,19 +52,29 @@ export default function App() {
       if (calls.length       && !calls.includes(p.Call))                                  return false
       if (sectors.length     && !sectors.includes(p.Sector))                              return false
       if (categories.length) {
-        const projectCats = (p.Category || '').split('&').map(c => c.trim())
+        const projectCats = (p.Category || '').split('&').map(c => c.trim().toLowerCase())
         const match = categories.some(selected =>
-          projectCats.some(pc =>
-            pc.toLowerCase().includes(selected.toLowerCase()) ||
-            selected.toLowerCase().includes(pc.toLowerCase())
-          )
+          projectCats.some(pc => pc === selected.toLowerCase())
         )
         if (!match) return false
       }
 
-      if (grantMax < 400 && p['Grant (€)']) {
-        if ((p['Grant (€)'] / 1e6) > grantMax) return false
+      if (quickFilters && quickFilters.length) {
+        const cat = (p.Category || '').toLowerCase()
+        const match = quickFilters.some(q => {
+          if (q === 'CCS') return cat.includes('ccs') || cat.includes('transport') || cat.includes('storage')
+          if (q === 'CCU') return cat.includes('ccu')
+          if (q === 'CDR') return cat.includes('carbon removal')
+          return false
+        })
+        if (!match) return false
       }
+
+      const rawGrant = p['Grant (€)']
+      const grantVal = parseFloat(rawGrant)
+      const grantMEur = isNaN(grantVal) ? 0 : grantVal / 1e6
+      if (grantMin > 0 && grantMEur < grantMin) return false
+      if (grantMax < 400 && grantMEur > grantMax) return false
 
       if (co2Min > 0) {
         const co2 = parseFloat(p['CO₂ Capture (Mt/yr)'])

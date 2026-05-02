@@ -51,9 +51,9 @@ export function formatEuro(v) {
   if (typeof v === 'string' && isNaN(parseFloat(v))) return v
   const n = parseFloat(v)
   if (isNaN(n)) return '—'
-  if (n >= 1e9) return `€${(n/1e9).toFixed(2)}B`
-  if (n >= 1e6) return `€${(n/1e6).toFixed(1)}M`
-  return `€${(n/1e3).toFixed(0)}K`
+  if (n >= 1e9) return `€${Math.round(n/1e9)}B`
+  if (n >= 1e6) return `€${Math.round(n/1e6)}M`
+  return `€${Math.round(n/1e3)}K`
 }
 
 export function formatCO2(v) {

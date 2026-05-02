@@ -29,8 +29,8 @@ export default function StatsBar({ projects, total }) {
   return (
     <header className={styles.bar}>
       <div className={styles.brand}>
-        <a href="https://zeroemissionsplatform.eu" target="_blank" rel="noopener noreferrer">
-          <img src="./Logotype_VerticalBaseline_FullWhite.png" alt="ZEP logo" className={styles.logo} />
+        <a href="https://carbonmanagementeurope.org/" target="_blank" rel="noopener noreferrer">
+          <img src="./Logotype_CME_FullWhite.png" alt="ZEP logo" className={styles.logo} />
         </a>
         <div className={styles.divider} />
         <div>
@@ -39,8 +39,8 @@ export default function StatsBar({ projects, total }) {
             style={{ textDecoration: 'none' }}
             onClick={e => { e.preventDefault(); window.location.reload() }}
           >
-            <div className={styles.title}>Industrial Carbon Management Project Database</div>
-            <div className={styles.sub}>Including CCS/CCU/CDR Projects</div>
+            <div className={styles.title}>Industrial Carbon Management Projects Database</div>
+            <div className={styles.sub}>CCS, CCU & CDR projects supported by the Innovation Fund</div>
           </a>
         </div>
       </div>

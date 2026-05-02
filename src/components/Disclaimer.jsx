@@ -19,10 +19,10 @@ export default function Disclaimer({ hasSelection }) {
           background:     'var(--surface)',
           border:         '1px solid var(--border2)',
           borderRadius:   '20px',
-          color:          'var(--text3)',
-          fontSize:       '11px',
+          color:          'var(--text2)',
+          fontSize:       '12.5px',
           fontWeight:     500,
-          padding:        '5px 14px',
+          padding:        '7px 18px',
           cursor:         'pointer',
           backdropFilter: 'blur(8px)',
           letterSpacing:  '0.02em',
@@ -75,7 +75,7 @@ export default function Disclaimer({ hasSelection }) {
               }}
             >✕</button>
 
-            <div style={{ fontSize: '13px', color: 'var(--accent2)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '10px' }}>
+            <div style={{ fontSize: '13px', color: 'var(--text2)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '10px' }}>
               Disclaimer
             </div>
 
@@ -88,7 +88,7 @@ export default function Disclaimer({ hasSelection }) {
                 All project data presented in this tool is sourced exclusively from publicly available information, including publications by the European Commission, CINEA, and official press releases and announcements of the company.
               </p>
               <p>
-                The data has been compiled, evaluated, and assessed by <strong style={{ color: 'var(--text)' }}>Zero Emissions Platform</strong> to the best of our ability. While every effort has been made to ensure accuracy and completeness, the information may contain errors, omissions, or outdated figures.
+                The data has been compiled, evaluated, and assessed by <strong style={{ color: 'var(--text)' }}>Carbon Management Europe</strong> to the best of our ability. While every effort has been made to ensure accuracy and completeness, the information may contain errors, omissions, or outdated figures.
               </p>
               <p>
                 Project metrics such as CO₂ capture capacity, investment figures, and operational timelines are based on reported estimates and are subject to change. This tool is intended for informational and analytical purposes only.
@@ -102,7 +102,7 @@ export default function Disclaimer({ hasSelection }) {
             </div>
 
             <div style={{ marginTop: '24px', paddingTop: '16px', borderTop: '1px solid var(--border)', fontSize: '11px', color: 'var(--text3)' }}>
-              Last reviewed April 2026 · Zero Emissions Platform
+              Last reviewed April 2026 · Carbon Management Europe
             </div>
           </div>
         </div>

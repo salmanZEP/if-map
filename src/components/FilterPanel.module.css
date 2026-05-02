@@ -93,12 +93,92 @@
 
 .sectionLabel {
   display: block;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 600;
-  color: var(--text3);
-  text-transform: uppercase;
+  color: var(--text2);
+  /* text-transform: uppercase; */
   letter-spacing: 0.08em;
   margin-bottom: 10px;
+}
+
+.collapseHeader {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: none;
+  border: none;
+  color: var(--text2);
+  cursor: pointer;
+  padding: 0;
+}
+
+.collapseHeader:hover {
+  color: var(--text);
+}
+
+.dualSlider {
+  position: relative;
+  height: 20px;
+  margin: 4px 0;
+}
+
+.dualSlider::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--surface3);
+  border-radius: 2px;
+  transform: translateY(-50%);
+  z-index: 0;
+}
+
+.dualSlider input[type="range"] {
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background: transparent;
+  pointer-events: none;
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.dualSlider input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 2px solid #fff;
+  cursor: pointer;
+  pointer-events: all;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+.dualSlider input[type="range"]::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 2px solid #fff;
+  cursor: pointer;
+  pointer-events: all;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+.rangeMin {
+  z-index: 1;
+}
+
+.rangeMax {
+  z-index: 2;
 }
 
 .searchWrap {

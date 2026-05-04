@@ -131,8 +131,8 @@ export default function FilterPanel({ projects, filters, onFilterChange, isOpen,
           <label className={styles.sectionLabel}>Quick Filter</label>
           <div className={styles.pillGroup}>
             {[
-              { label: 'CCS', color: '#3b82f6', tooltip: 'Carbon Capture & Storage projects' },
-              { label: 'CCU', color: '#14b8a6', tooltip: 'Carbon Capture & Utilisation projects' },
+              { label: 'CCS', color: '#10b981', tooltip: 'Carbon Capture & Storage projects' },
+              { label: 'CCU', color: '#10b981', tooltip: 'Carbon Capture & Utilisation projects' },
               { label: 'CDR', color: '#10b981', tooltip: 'Carbon Dioxide Removal projects' },
             ].map(({ label, color, tooltip }) => {
               const active = quickFilters.includes(label)

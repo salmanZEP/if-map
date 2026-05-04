@@ -30,7 +30,8 @@
     "Link": "https://www.aalborgportland.dk/accsion/ ",
     "Full Description": "ACCSION is a large-scale CCS project at Aalborg Portland’s cement plant in Aalborg, Denmark, developed with Air Liquide to establish an integrated onshore carbon capture, transport, and storage chain. It captures CO₂ from both grey and white cement production using Cryocap™ technology and transports it by pipeline to onshore storage in Denmark. The project will capture about 1.4–1.42 MtCO₂ per year and avoid around 1.5 MtCO₂ annually, including benefits from surplus heat recovery. Around 80 MW of excess heat will be supplied to district heating. The project aims to enable near net-zero scope 1 emissions and demonstrate a scalable CCS model for heavy industry.",
     "Technology Type": "Capture: Air Liquide Cryocap™ cryogenic CO₂ capture system, capturing CO₂ from flue-gas streams in a single integrated setup.\nTransport: Pipeline transport from the Aalborg cement site to a CO₂ reception/transport infrastructure.\nStorage: Onshore geological storage in Denmark / onshore CO₂ storage facilities (exact final storage formation/site not confirmed).\nIntegration notes: renewable electricity supply for the capture plant, certified biogas use in kilns, digital monitoring, and recovery of ~80 MW surplus heat for district heating.",
-    "Status": "Pre-FID / Advanced Development"
+    "Status": "Pre-FID / Advanced Development",
+    "Unnamed: 31": null
   },
   {
     "Scale": "medium-scale",
@@ -63,7 +64,8 @@
     "Link": "https://ec.europa.eu/assets/cinea/project_fiches/innovation_fund/101191172.pdf",
     "Full Description": "AdriatiCO₂ captures CO₂ from two emission points at Marcegaglia Ravenna steel plant: a gas-fired cogeneration unit (biomethane-fuelled) and a green DRI facility (biochar-based) — the first commercial biochar-DRI application globally. A patented post-combustion novel-solvent system with heat recovery captures up to 112 kt CO₂/yr (>40% of site Scope 1 emissions). Biogenic fuel substitution at both points enables BECCS, making this the first such deployment in Italy and Southern Europe. Captured CO₂ is transported via Eni/Snam pipeline to the Ravenna offshore geological storage hub (Adriatic Sea)",
     "Technology Type": "Post-combustion capture (novel solvent / patented process) + BECCS\nSpecifically: post-combustion solvent-based absorption using a patented novel solvent combined with an integrated heat recovery system, applied to flue gases from a gas-fired cogeneration unit and a green DRI facility. Biogenic fuel substitution (biomethane in cogeneration; biochar in DRI) enables the BECCS classification. CO₂ transport via pipeline; offshore geological storage in depleted Adriatic reservoirs via the Ravenna CCS hub (Eni/Snam).",
-    "Status": "FEED & Permitting"
+    "Status": "FEED & Permitting",
+    "Unnamed: 31": null
   },
   {
     "Scale": "small-scale",
@@ -96,7 +98,8 @@
     "Link": "https://aggregaco2.com/en/ ",
     "Full Description": "AGGREGACO2 is a small-scale Innovation Fund project in Spain led by Biscay Eco Aggregates, producing carbon-negative aggregates through CO₂ mineralisation. The project uses CO₂ from the Petronor refinery and reacts it with residues from Energy-from-Waste plants using Accelerated Carbonation Technology. This process converts waste materials into construction aggregates while permanently storing CO₂ as solid carbonates. The facility will process around 22,000 tonnes of residues annually and produce about 56,000 tonnes of aggregates. The project demonstrates circular carbon use by combining industrial CO₂ utilisation with waste valorisation in the construction sector.",
     "Technology Type": "CO₂ is sourced externally from the Petronor refinery (Steam Methane Reformer flue gas) with no on-site capture, and is transferred over a short distance to the mineralisation facility, where Accelerated Carbonation Technology (ACT, O.C.O Technology) is applied to react CO₂ with air pollution control residues (APCr) from energy-from-waste processes, producing construction aggregates while permanently storing CO₂ as solid carbonates; the system operates at a pilot scale of approximately 2.2 ktCO₂ per year.",
-    "Status": "Under Construction"
+    "Status": "Under Construction",
+    "Unnamed: 31": null
   },
   {
     "Scale": "large-scale",
@@ -129,7 +132,8 @@
     "Link": "https://www.heidelbergmaterials.fr/fr/node/523390? ",
     "Full Description": "AirvaultGOCO₂ is a large-scale CCUS project at Heidelberg Materials’ cement plant in Airvault, France, aiming to capture approximately 1 MtCO₂ per year. The project is part of the GOCO₂ initiative to decarbonise industrial sites in western France by establishing a full CO₂ transport and storage value chain. Captured CO₂ will be transported by pipeline to Saint-Nazaire and shipped to offshore geological storage in the North Sea. A portion of biogenic CO₂ may also be used for e-fuel production. The project is expected to start capturing CO₂ around 2030, subject to funding and regulatory approvals.",
     "Technology Type": "Post-combustion CO₂ capture at a cement plant (~1 MtCO₂/year planned), with CO₂ transported via pipeline to Saint-Nazaire and then shipped to offshore geological storage in the North Sea; part of the CO₂ stream (biogenic fraction) may be utilised for e-fuel production; final capture technology configuration not yet publicly confirmed.",
-    "Status": "Grant Preparation"
+    "Status": "Early Development",
+    "Unnamed: 31": null
   },
   {
     "Scale": "medium-scale",
@@ -162,7 +166,8 @@
     "Link": "https://bzkenergy.pl/projekt-ambassador/",
     "Full Description": "AMBASSADOR is a medium-scale Innovation Fund project in Poland led by BZK Energy, developing a closed-loop biogas facility for the production of biomethane, purified CO₂, and biofertilisers. The project integrates anaerobic digestion of agricultural and food waste with gas upgrading and CO₂ capture and liquefaction technologies. Produced biomethane will be injected into the national gas grid, while part of it will be used on-site for energy self-sufficiency. The captured biogenic CO₂ will be purified and reused, contributing to emissions reduction and circular carbon use. Over its first five years of operation, the project is expected to avoid approximately 128 ktCO₂.",
     "Technology Type": "Closed-loop biogas system with anaerobic digestion of agricultural and food waste, followed by biomethane upgrading (gas purification) and integrated CO₂ capture and liquefaction; biomethane is injected into the gas grid and partially used on-site for energy, while captured biogenic CO₂ is purified for reuse.",
-    "Status": "Engineering & Design"
+    "Status": "Engineering & Design",
+    "Unnamed: 31": null
   },
   {
     "Scale": "large-scale",
@@ -195,7 +200,8 @@
     "Link": "https://climate.ec.europa.eu/document/download/7eb6d2d5-c109-4c33-ba50-c065beb654d7_en?filename=if_pf_2022_anrav_en.pdf",
     "Full Description": "ANRAV is a large-scale CCUS project at the Devnya cement plant in Bulgaria, led by Heidelberg Materials, aiming to capture around 0.8 MtCO₂ per year. The project will establish the first full CCS value chain in Eastern Europe, linking cement production to offshore geological storage in the Black Sea via pipeline infrastructure. Captured CO₂ will be transported to the depleted Galata gas field for permanent storage, while enabling the development of a regional CCUS cluster.",
     "Technology Type": "Hybrid staged CO₂ capture system combining oxyfuel combustion (OxyCal) and post-combustion amine scrubbing. Achieving up to ~99% capture efficiency; CO₂ is processed via a CO₂ Processing Unit (CPU), transported by pipeline, and permanently stored in the depleted Galata gas field under the Black Sea.",
-    "Status": "Grant Preparation"
+    "Status": "On Hold / Cancelled",
+    "Unnamed: 31": "Cancelled"
   },
   {
     "Scale": "large-scale",
@@ -228,7 +234,8 @@
     "Link": "https://www.anthemis-ccs.com/en/about-the-project",
     "Full Description": "ANTHEMIS is a large-scale CCS project at Heidelberg Materials’ Antoing cement plant that will deploy a hybrid oxyfuel and amine carbon capture system to capture over 95% of emissions (~800,000 tCO₂/year). The project includes transport and permanent offshore storage, enabling near net-zero cement production from 2029. Invited to IF24 grant agreement preparation (Nov 2025). Amount not confirmed. Permit application submitted H1 2025 for Antoing clinker plant. FID targeted 2026-2027. Operational: 2029.",
     "Technology Type": "Oxyfuel-based CO₂ capture using pure oxygen combustion combined with CO₂ recycling to produce a high-concentration CO₂ stream (>80%), followed by cryogenic purification via a CO₂ Purification Unit (CPU) supplied by Linde to ~98% purity; CO₂ is then transported via pipeline infrastructure operated by Fluxys and connected to the CO₂ Highway Europe system, with offshore geological storage in Norway under development in partnership with Equinor; system designed to capture over 800,000 tCO₂/year.",
-    "Status": "Early Development"
+    "Status": "Early Development",
+    "Unnamed: 31": null
   },
   {
     "Scale": "large-scale",
@@ -261,7 +268,8 @@
     "Link": "https://www.desfa.gr/en/desfa-secures-e169-3-million-eu-innovation-fund-grant-for-apolloco%E2%82%82-advancing-greeces-first-large-scale-ccs-midstream-infrastructure/",
     "Full Description": "APOLLOCO2-LT is a CO₂ midstream infrastructure project developed by DESFA at Revythoussa Island in Megara, Greece. The project serves industrial emitters through a hub model in which gaseous CO₂ is collected by pipeline, liquefied at a dedicated export terminal, temporarily stored, and shipped to permanent geological storage sites. Public project sources describe an initial throughput of about 3 MtCO₂/year, expandable to 5 MtCO₂/year, with operation targeted for 2029.",
     "Technology Type": "CO₂ liquefaction export terminal + open-access CCS hub: receives gaseous CO₂ via pipeline from industrial emitters; liquefies using LNG regasification cold energy; CO₂ loaded to ships; South-Eastern European CCS infrastructure hub (DESFA/Hellenic Gas operator)",
-    "Status": "FEED & Permitting"
+    "Status": "FEED & Permitting",
+    "Unnamed: 31": null
   },
   {
     "Scale": "large-scale",
@@ -294,7 +302,8 @@
     "Link": "https://www.stockholmexergi.se/en/beccs/",
     "Full Description": "BECCS Stockholm is a large-scale carbon removal project developed by Stockholm Exergi at the Värtaverket biomass-fired CHP plant in Sweden. The project will capture approximately 800,000 tonnes of biogenic CO₂ per year using post-combustion carbon capture technology. The captured CO₂ will be liquefied and transported by ship to offshore geological storage sites for permanent sequestration. As the CO₂ originates from biomass, the project delivers negative emissions and contributes to long-term carbon removal. It is one of Europe’s flagship BECCS projects and has received funding from the Innovation Fund 2020.",
     "Technology Type": "BECCS: Post-combustion CO₂ capture (Capsol-based / potassium carbonate / amine hybrid configuration under development) on biomass-fired CHP plant (KVV8, Värtaverket); 100% biogenic CO₂; ship transport to offshore North Sea geological storage; negative emission carbon removal; 0.78 Mt/yr",
-    "Status": "Under Construction"
+    "Status": "Under Construction",
+    "Unnamed: 31": null
   },
   {
     "Scale": "medium-scale",
@@ -327,7 +336,8 @@
     "Link": "https://www.biovind.no/",
     "Full Description": "BIOVIND is an Innovation Fund IF24 medium-scale project developed by Biovind AS in Vindafjord, Rogaland, Norway. The project is a plant for treating organic waste from nearby farms and food industries to produce biomethane/bio-LNG, biofertiliser and a reusable biogenic CO₂ stream. Public permit documents describe capacity for up to 226,000 tonnes of organic input per year, biomethane production of about 109 GWh per year, and a separated CO₂ stream of 7,665 tonnes per year.",
     "Technology Type": "Organic waste streams including manure, fish sludge and food waste are treated via anaerobic digestion to produce biogas, which is upgraded to biomethane and liquefied into Bio-LNG. The process separates a biogenic CO₂ stream of approximately 7.7 kt/year, which is recovered and transported for industrial utilisation. Digestate from the process is hygienised and processed into liquid biofertiliser and solid biorest. The facility is designed for around 226 kt/year of feedstock input and biomethane production of about 9.9 million Nm³/year.",
-    "Status": "Early Development"
+    "Status": "Early Development",
+    "Unnamed: 31": null
   },
   {
     "Scale": "large-scale",
@@ -360,7 +370,8 @@
     "Link": "https://www.holcim.com/what-we-do/green-operations/ccus/carbon2business",
     "Full Description": "C2B (Carbon2Business) is a large-scale Innovation Fund project developed by Holcim at the Lägerdorf cement plant in Germany. The project captures approximately 1.2–1.3 Mt CO₂ per year using oxyfuel combustion and a cryogenic carbon processing unit. The captured CO₂ is supplied to downstream industrial users for conversion into chemicals such as methanol or for plastic production.",
     "Technology Type": "Oxyfuel combustion + Carbon Processing Unit (CPU) CO₂ capture at Holcim Lägerdorf cement plant; CO₂ utilised in thyssenkrupp/Linde CPU to produce industrial chemicals (methanol, plastics precursors) — CCU/conversion utilisation; ~1.3 Mt/yr",
-    "Status": "Engineering & Design"
+    "Status": "Engineering & Design",
+    "Unnamed: 31": null
   },
   {
     "Scale": "large-scale",
@@ -393,7 +404,8 @@
     "Link": "https://climate.ec.europa.eu/document/download/bd0ab5e5-bc37-4bff-b3b7-1a179c2e2529_en?filename=if_pf_2022_calcc_en.pdf ",
     "Full Description": "CalCC is a large-scale CCS project at Lhoist’s lime production plant in Réty, France, aiming to capture approximately 600,000 tonnes of CO₂ per year using Air Liquide’s Cryocap™ FG cryogenic capture technology. The project will integrate a full CCS value chain, with captured CO₂ transported to a regional CO₂ hub for liquefaction and shipment to offshore geological storage sites in the North Sea. It represents the first industrial-scale carbon capture application in the lime sector and is part of a broader regional decarbonisation initiative.",
     "Technology Type": "Cryogenic CO₂ capture using Air Liquide’s Cryocap™ FG technology applied to lime kiln flue gases (~0.6 MtCO₂/year), followed by transport to a regional CO₂ hub, liquefaction, ship transport, and offshore geological storage in the North Sea.",
-    "Status": "Pre-FID / Advanced Development"
+    "Status": "Pre-FID / Advanced Development",
+    "Unnamed: 31": null
   },
   {
     "Scale": "medium-scale",
@@ -426,7 +438,8 @@
     "Link": "https://ha.gruppohera.it/captureste-project",
     "Full Description": "CapturEste is a first-of-a-kind CCS project in Italy applied to a waste-to-energy (WtE) plant, located in Ferrara and developed by Herambiente (Hera Group) with Saipem. It aims to decarbonise WtE operations by capturing CO₂ emissions and linking them to a developing Italian CCS infrastructure (Ravenna hub). The project is positioned as a key step in scaling CCS in the waste sector and enabling a circular low-carbon energy system",
     "Technology Type": "Saipem Bluenzyme™ enzymatic CO₂ capture (biocatalyst enzyme technology) at Herambiente Ferrara Waste-to-Energy plant. CO₂ transported via pipeline to depleted gas fields in the Adriatic Sea. Italy's first industrial-scale CCS applied to a WtE plant. 64 kt/yr; 90% capture efficiency. ",
-    "Status": "Engineering & Design"
+    "Status": "Engineering & Design",
+    "Unnamed: 31": null
   },
   {
     "Scale": "large-scale",
@@ -459,7 +472,8 @@
     "Link": "https://www.holcim.com/what-we-do/green-operations/ccus/carbocleartech ",
     "Full Description": "CarboClearTech is a large-scale CCS project at Holcim’s Martres-Tolosane cement plant in France, designed to significantly reduce CO₂ emissions from clinker production through an integrated carbon capture, transport, and storage chain. Developed in collaboration with Air Liquide and regional infrastructure partners, the project will capture approximately 0.7 MtCO₂ per year and permanently store it in geological formations in southwestern France. In addition to decarbonising the plant, CarboClearTech serves as an industrial-scale demonstration platform for modular and replicable CCS solutions in the cement sector. The project aims to support Holcim’s net-zero strategy while enabling standardised, scalable CCS deployment across European heavy industry.",
     "Technology Type": "VPSA + cryogenic capture. Open innovation test bench for multiple capture technologies from 2025. CO₂ pipeline to Pyrenean/Lacq geological storage via Teréga infrastructure. 700 kt/yr. ",
-    "Status": "Engineering & Design"
+    "Status": "Engineering & Design",
+    "Unnamed: 31": null
   },
   {
     "Scale": "large-scale",
@@ -492,7 +506,8 @@
     "Link": "https://www.holcim.com/what-we-do/green-operations/ccus/carbon-hub-cpt01",
     "Full Description": "CARBON HUB CPT01 is a large-scale Innovation Fund project developed by Holcim in Câmpulung, Romania, in partnership with Carmeuse. The project captures CO₂ emissions from both a cement plant and a neighbouring lime facility through a shared capture system. The captured CO₂ is compressed and transported via pipeline to an onshore geological storage site in Romania, establishing one of the first full CCS value chains in Eastern Europe. The project enables production of approximately 2 million tonnes per year of near-zero cement from 2032",
     "Technology Type": "End-of-pipe CO₂ capture combining pressure swing adsorption (PSA) and cryogenic separation to flue gases from cement and lime kilns, generating a high-purity CO₂ stream. The captured CO₂ is compressed and transported via pipeline to a retrofitted onshore geological storage site, where it is injected into subsurface formations for permanent sequestration. The system integrates multi-source capture, shared processing infrastructure, and a full capture–transport–storage chain.",
-    "Status": "Early Development"
+    "Status": "Early Development",
+    "Unnamed: 31": null
   },
   {
     "Scale": "small-scale",
@@ -525,7 +540,8 @@
     "Link": "https://ec.europa.eu/assets/cinea/project_fiches/innovation_fund/101132998.pdf ",
     "Full Description": "CFCPILOT4CCS is an Innovation Fund IF22 small-scale project led by Esso Nederland BV at the Rotterdam refinery. The project demonstrates carbonate fuel cell (CFC) technology for CO₂ capture from industrial flue gases, with a capture capacity of approximately 4.6 kt CO₂ per year. The system integrates carbon capture with electricity and hydrogen co-production, showcasing a novel approach to industrial decarbonisation at pilot scale.",
     "Technology Type": "The project deploys molten carbonate fuel cell (MCFC) technology for CO₂ capture, where flue gas is fed to the cathode side and CO₂ is electrochemically transported across the electrolyte to the anode. This process simultaneously concentrates CO₂, generates electricity, and produces hydrogen-rich streams. The system operates at high temperature (~600–650°C) and enables capture efficiencies above 90% while integrating energy recovery. The captured CO₂ stream is conditioned for further handling, though permanent storage is not the primary objective of the pilot.",
-    "Status": "Under Construction"
+    "Status": "Under Construction",
+    "Unnamed: 31": null
   },
   {
     "Scale": "large-scale",
@@ -558,7 +574,8 @@
     "Link": "https://ec.europa.eu/assets/cinea/project_fiches/innovation_fund/101191027.pdf",
     "Full Description": "CO2LLECT is a large-scale CCS project at Cemex’s Rüdersdorf cement plant in Germany, aiming to capture approximately 1.3 MtCO₂ per year using Linde’s advanced HISORP® adsorptive-cryogenic capture technology. The project will integrate a full CCS value chain, with captured CO₂ liquefied on site and initially transported by rail to a coastal hub before being shipped to offshore geological storage in the North Sea. It is one of the largest CCS projects in the cement sector and aims to enable carbon-neutral cement production at the site by around 2030",
     "Technology Type": "Adsorptive-cryogenic CO₂ capture using Linde’s HISORP® technology at a cement plant (~1.3 MtCO₂/year), combined with on-site liquefaction, rail transport to a coastal CO₂ hub, and ship transport to offshore geological storage in the North Sea; designed as a full-chain CCS system for large-scale cement decarbonisation.",
-    "Status": "Early Development"
+    "Status": "Early Development",
+    "Unnamed: 31": null
   },
   {
     "Scale": "small-scale",
@@ -591,7 +608,8 @@
     "Link": "https://co2ncreat.com/",
     "Full Description": "CO₂ncrEAT will capture CO₂ from Lhoist’s lime plant and use Carbstone® technology to produce carbon-negative precast blocks, storing more CO₂ than emitted over 10 years and enabling a circular economy.",
     "Technology Type": "Accelerated carbonation mineralisation CCU: CO₂ reacted with lime and steel slag by-products to produce CO₂-negative construction aggregates and building materials",
-    "Status": "Under Construction"
+    "Status": "Under Construction",
+    "Unnamed: 31": null
   },
   {
     "Scale": "large-scale",
@@ -624,7 +642,8 @@
     "Link": "https://climate.ec.europa.eu/document/download/127cb46b-3974-4145-8960-53031599d4df_en?filename=if_pf_2022_coda_en.pdf",
     "Full Description": "Coda Terminal is a CO₂ transport and storage project developed by Carbfix at Straumsvík in Hafnarfjörður, Iceland. The project is designed as an onshore hub receiving captured CO₂ from industrial sources in Northern Europe via ship, followed by temporary storage and injection into nearby basalt formations. The system is designed to mineralise approximately 2.1 MtCO₂ per year, corresponding to 21.1 MtCO₂ over ten years of operation. The project was awarded funding under the EU Innovation Fund (IF21). The Straumsvík project was cancelled in early 2025 after local opposition, and alternative locations are being assessed.",
     "Technology Type": "The system integrates maritime CO₂ transport, onshore handling, and in-situ mineral storage. Liquefied CO₂ is shipped to a coastal terminal, unloaded into storage tanks, and injected via wells into basaltic formations. During injection, CO₂ is dissolved in water (freshwater or seawater) to form carbonated fluid, which reacts with calcium-, magnesium-, and iron-rich basalt to precipitate stable carbonate minerals. Mineralisation occurs rapidly, with high conversion efficiency approaching complete fixation, enabling permanent geological storage at scales exceeding 2 MtCO₂ per year.",
-    "Status": "On Hold / Cancelled"
+    "Status": "On Hold / Cancelled",
+    "Unnamed: 31": null
   },
   {
     "Scale": "medium-scale",
@@ -657,7 +676,8 @@
     "Link": "https://ec.europa.eu/assets/cinea/project_fiches/innovation_fund/101251762.pdf",
     "Full Description": "COnet2 Sea is a maritime carbon dioxide transport project developed by SCALE GREEN ENERGY S.L. in Spain. The project establishes a large-scale shipping service for transporting liquefied CO₂ from industrial emitters, such as cement plants, to permanent geological storage sites in Europe. The system enables cross-border CO₂ transport between Mediterranean sources and storage locations, including potential connections to North Sea storage infrastructure, supporting the development of a CO₂ transport network for hard-to-abate industries.",
     "Technology Type": "Maritime CO₂ transport service: medium-pressure liquid CO₂ (LCO₂) vessel with zeolite-based onboard CO₂ capture unit + bioLNG propulsion + innovative boil-off gas management using LNG cold; CO₂ shipped from cement plant to Mediterranean/North Sea geological storage",
-    "Status": "Early Development"
+    "Status": "Early Development",
+    "Unnamed: 31": null
   },
   {
     "Scale": "small-scale",
@@ -690,7 +710,8 @@
     "Link": "https://custardproject.com/",
     "Full Description": "CUSTARD is a small-scale carbon capture and utilisation project developed by Acciaierie Bertoli Safau S.p.A. with Danieli & C. Officine Meccaniche S.p.A. at the ABS steel plant in Pozzuolo del Friuli (Cargnacco), Udine, Italy. The project captures approximately 13,000 tonnes of CO₂ per year from a steel reheating furnace and converts the captured CO₂ into sodium bicarbonate. The publicly stated greenhouse-gas avoidance is 179,040 tonnes CO₂e over the first 10 years of operation, and the project fiche gives 31 March 2029 as the entry-into-operation date.",
     "Technology Type": "The process treats reheating-furnace flue gas through a flue-gas conditioning and CO₂ concentration unit, followed by a caustic-soda scrubbing step and a three-phase reactor in which captured CO₂ reacts to form sodium bicarbonate; downstream crystallisation and purification produce food-grade product. The system is designed to capture and utilise about 13 ktCO₂/year, corresponding to up to 50% of CO₂ emissions from the targeted walking-beam reheating furnace, with no geological storage step",
-    "Status": "Engineering & Design"
+    "Status": "Engineering & Design",
+    "Unnamed: 31": null
   },
   {
     "Scale": "medium-scale",
@@ -723,7 +744,8 @@
     "Link": "https://ec.europa.eu/assets/cinea/project_fiches/innovation_fund/101191237.pdf",
     "Full Description": "Danube Removals is a full-chain bioenergy carbon capture and storage (Bio-CCS) project located in Dunaföldvár, Hungary, developed by Danube Energy Ventures Kft. in partnership with ClonBio Group and EMOV. The project captures approximately 500,000 tonnes of biogenic CO₂ annually from fermentation processes at the Pannonia Bio biorefinery. The captured CO₂ is transported via pipeline and permanently stored in an onshore saline aquifer within the Pannonian Basin. The project generates certified carbon removal credits and represents the first onshore geological CO₂ storage project in the European Union, with total avoided emissions exceeding 5.6 million tonnes of CO₂ over the project period.",
     "Technology Type": "The project applies Bio-CCS by capturing high-purity biogenic CO₂ from fermentation and anaerobic digestion processes at a grain biorefinery. CO₂ is dehydrated, compressed, and transported via a short-distance pipeline (~10–15 km) to an onshore saline aquifer for permanent geological storage. The system operates at an annual scale of ~0.5 MtCO₂, with near-complete capture due to the concentrated nature of fermentation streams, enabling low capture energy demand and high CO₂ purity suitable for direct compression and injection.",
-    "Status": "Early Development"
+    "Status": "Early Development",
+    "Unnamed: 31": null
   },
   {
     "Scale": "large-scale",
@@ -756,7 +778,8 @@
     "Link": "https://verso.energy/wp-content/uploads/2025/11/CP-VERSO-ENERGY-INNOFUND-VENG-CINEA.pdf",
     "Full Description": "DEZiR is a large-scale synthetic sustainable aviation fuel project developed by Verso Energy in Normandy, with the fuel production site at Petit-Couronne and the biogenic CO₂ source at the BEA biomass boiler in Alizay. The project integrates capture and pipeline transfer of about 350,000 tonnes of biogenic CO₂ per year, hydrogen production by electrolysis, and synthesis steps leading to about 81,000 tonnes per year of e-SAF. The product is intended for connection into the regional fuel logistics system serving major Western European aviation markets.",
     "Technology Type": "The project captures biogenic CO₂ at the BEA biomass boiler in Alizay and transports it by pipeline to Petit-Couronne, where hydrogen is produced by water electrolysis using dedicated electricity supply. The CO₂ and hydrogen are converted to methanol in a methanolation step, and the methanol is then upgraded to jet-range hydrocarbons through a Methanol-to-Jet process to produce about 81 kt/year of e-SAF from roughly 350 kt/year of CO₂ feedstock.",
-    "Status": "FEED & Permitting"
+    "Status": "FEED & Permitting",
+    "Unnamed: 31": null
   },
   {
     "Scale": "large-scale",
@@ -789,7 +812,8 @@
     "Link": "https://www.heidelbergmaterials.it/it/decarbonizzazione-innovationfund",
     "Full Description": "DREAM is a carbon capture and storage project developed by Heidelberg Materials Italia Cementi at the Rezzato-Mazzano cement plant in Rezzato, in the province of Brescia, Italy. The project covers both grey and white clinker production lines and is designed to capture around 1 MtCO₂ per year for permanent geological storage through the Ravenna CCS system",
     "Technology Type": "The project combines oxyfuel-advanced cryogenic capture on the grey clinker line with post-combustion amine capture on the white clinker line. Waste-heat recovery from the plant is used to supply thermal energy for solvent regeneration, and the captured CO₂ is processed into a high-purity stream suitable for pipeline transport to depleted gas reservoirs associated with the Ravenna CCS hub for permanent storage. Public sources indicate a capture rate above 95% of plant emissions and a capture volume of about 1 MtCO₂ per year.",
-    "Status": "Early Development"
+    "Status": "Early Development",
+    "Unnamed: 31": null
   },
   {
     "Scale": "large-scale",
@@ -822,7 +846,8 @@
     "Link": "https://ec.europa.eu/assets/cinea/project_fiches/innovation_fund/101132987.pdf ",
     "Full Description": "E-Fuel Pilot is a Power-to-Liquid synthetic fuel project developed by Nordic Electrofuel AS at Herøya Industrial Park in Porsgrunn, Norway. The plant uses captured CO₂ from a local ammonia plant, renewable electricity and hydrogen to produce about 8,000 tonnes per year of synthetic hydrocarbons (syncrude) for aviation and other hard-to-abate transport uses. The project is backed by a €40 million Innovation Fund grant and is expected to deliver 228,163 tonnes CO₂e of avoided emissions over its first 10 years of operation.",
     "Technology Type": "The project applies a Power-to-Liquid route in which captured CO₂ from a local ammonia plant is combined with renewable hydrogen and converted through reverse water-gas shift (RWGS) to synthesis gas, followed by Fischer-Tropsch synthesis to produce approximately 8,000 t/year of synthetic hydrocarbons (syncrude). Public project sources describe carbon utilisation close to 100% and include a Safire reactor / gas-gas syngas cooler concept to improve heat recovery and process efficiency; no geological CO₂ storage component is indicated.",
-    "Status": "Pre-FID / Advanced Development"
+    "Status": "Pre-FID / Advanced Development",
+    "Unnamed: 31": null
   },
   {
     "Scale": "large-scale",
@@ -855,7 +880,8 @@
     "Link": "https://ec.europa.eu/assets/cinea/project_fiches/innovation_fund/101133147.pdf ",
     "Full Description": "eM-Rhône is a French carbon capture and utilisation project led by Elyse Energy. It combines renewable hydrogen production on the Roches-Roussillon chemical platform in Salaise-sur-Sanne with carbon dioxide captured at Holcim/Lafarge’s cement plant in Le Teil, Ardèche, and transported by rail to the methanol site. The project is designed around 170 MW of PEM electrolysis, about 27 kt/year of hydrogen production, and about 195 kt/year of CO₂ use to produce large-scale e-methanol for chemical and maritime markets.",
     "Technology Type": "The project captures concentrated CO₂ from the Le Teil cement plant using a fully electric cryogenic capture scheme, liquefies and transports the CO₂ by rail to Salaise-sur-Sanne, then receives, stores, regasifies and purifies the CO₂ before reaction with hydrogen produced on site by 170 MW PEM electrolysis. The hydrogen is compressed and purified, then combined with the purified CO₂ in a methanol synthesis unit, followed by intermediate storage and final methanol storage via the adjacent TEPSA logistics system. The updated Innovation Fund factsheet gives 195 kt/year CO₂ input, 27 kt/year hydrogen production and 138 kt/year methanol output; Elyse’s project page still states 150 kt/year methanol.",
-    "Status": "FEED & Permitting"
+    "Status": "FEED & Permitting",
+    "Unnamed: 31": null
   },
   {
     "Scale": "large-scale",
@@ -888,7 +914,8 @@
     "Link": "https://arcadiaefuels.com/arcadia-efuels-endor-project-awarded-eu-innovation-fund-support/",
     "Full Description": "ENDOR is a large-scale Power-to-Liquid e-fuels project developed by Arcadia eFuels Vordingborg ApS at Vordingborg Harbour on Masnedø in Denmark. The facility is permitted at Belgiensvej 5, 4760 Vordingborg and is designed to produce synthetic aviation fuel as e-kerosene/eSAF, with e-naphtha as a secondary product. Verified permitting documents indicate annual output of about 70.9 kt of e-kerosene and 15.3 kt of e-naphtha, equivalent to about 107,800 m³ of e-fuels",
     "Technology Type": "The project uses renewable electricity to produce hydrogen by electrolysis, combines hydrogen with sustainable CO₂ to form syngas, and converts that syngas through Fischer–Tropsch synthesis into long-chain hydrocarbons that are upgraded into e-kerosene/eSAF, with e-naphtha and e-diesel as co-products. The permitted plant is designed for about 360 MW power input, about 92% annual operating time, seawater intake and desalination integrated with waste-heat use, and annual production of about 70.9 kt e-kerosene and 15.3 kt e-naphtha",
-    "Status": "Pre-FID / Advanced Development"
+    "Status": "Pre-FID / Advanced Development",
+    "Unnamed: 31": null
   },
   {
     "Scale": "large-scale",
@@ -921,7 +948,8 @@
     "Link": "https://ec.europa.eu/assets/cinea/project_fiches/innovation_fund/101132835.pdf",
     "Full Description": "EVEREST is a carbon capture and storage project for the Rheinkalk Werk Flandersbach lime plant in Wülfrath, Germany, developed by Rheinkalk GmbH, part of Lhoist. The project combines retrofit capture on existing lime kilns with new oxyfuel kiln capacity and links the plant to CO₂ transport and offshore geological storage. Official project data show an Innovation Fund grant of EUR 228.7 million, an expected GHG emissions avoidance of 9.309295 MtCO₂e over the first ten years of operation, a start date of 1 January 2024, and entry into operation on 30 September 2031.",
     "Technology Type": "The project integrates two capture routes at the Flandersbach lime plant: a dedicated flue-gas CO₂ capture unit connected to existing rotary kilns and parallel flow regenerating kilns, and three new oxyfuel PFR kilns designed to produce a high-CO₂ process stream. Air Liquide’s Cryocap technology is referenced by Lhoist for capture, concentration, purification and compression, followed by liquefaction and transport through a chain including pipeline, rail and/or ship to offshore geological storage in the North Sea. The project is designed around about 1.5 MtCO₂ per year captured and stored, with official GHG avoidance of 9.309295 MtCO₂e over the first ten years of operation",
-    "Status": "Pre-FID / Advanced Development"
+    "Status": "Pre-FID / Advanced Development",
+    "Unnamed: 31": null
   },
   {
     "Scale": "pilots",
@@ -954,7 +982,8 @@
     "Link": "https://www.plagazi.com/projects/gavle-circular-park/",
     "Full Description": "The IF23 pilot project is a waste-to-hydrogen project developed by Plagazi in Sweden through the beneficiary Köping Hydrogen Park AB and now publicly presented as Gävle Circular Park in Forsbacka, near Gävle. It converts non-recyclable waste into hydrogen through plasma gasification and captures the process CO₂ for storage or utilisation. The official pilot phase is described at up to 4,000 t/yr of hydrogen from 22,000 t/yr of waste, while Plagazi’s later public site plan describes a larger two-phase commercial build-out in Forsbacka.",
     "Technology Type": "The process uses high-temperature plasma arc gasification to convert non-recyclable waste into syngas, followed by hydrogen recovery and CO₂ capture to produce sustainable hydrogen with a net-negative or very low-carbon profile. The official IF23 pilot phase is specified at 22,000 t/yr waste input and up to 4,000 t/yr hydrogen, while later public site planning for Gävle Circular Park indicates a larger phased configuration with capture of liquid CO₂ for storage or utilisation and surplus heat export to district heating.",
-    "Status": "FEED & Permitting"
+    "Status": "FEED & Permitting",
+    "Unnamed: 31": null
   },
   {
     "Scale": "large-scale",
@@ -987,7 +1016,8 @@
     "Link": "https://ec.europa.eu/assets/cinea/project_fiches/innovation_fund/101133005.pdf",
     "Full Description": "GeZero is a large-scale CCS project at Heidelberg Materials’ cement plant in Geseke, Germany, designed to capture approximately 700,000 tonnes of CO₂ per year using a second-generation oxyfuel kiln combined with cryogenic CO₂ purification. The project aims to establish a full CCS value chain for inland industrial sites, including on-site capture, liquefaction, and rail-based transport to a CO₂ hub, followed by shipment to offshore storage in the North Sea. It represents one of the first attempts to deploy CCS at scale in a landlocked cement facility in Europe.",
     "Technology Type": "Oxyfuel-based carbon capture using a second-generation oxyfuel kiln combined with cryogenic CO₂ purification (~0.7 MtCO₂/year), with interim storage and rail transport to a CO₂ hub and onward shipment to offshore geological storage in the North Sea.",
-    "Status": "Pre-FID / Advanced Development"
+    "Status": "Pre-FID / Advanced Development",
+    "Unnamed: 31": null
   },
   {
     "Scale": "large-scale",
@@ -1020,7 +1050,8 @@
     "Link": "https://www.go4ecoplanet.com/",
     "Full Description": "GO4ECOPlanet is a large-scale CCS project at Holcim’s Kujawy cement plant in Poland, aiming to capture approximately 1 MtCO₂ per year using Air Liquide’s Cryocap™ FG cryogenic capture technology. The project is designed to enable near-complete decarbonisation of cement production by combining carbon capture with circular production processes and alternative raw materials. Captured CO₂ will be liquefied and transported to a coastal terminal for shipment to offshore geological storage, forming part of a broader CCS value chain.",
     "Technology Type": "Air Liquide CryocapTM FG (high-pressure cryogenic CO₂ separation from cement flue gas, 99.9% purity) at Holcim Kujawy cement plant; CO₂ liquefied; rail transport to Gdańsk port; ship to North Sea geological storage; 1 Mt/yr",
-    "Status": "Pre-FID / Advanced Development"
+    "Status": "Pre-FID / Advanced Development",
+    "Unnamed: 31": null
   },
   {
     "Scale": "large-scale",
@@ -1053,7 +1084,8 @@
     "Link": "https://go4zero.com",
     "Full Description": "GO4ZERO is a cement decarbonisation project developed by Holcim Belgique SA at the Obourg cement plant in Wallonia, Belgium. The project combines a new air-oxyfuel switchable clinker production line with carbon capture, purification, pipeline transport, liquefaction and offshore geological storage. Public project documentation states an annual CO₂ capture volume of about 1.1 Mt and total avoided greenhouse gas emissions of 10.045932 MtCO₂e over the project period.",
     "Technology Type": "The project replaces existing clinker production with an air-oxyfuel switchable kiln that increases CO₂ concentration in the flue gas, followed by Air Liquide Cryocap™ OXY carbon purification/capture. The purified CO₂ stream is transported by pipeline through the Belgian CO₂ network toward an export hub such as Antwerp@C, where it is liquefied and transferred to ships for permanent offshore geological storage in the North Sea. The published capture scale is about 1.1 MtCO₂ per year, with project entry into operation planned for the end of 2028.",
-    "Status": "On Hold / Cancelled"
+    "Status": "On Hold / Cancelled",
+    "Unnamed: 31": null
   },
   {
     "Scale": "large-scale",
@@ -1086,7 +1118,8 @@
     "Link": "https://ec.europa.eu/assets/cinea/project_fiches/innovation_fund/101133150.pdf",
     "Full Description": "GREEN MEIGA is a large-scale e-methanol project led by Iberdrola Clientes with FORESA participation in Begonte, Lugo, Galicia, Spain. The project combines 151 MW of electrolysis with captured CO₂ to produce 100,000 tonnes per year of e-methanol. Public project materials indicate around 20,000 tonnes per year of renewable hydrogen production, about 152,698 tonnes per year of CO₂ use, and total avoided greenhouse-gas emissions of 2.901 million tonnes CO₂e over the first ten years of operation",
     "Technology Type": "The project integrates a hybrid renewable-hydrogen block based on alkaline, PEM, SOEC and co-SOEC electrolysis with a CO₂ supply chain that combines advanced capture approaches, including enzyme-based capture and direct air capture, together with biogenic CO₂ handling described by Iberdrola and Spanish public sources; the hydrogen and conditioned CO₂ are fed to an integrated methanol synthesis plant designed for 100,000 t/yr e-methanol output, with about 152,698 t/yr CO₂ input and around 151 MW electrolysis capacity.",
-    "Status": "Engineering & Design"
+    "Status": "Engineering & Design",
+    "Unnamed: 31": null
   },
   {
     "Scale": "large-scale",
@@ -1119,7 +1152,8 @@
     "Link": "https://greensandfuture.com/",
     "Full Description": "Greensand Future is a large-scale CO₂ transport and storage project in Denmark led by INEOS, aiming to establish the European Union’s first operational offshore CO₂ storage facility. The project will transport liquefied CO₂ from industrial emitters to a terminal at the Port of Esbjerg, from where it will be shipped to the offshore Nini West depleted oil field in the Danish North Sea for permanent geological storage. Initial operations are expected to begin around 2025–2026 with a storage capacity of approximately 0.4 MtCO₂ per year, with plans to scale significantly in later phases.",
     "Technology Type": "CO₂ transport and storage infrastructure involving collection of liquefied CO₂ from industrial emitters, temporary storage and handling at the Port of Esbjerg terminal, ship transport to offshore facilities, and injection into the depleted Nini West oil reservoir in the Danish North Sea for permanent geological storage; scalable system designed to expand from ~0.4 MtCO₂/year to multi-megaton capacity.",
-    "Status": "Under Construction"
+    "Status": "Under Construction",
+    "Unnamed: 31": null
   },
   {
     "Scale": "large-scale",
@@ -1152,7 +1186,8 @@
     "Link": "https://ec.europa.eu/assets/cinea/project_fiches/innovation_fund/101191016.pdf",
     "Full Description": "H2BE is a low-carbon hydrogen project developed by Electrabel and Equinor at the Rodenhuize industrial site in Desteldonk, Ghent, Belgium. The project comprises a 1 GW hydrogen production facility based on autothermal reforming with integrated carbon capture, designed to supply more than 210,000 tonnes of hydrogen per year. Captured CO₂ is transported for permanent geological storage on the Norwegian continental shelf",
     "Technology Type": "Natural gas is converted to hydrogen in a 1 GW autothermal reforming plant at the Rodenhuize site. The process includes integrated point-source carbon capture with a capture rate above 95% during hydrogen production, after which the captured CO₂ is conditioned for transport and sent to permanent offshore geological storage on the Norwegian continental shelf; the facility is designed to produce more than 210 kt H₂ per year.",
-    "Status": "Pre-FID / Advanced Development"
+    "Status": "Pre-FID / Advanced Development",
+    "Unnamed: 31": null
   },
   {
     "Scale": "pilots",
@@ -1185,7 +1220,8 @@
     "Link": "https://ec.europa.eu/assets/cinea/project_fiches/innovation_fund/101251312.pdf",
     "Full Description": "HuCCSar is an onshore CCS demonstration in Poland led by Górażdże Cement S.A., part of Heidelberg Materials Polska, with Schlumberger Poland. The project is linked to the Górażdże cement plant and develops a domestic CO₂ hub, pipeline and underground onshore storage system in Poland. Public project factsheets describe storage capacity above 17,000 tonnes of CO₂ per year and permanent storage of 51,711 tonnes of CO₂ over the course of the project",
     "Technology Type": "HuCCSar integrates a domestic CCS chain consisting of captured industrial CO₂ from the Górażdże cement value chain, transport through a purpose-built pipeline system, injection into modular onshore underground storage facilities in Poland, and advanced Monitoring, Measurement and Verification systems providing high-resolution, real-time monitoring and control; the pilot is designed for storage capacity above 17 ktCO₂ per year and 51.7 ktCO₂ permanent storage over the project period",
-    "Status": "Pre-FID / Advanced Development"
+    "Status": "Pre-FID / Advanced Development",
+    "Unnamed: 31": null
   },
   {
     "Scale": "large-scale",
@@ -1218,7 +1254,8 @@
     "Link": "https://ifestos.eu/",
     "Full Description": "IFESTOS is a large-scale CCS project at TITAN’s Kamari cement plant in Greece, near Athens, designed to establish one of Europe’s largest cement carbon capture value chains. The project will retrofit the plant with an innovative capture configuration combining first- and second-generation oxyfuel technologies with cryogenic capture to collect approximately 1.9 MtCO₂ per year. Captured CO₂ will be liquefied and transported to permanent geological storage in the Mediterranean.",
     "Technology Type": "Hybrid oxyfuel + cryogenic carbon capture at the TITAN Kamari cement plant, combining first- and second-generation oxyfuel technologies with cryogenic capture to achieve about 1.9 MtCO₂/year capture; captured CO₂ is liquefied and intended for transport to permanent geological storage in the Mediterranean as part of a large CCS value chain.",
-    "Status": "FEED & Permitting"
+    "Status": "FEED & Permitting",
+    "Unnamed: 31": null
   },
   {
     "Scale": "medium-scale",
@@ -1251,7 +1288,8 @@
     "Link": "https://www.innozhero.com/",
     "Full Description": "INNOZHERO is a waste-to-energy carbon capture project at the Filbornaverket CHP plant in Helsingborg, Sweden, developed by Öresundskraft. The project will capture approximately 0.2 MtCO₂ per year from mixed fossil and biogenic waste streams, enabling both emissions reduction and partial carbon removal. The captured CO₂ will be liquefied and transported via truck and ship to offshore geological storage in the Danish North Sea (Greensand project), one of Europe’s emerging operational storage sites. The project is in an advanced development phase, with operation targeted for 2028.",
     "Technology Type": "Aker Carbon Capture Just Catch™ post-combustion amine capture at Öresundskraft Filbornaverket WtE CHP plant, Helsingborg. CO₂ transported by truck/ship to INEOS Greensand Nini West offshore reservoir, Danish North Sea. ",
-    "Status": "FEED & Permitting"
+    "Status": "FEED & Permitting",
+    "Unnamed: 31": null
   },
   {
     "Scale": "large-scale",
@@ -1284,7 +1322,8 @@
     "Link": "https://ec.europa.eu/assets/cinea/project_fiches/innovation_fund/101133015.pdf",
     "Full Description": "IRIS is a refinery decarbonisation project developed by Motor Oil at the Agioi Theodoroi refinery in Greece. It captures CO₂ from the steam methane reformer flue gas to produce ultra-low-carbon hydrogen for refinery and transport uses, while a smaller share of captured CO₂ is combined with renewable hydrogen to produce e-methanol. The project is designed for about 0.85 MtCO₂ per year of capture and 8.585 MtCO₂e of avoided emissions over the first ten years of operation.",
     "Technology Type": "The project applies post-combustion CO₂ capture to the refinery steam methane reformer flue gas, with an official capture rate of 95%. Most of the captured CO₂ is directed to offshore geological storage in the North Aegean Sea, while a small fraction is routed with renewable hydrogen to an e-methanol synthesis unit producing about 10,000 t/yr of e-methanol. The integrated system is designed around approximately 0.85 MtCO₂/yr capture",
-    "Status": "Engineering & Design"
+    "Status": "Engineering & Design",
+    "Unnamed: 31": null
   },
   {
     "Scale": "large-scale",
@@ -1317,7 +1356,8 @@
     "Link": "https://be.airliquide.com/nl/energietransitie-de-benelux/co2-management/kairosc",
     "Full Description": "Kairos@C is a large-scale CCS project in the Port of Antwerp developed by Air Liquide and BASF to capture CO₂ from hydrogen, ammonia and ethylene oxide production units on the Zandvliet industrial platform. The project includes capture, pipeline transport within the port, liquefaction and export, followed by ship transport to permanent North Sea geological storage. It is designed to avoid about 14 MtCO₂e over the first ten years of operation. ",
     "Technology Type": "Kairos@C integrates Cryocap™ cryogenic CO₂ capture and purification across five industrial sources—two hydrogen plants, two ethylene oxide plants, and one ammonia plant—on the Antwerp Zandvliet platform. Captured CO₂ is transported by pipeline to a large-scale port liquefaction and export terminal, loaded onto ships, and sent to permanent geological storage sites in the North Sea. The system is designed at about 1.4 MtCO₂/yr and is scalable in phases",
-    "Status": "On Hold / Cancelled"
+    "Status": "On Hold / Cancelled",
+    "Unnamed: 31": null
   },
   {
     "Scale": "large-scale",
@@ -1350,7 +1390,8 @@
     "Link": "https://www.holcim.com/what-we-do/green-operations/ccus/kodeco",
     "Full Description": "KOdeCO is a carbon capture project at Holcim’s Koromačno cement plant in Croatia, aiming to capture approximately 3.7 MtCO2e. The project will retrofit the plant with cryogenic CO₂ capture technology and is designed to achieve net-zero cement production. The captured CO₂ is planned to be liquefied and transported by ship to offshore storage sites in the Mediterranean, although the full transport and storage chain is not yet finalised.",
     "Technology Type": "The project uses Air Liquide’s Cryocap™ FG technology, a cryogenic CO₂ capture process that separates and liquefies CO₂ directly from flue gas. This approach integrates capture and purification in a single system and avoids the use of conventional solvent-based (amine) processes.. Liquefied CO₂ loaded onto vessels and shipped to first permanent offshore geological storage in the Mediterranean Sea. ",
-    "Status": "Pre-FID / Advanced Development"
+    "Status": "Pre-FID / Advanced Development",
+    "Unnamed: 31": null
   },
   {
     "Scale": "large-scale",
@@ -1383,7 +1424,8 @@
     "Link": "https://www.aramislaunchstores.com/",
     "Full Description": "LaunchStores4AramisCCS is a large-scale offshore CO₂ storage project in the Netherlands led by TotalEnergies, forming part of the Aramis CCS value chain. The project focuses on developing two offshore storage sites (L4A and K14) in depleted gas fields under the North Sea, enabling the permanent storage of CO₂ from industrial emitters. CO₂ will be transported via the Aramis pipeline network from a central hub at the Maasvlakte in the Port of Rotterdam to offshore injection platforms. The project is designed to store up to 5 MtCO₂ per year and is expected to avoid over 30 MtCO₂ in its first ten years of operation.",
     "Technology Type": "Offshore geological CO₂ storage system in depleted gas fields (L4A and K14) involving transport of compressed CO₂ via pipeline from an onshore hub to offshore injection platforms, followed by injection at depths of 3–4 km below the North Sea seabed; incorporates Friction-Controlled Dual-Phase (FCDP) injection technology to enable stable and efficient CO₂ storage at scale (~5 MtCO₂/year).",
-    "Status": "Pre-FID / Advanced Development"
+    "Status": "Pre-FID / Advanced Development",
+    "Unnamed: 31": null
   },
   {
     "Scale": "medium-scale",
@@ -1416,7 +1458,8 @@
     "Link": "https://ec.europa.eu/assets/cinea/project_fiches/innovation_fund/101251756.pdf",
     "Full Description": "Leopard is a Carmeuse project at the Aisemont lime plant in Fosses-la-Ville, Belgium, to decarbonise more than 80,000 tonnes per year of lime production. It combines bioenergy with carbon capture and storage and is expected to avoid 788,439 tonnes CO₂e over its first ten years of operation.",
     "Technology Type": "The project retrofits a vertical lime kiln with a hybrid capture configuration combining kiln-process modification for CO₂ preconcentration and a membrane-based, fully electrified carbon-capture step. Bioenergy is used as the kiln’s main fuel source, and the captured CO₂ is intended for transport and permanent geological storage via planned Belgian/Northwest European CCS infrastructure. ",
-    "Status": "Pre-FID / Advanced Development"
+    "Status": "Pre-FID / Advanced Development",
+    "Unnamed: 31": null
   },
   {
     "Scale": "pilots",
@@ -1449,7 +1492,8 @@
     "Link": "https://ec.europa.eu/assets/cinea/project_fiches/innovation_fund/101191543.pdf",
     "Full Description": "MetZero is a Norwegian industrial pilot project led by NG Nordic AS, with Cruda AS and other partners, to produce biocarbon from wood waste and low-value biomass for use as a fossil reductant substitute in metallurgical production. Public project information places the facility in the Øra industrial cluster in Fredrikstad, and the 2026 CINEA fiche reports 414,520 tonnes CO₂e avoided over the first ten years of operation.",
     "Technology Type": "The project converts waste wood and low-value biomass into biocarbon for metallurgical use through pyrolysis followed by agglomeration, producing a biogenic reductant with high carbon density and reactivity suitable for silicon and manganese production. The public fiche states output of 10 kt/year of biocarbon and 36 GWh of carbon-neutral energy, with no direct CO₂ capture, transport or storage step disclosed.",
-    "Status": "Engineering & Design"
+    "Status": "Engineering & Design",
+    "Unnamed: 31": null
   },
   {
     "Scale": "large-scale",
@@ -1482,7 +1526,8 @@
     "Link": "https://olympusccs.eu/",
     "Full Description": "OLYMPUS is a large-scale CCS project at Holcim’s Milaki cement plant in Evia, Greece, designed to capture approximately 1 MtCO₂ per year using a hybrid system combining OxyCalciner technology and Air Liquide’s Cryocap™ FG cryogenic capture. The project will retrofit the existing cement plant to achieve around 95% emissions reduction and produce near-zero cement at industrial scale. Captured CO₂ will be liquefied and transported by ship to offshore geological storage at the Prinos site in the Aegean Sea. Construction officially started in May 2025, with operation expected by 2029.",
     "Technology Type": "Hybrid oxyfuel-based carbon capture using OxyCalciner combined with Cryocap™ FG cryogenic purification (~1 MtCO₂/year), with CO₂ liquefaction and ship transport to offshore geological storage at the Prinos site in the Aegean Sea.",
-    "Status": "Engineering & Design"
+    "Status": "Engineering & Design",
+    "Unnamed: 31": null
   },
   {
     "Scale": "medium-scale",
@@ -1515,7 +1560,8 @@
     "Link": "https://ec.europa.eu/assets/cinea/project_fiches/innovation_fund/101251834.pdf",
     "Full Description": "PP2XH (Pärnu P2X Hub) is a medium-scale renewable e-methanol and hydrogen project developed by MBH Power Energy (S) Pte. Ltd. with Pärnu P2X Hub OÜ in Pärnu Airport, Eametsa village, Tori municipality, Estonia. The project integrates on-site and contracted renewable electricity with hydrogen production and e-methanol synthesis, using biogenic CO₂ from local biomethane plants as carbon feedstock. Public 2025–2026 sources indicate annual production of about 10,000 tonnes of e-methanol and 2,000 tonnes of renewable hydrogen, with expected GHG emissions avoidance of about 155,063 tCO₂e.",
     "Technology Type": "The project combines renewable electricity supply, a smart microgrid, a 25 MW alkaline electrolyser, hydrogen compression and storage, and a methanol synthesis unit that reacts renewable hydrogen with captured biogenic CO₂ from local biomethane plants to produce about 10,000 t/y e-methanol, while also supplying about 2,000 t/y renewable hydrogen for transport applications. The power system described in 2025 sources includes 51 MWp solar, 18 MW wind under PPA, and a 10 MW renewable grid connection for backup and balancing",
-    "Status": "Early Development"
+    "Status": "Early Development",
+    "Unnamed: 31": null
   },
   {
     "Scale": "large-scale",
@@ -1548,7 +1594,8 @@
     "Link": "https://www.perstorp.com/en/about/sustainability/enable/project_air",
     "Full Description": "Project Air is a large-scale Innovation Fund project led by Perstorp Oxo AB at Perstorp’s Stenungsund chemicals site in Sweden. The project integrates carbon capture and utilisation with renewable hydrogen production to manufacture 200,000 tonnes of sustainable methanol per year for use as a chemical feedstock, replacing fossil methanol in Perstorp’s European operations. The Innovation Fund factsheet reports 4.06 MtCO₂e of greenhouse-gas avoidance over ten years, and the project is planned to enter operation in 2027.",
     "Technology Type": "CO₂ is captured from Perstorp’s existing chemical production processes (industrial point source) and combined with renewable hydrogen produced via a large-scale electrolysis unit powered by renewable electricity, along with biomethane and residue streams, to produce synthesis gas that is converted into methanol via catalytic synthesis; this represents a large-scale CCU Power-to-X system where CO₂ is utilised as a feedstock for sustainable methanol production (~200 kt methanol/year).",
-    "Status": "FEED & Permitting"
+    "Status": "FEED & Permitting",
+    "Unnamed: 31": null
   },
   {
     "Scale": "medium-scale",
@@ -1581,7 +1628,8 @@
     "Link": "https://biocirc.com/projects",
     "Full Description": "RECLAIM is a BioCirc project at the Vesthimmerland biogas plant in Farsø, Denmark, converting an existing biogas site into an integrated facility producing RFNBO e-methanol, biomethane and digestate-based fertilizer from agricultural biomass residues and renewable electricity. The official project factsheet states planned annual output of 16,000 tonnes of e-methanol, 22.7 million Nm³ of biomethane and 760,000 tonnes of digestate fertilizer.",
     "Technology Type": "Anaerobic digestion of agricultural residues produces biogas upgraded to biomethane, with separated biogenic CO₂ combined with renewable hydrogen from electrolysis to synthesise RFNBO methanol; digestate is recovered as fertiliser. Output: 16,000 t/yr methanol, 22.7 million Nm³/yr biomethane, 760,000 t/yr digestate; 670,780 tCO₂e avoided over 10 years.",
-    "Status": "Engineering & Design"
+    "Status": "Engineering & Design",
+    "Unnamed: 31": null
   },
   {
     "Scale": "medium-scale",
@@ -1614,7 +1662,8 @@
     "Link": "https://reverion.com/en/projects/resilience/",
     "Full Description": "RESILIENCE is a manufacturing scale-up project developed by Reverion GmbH in Eresing, Germany, focused on expanding production of modular reversible power plants for biogas applications. The project adds production, assembly and factory testing capacity for rSOC-based units that operate with electrical efficiency of up to 80% and are designed for deployment at biogas plants. Public Innovation Fund documentation reports 2.407 MtCO₂e of expected avoided emissions by 2035.",
     "Technology Type": "The technology is a containerised reversible Solid Oxide Cell (rSOC) system that operates in fuel-cell mode to convert biogas into electricity at up to 80% electrical efficiency and in electrolysis mode to convert electricity into hydrogen-based energy carriers. During biogas conversion, the process separates a concentrated CO₂ stream that is suitable for utilisation or geological storage. The RESILIENCE project scales manufacturing of these units through expanded component preparation, specialised module assembly, final assembly and factory acceptance testing at Reverion’s Eresing site.",
-    "Status": "Early Development"
+    "Status": "Early Development",
+    "Unnamed: 31": null
   },
   {
     "Scale": "large-scale",
@@ -1647,7 +1696,8 @@
     "Link": "https://restart-concertation.eu/",
     "Full Description": "ReSTart is a large-scale Power-to-Liquid sustainable aviation fuel project developed by Verso Energy in Tartas and Bégaar, Landes, France. The project integrates capture of 334,000 t/yr of biogenic CO₂ from RYAM’s Tartas cellulose site with on-site production of 48,000 t/yr of renewable hydrogen, conversion to 223,000 t/yr of e-methanol, and upgrading to 81,000 t/yr of e-SAF for supply to major Western European aviation markets",
     "Technology Type": "Biogenic CO₂ emitted from RYAM’s biomass boilers at Tartas is captured and combined with hydrogen produced by water electrolysis using a dedicated high-voltage power connection of at least 380 MW. The CO₂ and H₂ are synthesised into e-methanol, which is then upgraded through a methanol-to-jet (MTJ) route, with Honeywell’s eFining technology selected for Verso Energy’s e-SAF platform. Public project material states design capacities of 334 kt/yr CO₂ captured and utilised, 48 kt/yr H₂, 223 kt/yr e-methanol, and 81 kt/yr e-SAF",
-    "Status": "Early Development"
+    "Status": "Early Development",
+    "Unnamed: 31": null
   },
   {
     "Scale": "large-scale",
@@ -1680,7 +1730,8 @@
     "Link": "https://climate.ec.europa.eu/document/download/0b0c09d5-4b1d-4ad3-abe7-57e68a53a0c2_en?filename=if_pf_2022_sharc_en.pdf&prefLang=fr ",
     "Full Description": "SHARC will decarbonise Neste’s Porvoo refinery by replacing grey hydrogen with green and blue hydrogen and integrating CCS to capture and store CO₂ offshore.",
     "Technology Type": "Post-combustion amine scrubbing CO₂ capture at Neste Porvoo refinery (fossil + biogenic CO₂); liquid CO₂ ship transport to North Sea geological storage; green + blue H₂ co-production; 0.4 Mt/yr",
-    "Status": "On Hold / Cancelled"
+    "Status": "On Hold / Cancelled",
+    "Unnamed: 31": null
   },
   {
     "Scale": "small-scale",
@@ -1713,7 +1764,8 @@
     "Link": "https://climate.ec.europa.eu/system/files/2022-07/if_pf_2021_silverstone_en.pdf",
     "Full Description": "Silverstone is a carbon capture and geological storage project developed by Carbfix in cooperation with ON Power at the Hellisheiði geothermal power plant in Iceland. The project captures CO₂ from geothermal power generation, dissolves it in water, and stores it underground in basalt through mineralisation. Public project sources describe total annual capture and storage at about 34,000 tCO₂ after scale-up, with around 150,000 tonnes of CO₂ stored over the project’s operational phase, while the updated European Commission factsheet reports 172,415 tCO₂e of expected GHG emissions avoidance.",
     "Technology Type": "Carbfix mineralisation: CO₂ absorbed from geothermal plant exhaust dissolved in water; injected into basalt rock; permanently mineralised to carbonate within 2 years.",
-    "Status": "Operational"
+    "Status": "Operational",
+    "Unnamed: 31": null
   },
   {
     "Scale": "pilots",
@@ -1746,7 +1798,8 @@
     "Link": "https://ec.europa.eu/assets/cinea/project_fiches/innovation_fund/101250913.pdf",
     "Full Description": "SLALOM 2.0 is a pilot CCUS project developed by LanzaTech with Eramet Norway at Herøya Industrial Park in Porsgrunn, Norway. The project converts carbon-monoxide-rich off-gases from Eramet’s manganese smelter into ethanol and produces a concentrated CO₂ stream for liquefaction and permanent geological storage in the North Sea. Publicly disclosed outputs include 23.5 kt/year of ethanol and 126 kt/year of liquefied CO₂, with total greenhouse-gas avoidance of 1,698,175 tCO₂e over the first ten years.",
     "Technology Type": "The project applies LanzaTech’s gas-fermentation process to CO-rich industrial off-gases from manganese alloy production, using a higher-efficiency bioreactor and engineered microbes to convert part of the carbon into ethanol. The integrated plant also purifies and liquefies the concentrated CO₂ tail gas stream for transport and permanent geological storage in the North Sea. The disclosed performance is 23.5 kt/year ethanol output, 126 kt/year liquefied CO₂, 27% of input carbon converted into fermentation products, 69% permanently stored, and 97% of carbon sent to the project captured within the integrated CCUS configuration.",
-    "Status": "Early Development"
+    "Status": "Early Development",
+    "Unnamed: 31": null
   },
   {
     "Scale": "large-scale",
@@ -1779,7 +1832,8 @@
     "Link": "https://ec.europa.eu/assets/cinea/project_fiches/innovation_fund/101191516.pdf",
     "Full Description": "STARFISH is a large-scale offshore CO₂ storage project, part of the Havstjerne carbon storage development, led by Harbour Energy in partnership with Stella Maris CCS. The project will establish a novel CO₂ storage solution based on ship transport and direct offshore injection, eliminating the need for fixed pipeline infrastructure. CO₂ from multiple industrial sources will be transported by specialised carrier vessels and injected directly into a deep saline aquifer in the Havstjerne reservoir via a floating injection unit. The project is designed to store approximately 42.75 MtCO₂ over its first ten years of operation and to provide open-access storage services across Europe.",
     "Technology Type": "Offshore geological CO₂ storage system using ship-based transport and direct injection via a floating direct injection unit (FDIU), enabling CO₂ carrier vessels to offload and inject CO₂ directly into a deep saline aquifer (Havstjerne reservoir) without fixed pipeline infrastructure; open-access storage model with ~4.3 MtCO₂/year capacity.",
-    "Status": "Pre-FID / Advanced Development"
+    "Status": "Pre-FID / Advanced Development",
+    "Unnamed: 31": null
   },
   {
     "Scale": "pilots",
@@ -1812,7 +1866,8 @@
     "Link": "https://www.hynamics.com/en/our-projects/take-kair",
     "Full Description": "TAKE KAIR is a French pilot-scale Power-to-Liquid e-fuel project led by Hynamics to produce synthetic aviation fuel and e-naphtha at Donges in the Nantes Saint-Nazaire port area. The project uses renewable and low-carbon hydrogen together with about 160,000 tonnes per year of biogenic CO₂ sourced from the Saint-Pierre-la-Cour cement plant, and is designed to produce about 39,000 tonnes per year of e-kerosene and 11,000 tonnes per year of e-naphtha",
     "Technology Type": "The project captures and certifies a biogenic CO₂ stream from the Saint-Pierre-la-Cour cement plant, transports that CO₂ to the Donges e-fuel plant, produces renewable/low-carbon hydrogen by water electrolysis, converts CO₂ and H₂ to syngas via reverse water-gas shift, then synthesises liquid hydrocarbons through Fischer–Tropsch followed by refining into e-kerosene and e-naphtha; disclosed plant inputs and outputs include about 160 ktCO₂/yr feedstock, around 300 MW grid connection, about 1,700 GWh/yr electricity use, and output of roughly 39 kt/yr e-kerosene plus 11 kt/yr e-naphtha",
-    "Status": "Engineering & Design"
+    "Status": "Engineering & Design",
+    "Unnamed: 31": null
   },
   {
     "Scale": "large-scale",
@@ -1845,7 +1900,8 @@
     "Link": "https://ec.europa.eu/assets/cinea/project_fiches/innovation_fund/101191313.pdf",
     "Full Description": "TarraCO2 is a large-scale offshore CO₂ storage project led by Repsol Exploración in Spain. The project is designed to provide about 2 million tonnes per year of permanent offshore CO₂ storage capacity for hard-to-abate industrial emitters in the Tarragona area, with a total storage capacity of 54 million tonnes. The storage site is publicly described as being around 45 km offshore of Tarragona",
     "Technology Type": "TarraCO2 receives captured CO₂ from industrial sources in the Tarragona region, transports the CO₂ to an offshore storage site, and injects it for permanent geological storage in a subsea reservoir system; the publicly disclosed scale is about 2 MtCO₂/yr injection and 54 Mt total storage capacity, while the project factsheet positions it as offshore geological storage infrastructure serving the petrochemical, chemical, cement, and other hard-to-abate industries in north-eastern Spain",
-    "Status": "Pre-FID / Advanced Development"
+    "Status": "Pre-FID / Advanced Development",
+    "Unnamed: 31": null
   },
   {
     "Scale": "medium-scale",
@@ -1878,7 +1934,8 @@
     "Link": "https://ec.europa.eu/assets/cinea/project_fiches/innovation_fund/101250821.pdf",
     "Full Description": "The Thermolysis project, developed by Thermo Lysi S.A., is located in Livanates, Greece, and consists of a large-scale facility for recycling end-of-life tyres (ELTs) using pyrolysis technology. The plant processes up to approximately 45,000 tonnes of tyres per year into recovered carbon black, pyrolysis oil, and steel. The system converts waste tyres into secondary raw materials for industrial reuse while reducing landfill and incineration. The project is supported by the EU Innovation Fund and is implemented with Pyrum Innovations AG as the technology provider.",
     "Technology Type": "The process uses thermolysis (pyrolysis) of end-of-life tyres in an oxygen-free reactor system, where rubber is decomposed at elevated temperatures into solid recovered carbon black, liquid hydrocarbons (pyrolysis oil), and non-condensable syngas. The plant integrates multiple modular reactors (up to six units) with a total processing capacity of approximately 45 kt/year of tyres. The produced syngas is internally recycled to supply around 60% of the plant’s energy demand, improving energy efficiency. Outputs are upgraded and reused as industrial feedstocks, substituting fossil-derived materials.",
-    "Status": "Pre-FID / Advanced Development"
+    "Status": "Pre-FID / Advanced Development",
+    "Unnamed: 31": null
   },
   {
     "Scale": "large-scale",
@@ -1911,7 +1968,8 @@
     "Link": "https://ec.europa.eu/assets/cinea/project_fiches/innovation_fund/101133213.pdf",
     "Full Description": "TRISKELION is an e-methanol project developed by Forestal del Atlántico at Mugardos, A Coruña, Spain. The plant captures about 56,000 tonnes of CO₂ per year from CHP flue gas and combines it with renewable hydrogen from electrolysis to produce about 40,000 tonnes per year of e-methanol. The project is part of the EU Innovation Fund large-scale portfolio.",
     "Technology Type": "CCU e-methanol: biogenic CO₂ captured from Forestal del Atlántico forestry operations + renewable H₂ electrolysis + RFNBO methanol synthesis (MeOH); methanol for maritime transport decarbonisation; 56 kt/yr CO₂ input",
-    "Status": "FEED & Permitting"
+    "Status": "FEED & Permitting",
+    "Unnamed: 31": null
   },
   {
     "Scale": "large-scale",
@@ -1944,7 +2002,8 @@
     "Link": "https://www.vicat.com/news/vicat-group-launches-vaia-project-accelerator-decarbonization-ambitions",
     "Full Description": "VAIA is a cement CCS project developed by Vicat at its Montalieu-Vercieu cement plant in Isère, France. The project is designed to capture and permanently store about 1.2 MtCO₂ per year from cement production. Captured CO₂ is transported by pipeline along the Rhône Valley to the Fos Tonkin terminal at Fos-sur-Mer for liquefaction and shipment to a depleted gas reservoir in Italy for geological storage",
     "Technology Type": "Post-combustion CO₂ capture (electromechanical activation + electrified amine/post-combustion + heat integration) at Vicat Montalieu-Vercieu cement plant; CO₂ via repurposed SPESE oil pipeline → Lacq/Elengy terminal → geological storage in Italy (depleted gas); 1.2 Mt/yr",
-    "Status": "Pre-FID / Advanced Development"
+    "Status": "Pre-FID / Advanced Development",
+    "Unnamed: 31": null
   },
   {
     "Scale": "medium-scale",
@@ -1977,6 +2036,7 @@
     "Link": "https://ec.europa.eu/assets/cinea/project_fiches/innovation_fund/101252030.pdf",
     "Full Description": "VIPER is a pyrolysis biorefinery project developed by Vow Green Metals AS at Viken Park in Fredrikstad, Norway. The facility converts woody biomass residues into biocarbon, biochar and bio-oil, with a planned production capacity of approximately 30,000 tonnes per year of biocarbon for metallurgical applications. The project achieves greenhouse gas emission reductions of around 100 ktCO₂ per year by substituting fossil-based reducing agents and materials in industrial value chains.",
     "Technology Type": "Slow pyrolysis biorefinery (Vow Green Metals technology): woody biomass by-products → biocarbon (metallurgical reducing agent replacing fossil coke) + biochar (soil amendment) + bio-oil (bitumen replacement in asphalt); circular bioeconomy; GHG reduction via feedstock substitution",
-    "Status": "Early Development"
+    "Status": "Early Development",
+    "Unnamed: 31": null
   }
 ]

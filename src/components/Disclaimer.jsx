@@ -75,29 +75,29 @@ export default function Disclaimer({ hasSelection }) {
               }}
             >✕</button>
 
-            <div style={{ fontSize: '13px', color: 'var(--text2)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '10px' }}>
-              Disclaimer
-            </div>
-
-            <div style={{ fontSize: '16px', fontWeight: 700, color: 'var(--text)', marginBottom: '16px', lineHeight: 1.3 }}>
+            <div style={{ fontSize: '16px', color: 'var(--text2)', fontWeight: 700, marginBottom: '10px' }}>
               Data Sources & Accuracy
             </div>
 
-            <div style={{ fontSize: '13.5px', color: 'var(--text2)', lineHeight: 1.75, display: 'flex', flexDirection: 'column', gap: '12px' }}>
+            {/* <div style={{ fontSize: '16px', fontWeight: 500, color: 'var(--text2)', marginBottom: '16px', lineHeight: 1.3 }}>
+              Data Sources & Accuracy
+            </div> */}
+
+            <div style={{ fontSize: '13.5px', color: 'var(--text2)', lineHeight: 1.75, display: 'flex', flexDirection: 'column', gap: '12px', textAlign: 'justify' }}>
               <p>
                 All project data presented in this tool is sourced exclusively from publicly available information, including publications by the European Commission, CINEA, and official press releases and announcements of the company.
               </p>
               <p>
-                The data has been compiled, evaluated, and assessed by <strong style={{ color: 'var(--text)' }}>Carbon Management Europe</strong> to the best of our ability. While every effort has been made to ensure accuracy and completeness, the information may contain errors, omissions, or outdated figures.
+                The data has been compiled, evaluated, and assessed by Carbon Management Europe to the best of our ability. While every effort has been made to ensure accuracy and completeness, the information may contain errors, omissions, or outdated figures.
               </p>
               <p>
                 Project metrics such as CO₂ capture capacity, investment figures, and operational timelines are based on reported estimates and are subject to change. This tool is intended for informational and analytical purposes only.
               </p>
               <p>
-                In case of any discrepancies or questions regarding the data, please contact us at <a href="mailto:salman.muhammad@cmeurope.org" style={{ color: 'var(--accent2)' }}>salman.muhammad@cmeurope.org</a>.
+                The sector classification used in this tool refers to the industrial origin of the CO₂ (i.e., the sector from which CO₂ is captured or sourced), rather than the final product or application.
               </p>
               <p>
-                The <strong style={{ color: 'var(--text)' }}>sector classification</strong> used in this tool refers to the <strong style={{ color: 'var(--text)' }}>industrial origin of the CO₂</strong> (i.e., the sector from which CO₂ is captured or sourced), rather than the final product or application.
+                In case of any discrepancies or questions regarding the data, please contact us at <a href="mailto:salman.muhammad@cmeurope.org" style={{ color: 'var(--accent2)' }}>salman.muhammad@cmeurope.org</a>.
               </p>
             </div>
 

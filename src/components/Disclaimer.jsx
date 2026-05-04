@@ -102,7 +102,7 @@ export default function Disclaimer({ hasSelection }) {
             </div>
 
             <div style={{ marginTop: '24px', paddingTop: '16px', borderTop: '1px solid var(--border)', fontSize: '11px', color: 'var(--text3)' }}>
-              Last reviewed April 2026 · Carbon Management Europe
+              {/* Last reviewed April 2026 · Carbon Management Europe */}
             </div>
           </div>
         </div>

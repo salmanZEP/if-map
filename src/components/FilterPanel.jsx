@@ -285,7 +285,7 @@ export default function FilterPanel({ projects, filters, onFilterChange, isOpen,
         <div className={styles.section}>
           <button className={styles.collapseHeader} onClick={() => setCo2Open(o => !o)}>
             <label className={styles.sectionLabel} style={{ pointerEvents: 'none', marginBottom: 0 }}>
-              CO₂ Capture
+              CO₂ capture rate
               {filters.co2Min > 0 &&
                 <span className={styles.badge} style={{ marginLeft: 8 }}>min {filters.co2Min} Mt/yr</span>
               }

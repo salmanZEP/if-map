@@ -3,7 +3,7 @@ import json
 import os
 from datetime import datetime, timezone
 
-INPUT  = os.path.join(os.path.dirname(__file__), '../excel_data/Innovation_Fund_Projects_data - 130426.xlsx')
+INPUT  = os.path.join(os.path.dirname(__file__), '../excel_data/Innovation_Fund_Projects_data - 060526.xlsx')
 OUTPUT = os.path.join(os.path.dirname(__file__), '../public/data/projects.json')
 
 # Load Excel

@@ -4,9 +4,9 @@ export const STATUS_COLORS = {
   'FEED & Permitting':              '#2065d5',
   'Pre-FID / Advanced Development': '#818cf8',
   'Engineering & Design':           '#9f6cad',  // cyan
-  'Early Development':              '#735223',  // light cyan
+  'Early Development':              '#7e6137',  // light cyan
   'Grant Preparation':              '#deafe5',
-  'On Hold / Cancelled':            '#ef4444',
+  'On Hold / Cancelled':            '#ff0000',
 }
 
 export const CATEGORY_COLORS = {

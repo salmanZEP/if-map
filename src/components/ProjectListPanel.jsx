@@ -34,7 +34,7 @@ export default function ProjectListPanel({ projects, onProjectClick, selectedId,
         <>
           <div className={styles.sortBar}>
             <span className={styles.sortLabel}>Sort:</span>
-            {[['grant', 'Grant'], ['co2', 'CO₂'], ['name', 'Name'], ['country', 'Country']].map(([k, l]) => (
+            {[['grant', 'Grant'], ['co2', 'Capture rate'], ['name', 'Name'], ['country', 'Country']].map(([k, l]) => (
               <button
                 key={k}
                 className={`${styles.sortBtn} ${sort === k ? styles.active : ''}`}

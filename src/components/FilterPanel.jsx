@@ -237,7 +237,7 @@ export default function FilterPanel({ projects, filters, onFilterChange, isOpen,
         <div className={styles.section}>
           <button className={styles.collapseHeader} onClick={() => setGrantOpen(o => !o)}>
             <label className={styles.sectionLabel} style={{ pointerEvents: 'none', marginBottom: 0 }}>
-              Grant Size
+              Grant size
             </label>
             <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
               style={{ transform: grantOpen ? 'rotate(180deg)' : 'none', transition: 'transform 0.2s', flexShrink: 0 }}>
@@ -316,7 +316,7 @@ export default function FilterPanel({ projects, filters, onFilterChange, isOpen,
         <div className={styles.section}>
           <button className={styles.collapseHeader} onClick={() => setCallOpen(o => !o)}>
             <label className={styles.sectionLabel} style={{ pointerEvents: 'none', marginBottom: 0 }}>
-              Funding Call
+              Funding call
               {(filters.calls || []).length > 0 &&
                 <span className={styles.badge} style={{ marginLeft: 8 }}>{filters.calls.length}</span>
               }

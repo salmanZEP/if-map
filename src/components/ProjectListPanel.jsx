@@ -1,9 +1,10 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { getStatusColor, getCategoryColor, formatEuro } from '../constants.js'
 import styles from './ProjectListPanel.module.css'
 
 export default function ProjectListPanel({ projects, onProjectClick, selectedId, filterOpen }) {
   const [open, setOpen] = useState(false)
+  useEffect(() => { if (filterOpen) setOpen(true)}, [filterOpen])
   const [sort, setSort] = useState('grant')
 
   const sorted = [...projects].sort((a, b) => {

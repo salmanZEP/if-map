@@ -9,7 +9,7 @@ const STATUSES = [
   'Pre-FID / Advanced Development',
   'Engineering & Design',
   'Early Development',
-  'Grant Preparation',
+  // 'Grant Preparation',
   'On Hold / Cancelled',
 ]
 

@@ -4,8 +4,8 @@ import { STATUS_COLORS } from '../constants.js'
 import styles from './Legend.module.css'
 
 const STATUS_DESCRIPTIONS = {
-  'Grant Preparation':
-    'Grant application submitted or in preparation; no agreement signed. Project likely awaits CINEA evaluation or selection outcome.',
+  // 'Grant Preparation':
+  //   'Grant application submitted or in preparation; no agreement signed. Project likely awaits CINEA evaluation or selection outcome.',
   'Early Development':
     'Grant agreement signed; project likely in early-award or front-end loading phase. Includes manufacturing and scale-up at early implementation.',
   'Engineering & Design':

@@ -3,9 +3,9 @@ export const STATUS_COLORS = {
   'Under Construction':             '#fbfb00',
   'FEED & Permitting':              '#2065d5',
   'Pre-FID / Advanced Development': '#818cf8',
-  'Engineering & Design':           '#9f6cad',  // cyan
-  'Early Development':              '#7e6137',  // light cyan
-  'Grant Preparation':              '#deafe5',
+  'Engineering & Design':           '#9c63ab',  // cyan
+  'Early Development':              '#f197ff',  // light cyan
+  // 'Grant Preparation':              '#deafe5',
   'On Hold / Cancelled':            '#ff0000',
 }
 

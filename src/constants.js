@@ -1,12 +1,12 @@
 export const STATUS_COLORS = {
-  'Operational':                    '#417553',
+  'Operational':                    '#41b168',
   'Under Construction':             '#fbfb00',
   'FEED & Permitting':              '#2065d5',
   'Pre-FID / Advanced Development': '#818cf8',
   'Engineering & Design':           '#9c63ab',  // cyan
   'Early Development':              '#f197ff',  // light cyan
   // 'Grant Preparation':              '#deafe5',
-  'On Hold / Cancelled':            '#ff0000',
+  'On Hold / Cancelled':            '#ff0000d8',
 }
 
 export const CATEGORY_COLORS = {

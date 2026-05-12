@@ -73,13 +73,13 @@ export default function ProjectSidebar({ project, onClose }) {
         <div className={styles.metricsGrid}>
           {/* Annual metrics */}
           {!isNaN(parseFloat(project['CO₂ Capture (Mt/yr)'])) && parseFloat(project['CO₂ Capture (Mt/yr)']) > 0 &&
-            <MetricCard label="CO₂ Capture" value={parseFloat(project['CO₂ Capture (Mt/yr)']).toFixed(2)} sub="Mt/year" color="#c2d4ef"/>}
+            <MetricCard label="Annual CO₂ Capture" value={parseFloat(project['CO₂ Capture (Mt/yr)']).toFixed(2)} sub="Mt/year" color="#c2d4ef"/>}
           {!isNaN(parseFloat(project['CO₂ Avoid (Mt/yr)'])) && parseFloat(project['CO₂ Avoid (Mt/yr)']) > 0 &&
-            <MetricCard label="CO₂ Avoided" value={parseFloat(project['CO₂ Avoid (Mt/yr)']).toFixed(2)} sub="Mt/year" color="#c2d4ef"/>}
+            <MetricCard label="Annual CO₂ Avoided" value={parseFloat(project['CO₂ Avoid (Mt/yr)']).toFixed(2)} sub="Mt/year" color="#c2d4ef"/>}
           {!isNaN(parseFloat(project['CO₂ Seq (Mt/yr)'])) && parseFloat(project['CO₂ Seq (Mt/yr)']) > 0 &&
-            <MetricCard label="CO₂ Stored" value={parseFloat(project['CO₂ Seq (Mt/yr)']).toFixed(2)} sub="Mt/year" color="#c2d4ef"/>}
+            <MetricCard label="Annual CO₂ Stored" value={parseFloat(project['CO₂ Seq (Mt/yr)']).toFixed(2)} sub="Mt/year" color="#c2d4ef"/>}
           {!isNaN(parseFloat(project['CO₂ Util (Mt/yr)'])) && parseFloat(project['CO₂ Util (Mt/yr)']) > 0 &&
-            <MetricCard label="CO₂ Utilised" value={parseFloat(project['CO₂ Util (Mt/yr)']).toFixed(2)} sub="Mt/year" color="#c2d4ef"/>}
+            <MetricCard label="Annual CO₂ Utilised" value={parseFloat(project['CO₂ Util (Mt/yr)']).toFixed(2)} sub="Mt/year" color="#c2d4ef"/>}
 
           {/* Totals */}
           {!isNaN(parseFloat(project['CO₂ Avoid Total (Mt)'])) && parseFloat(project['CO₂ Avoid Total (Mt)']) > 0 &&

@@ -15,7 +15,7 @@ const STATUS_DESCRIPTIONS = {
   'Pre-FID / Advanced Development':
     'FEED completed; progressing toward FID with financing, procurement, and pre-construction activities likely ongoing.',
   'Under Construction':
-    'Facility under construction or commissioning phase. Capital expenditure actively being deployed on site.',
+    'Facility under construction or commissioning phase. FID taken and capital expenditure is being actively deployed on site.',
   'Operational':
     'Facility in operation under normal commercial conditions.',
   'On Hold / Cancelled':

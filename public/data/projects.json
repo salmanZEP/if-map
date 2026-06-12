@@ -63,7 +63,10 @@
     "Short Description": "-",
     "Link": "https://ec.europa.eu/assets/cinea/project_fiches/innovation_fund/101191172.pdf",
     "Full Description": "AdriatiCO₂ captures CO₂ from two emission points at Marcegaglia Ravenna steel plant: a gas-fired cogeneration unit (biomethane-fuelled) and a green DRI facility (biochar-based) — the first commercial biochar-DRI application globally. A patented post-combustion novel-solvent system with heat recovery captures up to 112 kt CO₂/yr (>40% of site Scope 1 emissions). Biogenic fuel substitution at both points enables BECCS, making this the first such deployment in Italy and Southern Europe. Captured CO₂ is transported via Eni/Snam pipeline to the Ravenna offshore geological storage hub (Adriatic Sea)",
-    "Technology Type": "Post-combustion solvent-based absorption using a patented novel solvent combined with an integrated heat recovery system, applied to flue gases from a gas-fired cogeneration unit and a green DRI facility. Biogenic fuel substitution (biomethane in cogeneration; biochar in DRI) enables the BECCS classification. CO₂ transport via pipeline; offshore geological storage in depleted Adriatic reservoirs via the <a href=\"https://www.ravennaccs.com\">Ravenna CCS hub</a>.",
+    "Technology Type": "Post-combustion solvent-based absorption using a patented novel solvent combined with an integrated heat recovery system, applied to flue gases from a gas-fired cogeneration unit and a green DRI facility. Biogenic fuel substitution (biomethane in cogeneration; biochar in DRI) enables the BECCS classification. CO₂ transport via pipeline; offshore geological storage in depleted Adriatic reservoirs via the Ravenna CCS hub.",
+    "Technology Type Links": {
+      "Ravenna CCS hub": "https://www.ravennaccs.com"
+    }, 
     "Status": "FEED & Permitting",
     "Unnamed: 31": null
   },

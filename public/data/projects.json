@@ -805,7 +805,7 @@
     "Sector": "Cement",
     "Category": "CCU",
     "Country": "France",
-    "Coordinator": "Elyse Energy",
+    "Coordinator": "Elyse Energy, Lafarge (Holcim)",
     "Site Owner": "GIE OSIRIS",
     "CO₂ Avoid (Mt/yr)": 0.2325243,
     "CO₂ Capture (Mt/yr)": 0.195,
@@ -827,8 +827,8 @@
     "Address": "Usine Lafarge, 07220 Viviers, France",
     "Facility Type": "Power-to-X Plant",
     "Link": "https://ec.europa.eu/assets/cinea/project_fiches/innovation_fund/101133147.pdf ",
-    "Full Description": "eM-Rhône is a French carbon capture and utilisation project led by Elyse Energy. It combines renewable hydrogen production on the Roches-Roussillon chemical platform in Salaise-sur-Sanne with carbon dioxide captured at Holcim/Lafarge’s cement plant in Le Teil, Ardèche, and transported by rail to the methanol site. The project is designed around 170 MW of PEM electrolysis, about 27 kt/year of hydrogen production, and about 195 kt/year of CO₂ use to produce large-scale e-methanol for chemical and maritime markets.",
-    "Technology Type": "The project captures concentrated CO₂ from the Le Teil cement plant using a fully electric cryogenic capture scheme, liquefies and transports the CO₂ by rail to Salaise-sur-Sanne, then receives, stores, regasifies and purifies the CO₂ before reaction with hydrogen produced on site by 170 MW PEM electrolysis. The hydrogen is compressed and purified, then combined with the purified CO₂ in a methanol synthesis unit, followed by intermediate storage and final methanol storage via the adjacent TEPSA logistics system. The updated Innovation Fund factsheet gives 195 kt/year CO₂ input, 27 kt/year hydrogen production and 138 kt/year methanol output; Elyse’s project page still states 150 kt/year methanol.",
+    "Full Description": "eM-Rhône is a joint venture of Elyse Energy and Lafarge Cement (Holcim). It combines renewable hydrogen production on the Roches-Roussillon chemical platform in Salaise-sur-Sanne with CO₂ captured at Holcim/Lafarge’s cement plant in Le Teil, Ardèche, and transported by rail to the methanol site. The project is designed around 170 MW of PEM electrolysis, about 27 kt/year of hydrogen production, and about 195 kt/year of CO₂ use to produce large-scale e-methanol for chemical and maritime markets.",
+    "Technology Type": "The project captures concentrated CO₂ from the Le Teil cement plant using a fully electric cryogenic capture scheme, liquefies and transports the CO₂ by rail to Salaise-sur-Sanne, then receives, stores, regasifies and purifies the CO₂ before reaction with hydrogen produced on site by 170 MW PEM electrolysis. The hydrogen is compressed and purified, then combined with the purified CO₂ in a methanol synthesis unit, followed by intermediate storage and final methanol storage via the adjacent TEPSA logistics system. The updated Innovation Fund factsheet gives 195 kt/year CO₂ input, 27 kt/year hydrogen production and 138 kt/year methanol output.",
     "Status": "FEED & Permitting"
   },
   {

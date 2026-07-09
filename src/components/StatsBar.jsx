@@ -64,7 +64,7 @@ export default function StatsBar({ projects, total, isLight }) {
           const csv = projectsToCSV(projects)
           downloadCSV(csv, `IF_ICM_projects_database_CME_${getTodayDateString()}.csv`)
         }}
-        title="Download visible projects as CSV"
+        // title="Download visible projects as CSV"
       >
         <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
           <path d="M7 1v8M4 6l3 3 3-3M2 10.5v1.5a1 1 0 001 1h8a1 1 0 001-1v-1.5" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round"/>

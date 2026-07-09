@@ -16,7 +16,7 @@ export default function Disclaimer({ hasSelection, isLight }) {
         //   left:           '50%',
         //   transform:      'translateX(-50%)',
           zIndex:         300,
-          background:     isLight ? 'rgba(226, 207, 233, 0.94)' : 'var(--surface)',
+          background:     isLight ? 'rgba(229, 228, 255, 0.94)' : 'var(--surface)',
           border:         '1px solid var(--border2)',
           borderRadius:   '20px',
           color:          isLight ? 'rgba(112, 109, 114, 0.94)' : 'var(--text2)',

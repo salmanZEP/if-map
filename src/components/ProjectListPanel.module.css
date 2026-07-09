@@ -132,7 +132,7 @@
 
 /* Light mode only — Legend toggle bar gets a distinct blue-grey tint */
 :global(.theme-light) .toggle {
-  background: rgba(226, 207, 233, 0.94);
+  background: rgba(229, 228, 255, 0.94);
 }
 
 :global(.theme-light) .panel {

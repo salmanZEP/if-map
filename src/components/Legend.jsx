@@ -132,7 +132,7 @@ export default function Legend({ hasSelection }) {
 
           {/* CO2 size section */}
           <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 8, lineHeight: '14px' }}>
-            <span style={{ fontSize: '12px', fontWeight: 600, color: 'var(--text1)', letterSpacing: '0.08em', lineHeight: '14px' }}>CO₂ Avoided (Mt)</span>
+            <span style={{ fontSize: '12px', fontWeight: 600, color: 'var(--text)', letterSpacing: '0.08em', lineHeight: '14px' }}>CO₂ Avoided (Mt)</span>
             <Co2Tooltip />
           </div>
 

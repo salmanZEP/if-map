@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-export default function Disclaimer({ hasSelection }) {
+export default function Disclaimer({ hasSelection, isLight }) {
   const [open, setOpen] = useState(false)
 
   return (
@@ -16,10 +16,10 @@ export default function Disclaimer({ hasSelection }) {
         //   left:           '50%',
         //   transform:      'translateX(-50%)',
           zIndex:         300,
-          background:     'var(--surface)',
+          background:     isLight ? 'rgba(226, 207, 233, 0.94)' : 'var(--surface)',
           border:         '1px solid var(--border2)',
           borderRadius:   '20px',
-          color:          'var(--text2)',
+          color:          isLight ? 'rgba(112, 109, 114, 0.94)' : 'var(--text2)',
           fontSize:       '12.5px',
           fontWeight:     500,
           padding:        '7px 18px',

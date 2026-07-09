@@ -25,6 +25,41 @@ export default function App() {
   const [filters, setFilters]             = useState(DEFAULT_FILTERS)
   const [selectedProject, setSelectedProject] = useState(null)
   const [filterOpen, setFilterOpen]       = useState(false)
+
+  const [mapStyle, setMapStyle] = useState('dark')
+  const isLight = mapStyle === 'light' || mapStyle === 'satellite'
+
+  useEffect(() => {
+    const root = document.documentElement
+    if (isLight) {
+      root.classList.add('theme-light')
+        root.style.setProperty('--bg',       '#c4d9ff')
+        root.style.setProperty('--surface',  '#fbfbfb')
+        root.style.setProperty('--surface2', '#ffffff')
+        root.style.setProperty('--surface3', '#eae7fb')
+        root.style.setProperty('--border',   'rgba(30,41,59,0.10)')
+        root.style.setProperty('--border2',  'rgba(76,89,255,0.25)')
+        root.style.setProperty('--text',     '#1e2233')
+        root.style.setProperty('--text2',    '#4a5372')
+        root.style.setProperty('--text3',    '#6b7494')
+        root.style.setProperty('--surface-glass', 'rgba(246, 251, 254, 0.94)')
+        root.style.setProperty('--amber', '#452f83')
+    } else {
+      root.classList.remove('theme-light')
+        root.style.setProperty('--bg',       '#0a0e1a')
+        root.style.setProperty('--surface',  '#111827')
+        root.style.setProperty('--surface2', '#1a2235')
+        root.style.setProperty('--surface3', '#222d42')
+        root.style.setProperty('--border',   'rgba(255,255,255,0.08)')
+        root.style.setProperty('--border2',  'rgba(255,255,255,0.14)')
+        root.style.setProperty('--text',     '#e8eaf0')
+        root.style.setProperty('--text2',    '#8b93a8')
+        root.style.setProperty('--text3',    '#5a6478')
+        root.style.setProperty('--surface-glass', 'rgba(10,14,26,0.93)')
+        root.style.setProperty('--amber', '#f59e0b')
+    }
+  }, [isLight])
+
   const [loading, setLoading]             = useState(true)
 
   // Load data
@@ -126,12 +161,14 @@ export default function App() {
 
   return (
     <>
-      <StatsBar projects={filteredProjects} total={allProjects.length} />
+      <StatsBar projects={filteredProjects} total={allProjects.length} isLight={isLight} />
 
       <MapView
         projects={filteredProjects}
         onProjectClick={handleProjectClick}
         selectedId={selectedProject?.Project}
+        mapStyle={mapStyle}
+        onMapStyleChange={setMapStyle}
       />
 
       <FilterPanel
@@ -157,7 +194,7 @@ export default function App() {
       />
 
       <Legend hasSelection={!!selectedProject} />
-      <Disclaimer hasSelection={!!selectedProject} />
+      <Disclaimer hasSelection={!!selectedProject} isLight={isLight} />
     </>
   )
 }

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import styles from './StatsBar.module.css'
 import { formatEuro } from '../constants.js'
 
-export default function StatsBar({ projects, total }) {
+export default function StatsBar({ projects, total, isLight }) {
   const [meta, setMeta] = useState(null)
 
   useEffect(() => {
@@ -30,7 +30,11 @@ export default function StatsBar({ projects, total }) {
     <header className={styles.bar}>
       <div className={styles.brand}>
         <a href="https://carbonmanagementeurope.org/" target="_blank" rel="noopener noreferrer">
-          <img src="./Logotype_CME_FullWhite.png" alt="ZEP logo" className={styles.logo} />
+          <img
+            src={isLight ? './Logo-FullColor-CarbonManagementEurope.png' : './Logotype_CME_FullWhite.png'}
+            alt="Carbon Management Europe logo"
+            className={styles.logo}
+          />
         </a>
         <div className={styles.divider} />
         <div>

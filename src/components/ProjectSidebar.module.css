@@ -4,9 +4,9 @@
   right: 0;
   bottom: 0;
   width: var(--sidebar-w);
-  background: rgba(10, 14, 26, 0.97);
+  background: var(--surface-glass);
   backdrop-filter: blur(20px);
-  border-left: 1px solid var(--border);
+  border-left: 2px solid var(--border2);
   z-index: 200;
   display: flex;
   flex-direction: column;
@@ -15,8 +15,15 @@
 }
 
 @keyframes slideIn {
-  from { transform: translateX(100%); opacity: 0; }
-  to   { transform: translateX(0);    opacity: 1; }
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 .header {
@@ -285,4 +292,48 @@
   background: var(--surface3);
   border-color: var(--accent);
   color: var(--text);
+}
+
+/* ============================================= */
+/* LIGHT MODE ONLY — Metric card color overrides */
+/* Dark mode is completely unaffected below       */
+/* ============================================= */
+
+:global(.theme-light) .metricCard {
+  box-shadow: 0 1px 3px rgba(30, 41, 59, 0.06);
+}
+
+/* Annual metrics group */
+:global(.theme-light) .metricCard[data-group="annual"] {
+  border-color: rgba(76, 89, 255, 0.3) !important;
+}
+
+:global(.theme-light) .metricCard[data-group="annual"] .metricValue {
+  color: #5265ce !important;
+}
+
+/* Total metrics group */
+:global(.theme-light) .metricCard[data-group="total"] {
+  border-color: rgba(16, 185, 129, 0.3) !important;
+}
+
+:global(.theme-light) .metricCard[data-group="total"] .metricValue {
+  color: #1e1eaf !important;
+}
+
+/* Grant + Investment group */
+:global(.theme-light) .metricCard[data-group="funding"] {
+  border-color: rgba(217, 119, 6, 0.3) !important;
+}
+
+:global(.theme-light) .metricCard[data-group="funding"] .metricValue {
+  color: #797979 !important;
+}
+
+/* Light mode only — Under Construction badge gets darker border + text outline */
+:global(.theme-light) .badge[data-status="Under Construction"] {
+  border-color: #b45309 !important;
+  border-width: 1px;
+  color: #b45309 !important;
+  -webkit-text-stroke: 0.1px #8fb409;
 }

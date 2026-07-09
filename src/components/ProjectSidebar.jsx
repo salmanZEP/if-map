@@ -2,17 +2,17 @@ import React from 'react'
 import { getStatusColor, getCategoryColor, formatEuro, formatCO2, CALL_COLORS } from '../constants.js'
 import styles from './ProjectSidebar.module.css'
 
-function Badge({ children, color }) {
+function Badge({ children, color, status }) {
   return (
-    <span className={styles.badge} style={{ background: color + '22', color, borderColor: color + '55' }}>
+    <span className={styles.badge} data-status={status} style={{ background: color + '22', color, borderColor: color + '55' }}>
       {children}
     </span>
   )
 }
 
-function MetricCard({ label, value, sub, color }) {
+function MetricCard({ label, value, sub, color, group }) {
   return (
-    <div className={styles.metricCard} style={{ borderColor: (color || '#3b82f6') + '33' }}>
+    <div className={styles.metricCard} data-group={group} style={{ borderColor: (color || '#3b82f6') + '33' }}>
       <div className={styles.metricValue} style={{ color: color || 'var(--accent2)' }}>{value}</div>
       <div className={styles.metricLabel}>{label}</div>
       {sub && <div className={styles.metricSub}>{sub}</div>}
@@ -41,7 +41,7 @@ export default function ProjectSidebar({ project, onClose }) {
           <div className={styles.badges}>
             <div className={styles.badgeGroup}>
               <span className={styles.badgeLabel}>Status</span>
-              <Badge color={statusColor}>{project.Status || 'Unknown'}</Badge>
+              <Badge color={statusColor} status={project.Status}>{project.Status || 'Unknown'}</Badge>
             </div>
             {project.Scale && (
               <div className={styles.badgeGroup}>
@@ -73,25 +73,25 @@ export default function ProjectSidebar({ project, onClose }) {
         <div className={styles.metricsGrid}>
           {/* Annual metrics */}
           {!isNaN(parseFloat(project['CO₂ Capture (Mt/yr)'])) && parseFloat(project['CO₂ Capture (Mt/yr)']) > 0 &&
-            <MetricCard label="Annual CO₂ Capture" value={parseFloat(project['CO₂ Capture (Mt/yr)']).toFixed(2)} sub="Mt/year" color="#c2d4ef"/>}
+            <MetricCard group="annual" label="Annual CO₂ Capture" value={parseFloat(project['CO₂ Capture (Mt/yr)']).toFixed(2)} sub="Mt/year" color="#c2d4ef"/>}
           {!isNaN(parseFloat(project['CO₂ Avoid (Mt/yr)'])) && parseFloat(project['CO₂ Avoid (Mt/yr)']) > 0 &&
-            <MetricCard label="Annual CO₂ Avoided" value={parseFloat(project['CO₂ Avoid (Mt/yr)']).toFixed(2)} sub="Mt/year" color="#c2d4ef"/>}
+            <MetricCard group="annual" label="Annual CO₂ Avoided" value={parseFloat(project['CO₂ Avoid (Mt/yr)']).toFixed(2)} sub="Mt/year" color="#c2d4ef"/>}
           {!isNaN(parseFloat(project['CO₂ Seq (Mt/yr)'])) && parseFloat(project['CO₂ Seq (Mt/yr)']) > 0 &&
-            <MetricCard label="Annual CO₂ Stored" value={parseFloat(project['CO₂ Seq (Mt/yr)']).toFixed(2)} sub="Mt/year" color="#c2d4ef"/>}
+            <MetricCard group="annual" label="Annual CO₂ Stored" value={parseFloat(project['CO₂ Seq (Mt/yr)']).toFixed(2)} sub="Mt/year" color="#c2d4ef"/>}
           {!isNaN(parseFloat(project['CO₂ Util (Mt/yr)'])) && parseFloat(project['CO₂ Util (Mt/yr)']) > 0 &&
-            <MetricCard label="Annual CO₂ Utilised" value={parseFloat(project['CO₂ Util (Mt/yr)']).toFixed(2)} sub="Mt/year" color="#c2d4ef"/>}
+            <MetricCard group="annual" label="Annual CO₂ Utilised" value={parseFloat(project['CO₂ Util (Mt/yr)']).toFixed(2)} sub="Mt/year" color="#c2d4ef"/>}
 
           {/* Totals */}
           {!isNaN(parseFloat(project['CO₂ Avoid Total (Mt)'])) && parseFloat(project['CO₂ Avoid Total (Mt)']) > 0 &&
-            <MetricCard label="Total CO₂ Avoided" value={parseFloat(project['CO₂ Avoid Total (Mt)']).toFixed(1)} sub="Mt" color="#10b981"/>}
+            <MetricCard group="total" label="Total CO₂ Avoided" value={parseFloat(project['CO₂ Avoid Total (Mt)']).toFixed(1)} sub="Mt" color="#10b981"/>}
           {!isNaN(parseFloat(project['CO₂ Capture Total (Mt)'])) && parseFloat(project['CO₂ Capture Total (Mt)']) > 0 &&
-            <MetricCard label="Total CO₂ Capture" value={parseFloat(project['CO₂ Capture Total (Mt)']).toFixed(1)} sub="Mt" color="#10b981"/>}
+            <MetricCard group="total" label="Total CO₂ Capture" value={parseFloat(project['CO₂ Capture Total (Mt)']).toFixed(1)} sub="Mt" color="#10b981"/>}
 
           {/* Funding */}
           {project['Grant (€)'] &&
-            <MetricCard label="EU Grant" value={formatEuro(project['Grant (€)'])} color="#f59e0b"/>}
+            <MetricCard group="funding" label="EU Grant" value={formatEuro(project['Grant (€)'])} color="#f59e0b"/>}
           {project['Total Invest. (€)'] &&
-            <MetricCard label="Total Investment" value={formatEuro(project['Total Invest. (€)'])} color="#f97316"/>}
+            <MetricCard group="funding" label="Total Investment" value={formatEuro(project['Total Invest. (€)'])} color="#f97316"/>}
         </div>
 
         {/* Description */}

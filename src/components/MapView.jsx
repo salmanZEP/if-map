@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef } from 'react'
 import mapboxgl from 'mapbox-gl'
 import { getStatusColor, markerSize } from '../constants.js'
 
@@ -10,22 +10,19 @@ const STYLES = {
   satellite: 'mapbox://styles/mapbox/satellite-streets-v12',
 }
 
-export default function MapView({ projects, onProjectClick, selectedId }) {
+export default function MapView({ projects, onProjectClick, selectedId, mapStyle, onMapStyleChange }) {
   const containerRef  = useRef(null)
   const mapRef        = useRef(null)
   const markersRef    = useRef([])
   const onClickRef    = useRef(onProjectClick)
   const selectedIdRef = useRef(selectedId)
-  const [activeStyle, setActiveStyle] = useState('dark')
-  // const [activeStyle, setActiveStyle] = useState('light')
 
   useEffect(() => { onClickRef.current = onProjectClick }, [onProjectClick])
 
   useEffect(() => {
     const map = new mapboxgl.Map({
       container: containerRef.current,
-      style: STYLES.dark,
-      // style: STYLES.light,
+      style: STYLES[mapStyle] || STYLES.dark,
       center: [9.5, 52],
       zoom: 3.2,
       minZoom: 2,
@@ -45,14 +42,13 @@ export default function MapView({ projects, onProjectClick, selectedId }) {
     }
   }, [])
 
-  // Switch style when toggle changes
+  // Switch style when prop changes
   useEffect(() => {
     const map = mapRef.current
     if (!map) return
-    map.setStyle(STYLES[activeStyle])
-    // Markers are removed by style change, rebuild after new style loads
+    map.setStyle(STYLES[mapStyle])
     map.once('styledata', () => buildMarkers(map))
-  }, [activeStyle]) // eslint-disable-line react-hooks/exhaustive-deps
+  }, [mapStyle]) // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {
     const map = mapRef.current
@@ -159,19 +155,19 @@ export default function MapView({ projects, onProjectClick, selectedId }) {
         style={{ position: 'fixed', top: 'var(--header-h)', left: 0, right: 0, bottom: 0, zIndex: 0 }}
       />
 
-      {/* Style toggle — sits over the map, top-right below navigation controls */}
+      {/* Style toggle */}
       <div style={{
-        position: 'fixed',
-        top: 'calc(var(--header-h) + 130px)',
-        right: '10px',
-        zIndex: 100,
-        display: 'flex',
-        flexDirection: 'column',
-        gap: '2px',
-        background: 'rgba(10,14,26,0.9)',
-        border: '1px solid rgba(255,255,255,0.12)',
-        borderRadius: '8px',
-        padding: '4px',
+        position:       'fixed',
+        top:            'calc(var(--header-h) + 130px)',
+        right:          '10px',
+        zIndex:         100,
+        display:        'flex',
+        flexDirection:  'column',
+        gap:            '2px',
+        background:     'var(--surface-glass)',
+        border:         '1px solid var(--border2)',
+        borderRadius:   '8px',
+        padding:        '4px',
         backdropFilter: 'blur(8px)',
       }}>
         {[
@@ -182,17 +178,17 @@ export default function MapView({ projects, onProjectClick, selectedId }) {
           <button
             key={key}
             title={title}
-            onClick={() => setActiveStyle(key)}
+            onClick={() => onMapStyleChange(key)}
             style={{
-              background: activeStyle === key ? 'rgba(59,130,246,0.3)' : 'none',
-              border: activeStyle === key ? '1px solid rgba(59,130,246,0.6)' : '1px solid transparent',
+              background:   mapStyle === key ? 'rgba(59,130,246,0.2)' : 'none',
+              border:       mapStyle === key ? '1px solid rgba(59,130,246,0.6)' : '1px solid transparent',
               borderRadius: '5px',
-              color: activeStyle === key ? '#60a5fa' : '#8b93a8',
-              cursor: 'pointer',
-              fontSize: '16px',
-              padding: '5px 7px',
-              lineHeight: 1,
-              transition: 'all 0.15s',
+              color:        mapStyle === key ? '#3b82f6' : 'var(--text2)',
+              cursor:       'pointer',
+              fontSize:     '16px',
+              padding:      '5px 7px',
+              lineHeight:   1,
+              transition:   'all 0.15s',
             }}
           >{label}</button>
         ))}
@@ -207,7 +203,7 @@ function setMarkerStyle(el, size, color, isSelected) {
   el.style.borderRadius = '50%'
   el.style.background   = color
   el.style.border       = `2px solid ${isSelected ? '#ffffff' : color + 'bb'}`
-  el.style.outline   = '1px solid rgba(0,0,0,0.5)'
+  el.style.outline      = '1px solid rgba(0,0,0,0.5)'
   el.style.boxShadow    = isSelected
     ? `0 0 0 3px ${color}55, 0 0 16px ${color}88`
     : `0 0 8px ${color}55`

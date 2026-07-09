@@ -3,7 +3,7 @@
   bottom: 48px;
   right: 24px;
   z-index: 200;
-  background: rgba(10, 14, 26, 0.93);
+  background: var(--surface-glass);
   backdrop-filter: blur(12px);
   border: 1px solid var(--border2);
   border-radius: 10px;
@@ -35,9 +35,7 @@
 
 .sectionLabel {
   font-size: 13px;
-  /* color: var(--text3); */
-  color: rgba(255, 255, 255, 0.93);
-  /* text-transform: uppercase; */
+  color: var(--text);
   letter-spacing: 0.08em;
   font-weight: 400;
   margin: 8px 0 6px;
@@ -68,7 +66,7 @@
 .infoIcon {
   margin-left: auto;
   font-size: 11px;
-  color: var(--text1);
+  color: var(--text);
   opacity: 0.5;
   line-height: 1;
 }
@@ -203,4 +201,13 @@
 .hint {
   font-size: 10px;
   color: var(--text3);
+}
+
+/* Light mode only — Legend toggle bar gets a distinct blue-grey tint */
+:global(.theme-light) .toggle {
+  background: rgba(226, 207, 233, 0.94);
+}
+
+:global(.theme-light) .wrap {
+  border-color: rgba(118, 146, 159, 0.94);
 }

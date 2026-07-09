@@ -1,5 +1,6 @@
 import React from 'react'
 import { getStatusColor, getCategoryColor, formatEuro, formatCO2, CALL_COLORS } from '../constants.js'
+import { projectsToCSV, downloadCSV } from '../utils/csvExport.js'
 import styles from './ProjectSidebar.module.css'
 
 function Badge({ children, color, status }) {
@@ -177,6 +178,24 @@ export default function ProjectSidebar({ project, onClose }) {
             </a>
           </div>
         )}
+
+        {/* Download this project */}
+        <div className={styles.section}>
+          <button
+            className={styles.extLink}
+            onClick={() => {
+              const csv = projectsToCSV([project])
+              const safeName = project.Project.replace(/[^a-zA-Z0-9]+/g, '_')
+              downloadCSV(csv, `IF_ICM_${safeName}_CME.csv`)
+            }}
+          >
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <path d="M7 1v8M4 6l3 3 3-3M2 10.5v1.5a1 1 0 001 1h8a1 1 0 001-1v-1.5" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+            Download data
+          </button>
+        </div>
+
       </div>
     </aside>
   )

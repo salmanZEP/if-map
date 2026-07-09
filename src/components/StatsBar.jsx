@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import styles from './StatsBar.module.css'
 import { formatEuro } from '../constants.js'
+import { projectsToCSV, downloadCSV, getTodayDateString } from '../utils/csvExport.js'
 
 export default function StatsBar({ projects, total, isLight }) {
   const [meta, setMeta] = useState(null)
@@ -56,6 +57,20 @@ export default function StatsBar({ projects, total, isLight }) {
         <Stat value={formatEuro(totalInvest)} label="Total Investment"/>
         <Stat value={`${totalCO2.toFixed(1)} Mt/yr`} label="CO₂ Capture"/>
       </div>
+
+      <button
+        className={styles.downloadBtn}
+        onClick={() => {
+          const csv = projectsToCSV(projects)
+          downloadCSV(csv, `IF_ICM_projects_database_CME_${getTodayDateString()}.csv`)
+        }}
+        title="Download visible projects as CSV"
+      >
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+          <path d="M7 1v8M4 6l3 3 3-3M2 10.5v1.5a1 1 0 001 1h8a1 1 0 001-1v-1.5" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+        <span className={styles.downloadLabel}>Download data</span>
+      </button>
 
       <div className={styles.meta}>
         {meta

@@ -188,7 +188,7 @@
     "Facility Type": "CO₂ Emitter",
     "Link": "https://climate.ec.europa.eu/document/download/7eb6d2d5-c109-4c33-ba50-c065beb654d7_en?filename=if_pf_2022_anrav_en.pdf",
     "Full Description": "ANRAV is a large-scale CCUS project at the Devnya cement plant in Bulgaria, led by Heidelberg Materials, aiming to capture around 0.8 MtCO₂ per year. The project will establish the first full CCS value chain in Eastern Europe, linking cement production to offshore geological storage in the Black Sea via pipeline infrastructure. Captured CO₂ will be transported to the depleted Galata gas field for permanent storage, while enabling the development of a regional CCUS cluster.",
-    "Technology Type": "Hybrid staged CO₂ capture system combining oxyfuel combustion (OxyCal) and post-combustion amine scrubbing. Achieving up to ~99% capture efficiency; CO₂ is processed via a CO₂ Processing Unit (CPU), transported by pipeline, and permanently stored in the depleted Galata gas field under the Black Sea.",
+    "Technology Type": "Hybrid staged CO₂ capture system combining oxyfuel combustion (OxyCal) and post-combustion amine scrubbing. Achieving up to ~99% capture efficiency; CO₂ will be processed via a CO₂ Processing Unit (CPU), transported by pipeline, and permanently stored in the depleted Galata gas field under the Black Sea.",
     "Status": "On Hold / Cancelled"
   },
   {
@@ -828,7 +828,7 @@
     "Facility Type": "Power-to-X Plant",
     "Link": "https://ec.europa.eu/assets/cinea/project_fiches/innovation_fund/101133147.pdf ",
     "Full Description": "eM-Rhône is a joint venture of Elyse Energy and Lafarge Cement (Holcim). It combines renewable hydrogen production on the Roches-Roussillon chemical platform in Salaise-sur-Sanne with CO₂ captured at Holcim/Lafarge’s cement plant in Le Teil, Ardèche, and transported by rail to the methanol site. The project is designed around 170 MW of PEM electrolysis, about 27 kt/year of hydrogen production, and about 195 kt/year of CO₂ use to produce large-scale e-methanol for chemical and maritime markets.",
-    "Technology Type": "The project captures concentrated CO₂ from the Le Teil cement plant using a fully electric cryogenic capture scheme, liquefies and transports the CO₂ by rail to Salaise-sur-Sanne, then receives, stores, regasifies and purifies the CO₂ before reaction with hydrogen produced on site by 170 MW PEM electrolysis. The hydrogen is compressed and purified, then combined with the purified CO₂ in a methanol synthesis unit, followed by intermediate storage and final methanol storage via the adjacent TEPSA logistics system. The updated Innovation Fund factsheet gives 195 kt/year CO₂ input, 27 kt/year hydrogen production and 138 kt/year methanol output.",
+    "Technology Type": "The project captures concentrated CO₂ from the Le Teil cement plant using a fully electric cryogenic capture scheme, liquefies and transports the CO₂ by rail to Salaise-sur-Sanne, then receives, stores, regasifies and purifies the CO₂ before reaction with hydrogen produced on site by 170 MW PEM electrolysis. The hydrogen is compressed and purified, then combined with the purified CO₂ in a methanol synthesis unit, followed by intermediate storage and final methanol storage via the adjacent TEPSA logistics system. The project takes 195 kt/year of CO₂ input and results in 27 kt/year of hydrogen production and 138 kt/year of methanol output.",
     "Status": "FEED & Permitting"
   },
   {
@@ -1499,7 +1499,7 @@
     "Address": "Sanden, 444 84 Stenungsund, Sweden",
     "Facility Type": "CO₂ Emitter",
     "Link": "https://www.perstorp.com/en/about/sustainability/enable/project_air",
-    "Full Description": "Project Air is a large-scale Innovation Fund project led by Perstorp Oxo AB at Perstorp’s Stenungsund chemicals site in Sweden. The project integrates carbon capture and utilisation with renewable hydrogen production to manufacture 200,000 tonnes of sustainable methanol per year for use as a chemical feedstock, replacing fossil methanol in Perstorp’s European operations. The Innovation Fund factsheet reports 4.06 MtCO₂e of greenhouse-gas avoidance over ten years, and the project is planned to enter operation in 2027.",
+    "Full Description": "Project Air is a large-scale Innovation Fund project led by Perstorp Oxo AB at Perstorp’s Stenungsund chemicals site in Sweden. The project integrates carbon capture and utilisation with renewable hydrogen production to manufacture 200,000 tonnes of sustainable methanol per year for use as a chemical feedstock, replacing fossil methanol in Perstorp’s European operations. The Innovation Fund project factsheet reports 4.06 MtCO₂e of greenhouse-gas avoidance over ten years, and the project is planned to enter operation in 2027.",
     "Technology Type": "CO₂ is captured from Perstorp’s existing chemical production processes (industrial point source) and combined with renewable hydrogen produced via a large-scale electrolysis unit powered by renewable electricity, along with biomethane and residue streams, to produce synthesis gas that is converted into methanol via catalytic synthesis; this represents a large-scale CCU Power-to-X system where CO₂ is utilised as a feedstock for sustainable methanol production (~200 kt methanol/year).",
     "Status": "FEED & Permitting"
   },

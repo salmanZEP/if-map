@@ -1199,9 +1199,9 @@
     "CO₂ Capture Total (Mt)": 2,
     "CO₂ Seq Total (Mt)": 2,
     "CO₂ Util Total (Mt)": "-",
-    "Start Date": 2025,
-    "Operational Year": 2028,
-    "Evaluation End Year": 2038,
+    "Start Date": 2026,
+    "Operational Year": 2029,
+    "Evaluation End Year": 2039,
     "Call": "IF23",
     "Grant (€)": 54000000,
     "Total Invest. (€)": 265000000,
@@ -1211,8 +1211,8 @@
     "Address": "Hjortshögsvägen 7, 254 64 Helsingborg, Sweden",
     "Facility Type": "CO₂ Emitter",
     "Link": "https://www.innozhero.com/",
-    "Full Description": "INNOZHERO is a waste-to-energy carbon capture project at the Filbornaverket CHP plant in Helsingborg, Sweden, developed by Öresundskraft. The project will capture approximately 0.2 MtCO₂ per year from mixed fossil and biogenic waste streams, enabling both emissions reduction and partial carbon removal. The captured CO₂ will be liquefied and transported via truck and ship to offshore geological storage in the Danish North Sea (Greensand project), one of Europe’s emerging operational storage sites. The project has taken FID in May 2026.",
-    "Technology Type": "Aker Carbon Capture Just Catch™ post-combustion amine capture at Öresundskraft Filbornaverket WtE CHP plant, Helsingborg. CO₂ transported by truck/ship to INEOS Greensand Nini West offshore reservoir, Danish North Sea. ",
+    "Full Description": "INNOZHERO is a full-scale CCS project at Öresundskraft’s Filbornaverket waste-to-energy CHP plant in Helsingborg, Sweden. FID was taken on 30 September 2026, with construction starting in late 2026. The project will capture around 0.2 MtCO₂/year at ≥90% capture rate, of which 40–45% is expected to be biogenic. Linde Engineering will design and construct the carbon capture and conditioning plant at Filbornaverket. CO₂ will be transported by truck to Halmstad and then shipped by Northern Lights for permanent storage beneath the Norwegian North Sea. Commissioning is planned for 2029, with transport and storage starting in Q4 2029.",
+    "Technology Type": "Linde Engineering carbon capture and conditioning (CCC) plant at Öresundskraft Filbornaverket WtE CHP; ≥90% capture rate; CO₂ liquefaction at site. Truck transport to intermediate storage at Port of Halland, Halmstad (operated by Linde), followed by Northern Lights shipping to Øygarden and permanent offshore geological storage in the Norwegian North Sea.",
     "Status": "Under Construction"
   },
   {

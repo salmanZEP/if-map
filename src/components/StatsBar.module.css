@@ -12,6 +12,39 @@
   align-items: center;
   padding: 0 20px;
   gap: 28px;
+  overflow: hidden;
+}
+
+/* Faded brand symbol watermark, bleeding off the right edge — same idea as the
+   Investment Booster explainer's header, shown in both the default (dark) and
+   light/satellite-basemap banner states. */
+.bar::after {
+  content: '';
+  position: absolute;
+  z-index: 0;
+  right: -32px;
+  top: 50%;
+  width: 104px;
+  height: 104px;
+  transform: translateY(-50%) rotate(-6deg);
+  background: url('/cme-symbol-watermark.svg') center / contain no-repeat;
+  opacity: 0.19;
+  -webkit-mask-image: radial-gradient(circle at 58% 50%, #000 0%, transparent 68%);
+  mask-image: radial-gradient(circle at 58% 50%, #000 0%, transparent 68%);
+  pointer-events: none;
+}
+
+/* Keep the real header content above the watermark pseudo-element */
+.bar > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Mobile: the watermark doesn't fit the tighter 2-row layout, so skip it there. */
+@media (max-width: 768px) {
+  .bar::after {
+    display: none;
+  }
 }
 
 .brand {
@@ -34,17 +67,37 @@
   flex-shrink: 0;
 }
 
+.titleLink {
+  display: block;
+  min-width: 0;
+}
+
+.titleWrap {
+  min-width: 0;
+  overflow: hidden;
+}
+
+.subDivider {
+  display: none;
+}
+
 .title {
   font-size: 13px;
   font-weight: 700;
   color: var(--text);
   line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .sub {
   font-size: 12.5px;
   color: var(--text2);
   font-weight: 400;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .stats {
@@ -93,16 +146,31 @@
 }
 
 .meta {
-  font-size: 12px;
-  color: var(--text3);
+  font-size: 14px;
+  color: var(--text2);
   flex-shrink: 0;
   white-space: nowrap;
 }
 
-@media (max-width: 900px) {
-  .meta { display: none; }
-  .stat:nth-child(n+4) { display: none; }
+/* Progressively drop less-critical stats as the bar narrows, one at a time,
+   so a value never gets squeezed into "…" — it just disappears cleanly. */
+@media (max-width: 1480px) {
+  .bar { gap: 20px; }
+  .stat:nth-child(5) { display: none; }
 }
+@media (max-width: 1260px) {
+  .stat:nth-child(4) { display: none; }
+}
+@media (max-width: 1060px) {
+  .meta { display: none; }
+}
+@media (max-width: 900px) {
+  .bar { gap: 14px; }
+  .stat { padding: 0 8px; }
+  .stat:nth-child(3) { display: none; }
+}
+
+.mobileSearchRow { display: none; }
 
 .downloadBtn {
   display: flex;
@@ -141,21 +209,189 @@
   }
 }
 
-/* Light mode only — Legend toggle bar gets a distinct blue-grey tint */
+/* Light mode: deep navy "banner" header — a professional gradient treatment
+   borrowed from the CME Investment Booster explainer's dark header, used here
+   specifically for the map's light/satellite basemap state. White logo (see
+   StatsBar.jsx) and light text throughout, regardless of the page's light theme. */
 :global(.theme-light) .bar {
-  background: rgba(229, 228, 255, 0.94);
+  border-bottom: 0;
+  box-shadow: 0 6px 20px rgba(8, 5, 46, 0.18);
+  overflow: hidden;
+  background:
+    radial-gradient(40rem 10rem at 100% 120%, rgba(113, 118, 255, 0.45), transparent 70%),
+    linear-gradient(110deg, #08052e 0%, #17134d 45%, #2e2c82 80%, #5051c9 100%);
 }
 
-:global(.theme-light) .bar {
-  border-bottom: 1px solid rgba(118, 146, 159, 0.94);
+/* The navy banner is brighter than the default dark bar, so the watermark
+   needs a touch more opacity there to read at the same strength. */
+:global(.theme-light) .bar::after {
+  opacity: 0.28;
+}
+
+:global(.theme-light) .title,
+:global(.theme-light) .sub {
+  color: #fff;
+}
+
+:global(.theme-light) .divider,
+:global(.theme-light) .subDivider {
+  background: rgba(255, 255, 255, 0.28);
 }
 
 :global(.theme-light) .value {
-  color: rgba(50, 74, 86, 0.94);
-  ;
+  color: #fff;
+  -webkit-text-stroke: 0.3px rgba(8, 5, 46, 0.35);
+}
+
+:global(.theme-light) .value.filtered {
+  color: #ffd27a;
+  -webkit-text-stroke: 0.3px rgba(8, 5, 46, 0.35);
+}
+
+:global(.theme-light) .maxOf,
+:global(.theme-light) .label {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+:global(.theme-light) .meta {
+  color: rgba(255, 255, 255, 0.8);
 }
 
 :global(.theme-light) .stat {
-  border-left-color: rgba(118, 146, 159, 0.6);
+  border-left-color: rgba(255, 255, 255, 0.18);
   border-left-width: 1.5px;
+}
+
+:global(.theme-light) .downloadBtn {
+  border-color: rgba(255, 255, 255, 0.28);
+  color: rgba(255, 255, 255, 0.85);
+}
+
+:global(.theme-light) .downloadBtn:hover {
+  color: #fff;
+  border-color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Mobile: Google Maps style — two-row header, collapsed search + filter row.
+   Placed last so it wins the cascade over the unconditional rules above. */
+@media (max-width: 768px) {
+  .bar {
+    flex-wrap: wrap;
+    align-items: center;
+    height: auto;
+    min-height: var(--header-h);
+    padding: 8px 10px;
+    gap: 8px;
+  }
+  .brand { order: 1; flex: 1 1 auto; min-width: 0; gap: 8px; }
+  .logo { height: 22px; }
+
+  /* Logo | Title | Subtitle — each its own division, free to wrap onto
+     multiple lines; the divider(s) stretch to match whichever is tallest. */
+  .titleLink {
+    display: flex;
+    align-items: center;
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+  .titleWrap {
+    flex: 1 1 0;
+    min-width: 0;
+    overflow: visible;
+  }
+  .subDivider {
+    display: block;
+    width: 1px;
+    align-self: stretch;
+    background: var(--border2);
+    flex-shrink: 0;
+    margin: 0 8px;
+  }
+  .subWrap {
+    flex: 1 1 0;
+    min-width: 0;
+    overflow: visible;
+  }
+  .title {
+    display: block;
+    font-size: 11px;
+    line-height: 1.25;
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+  }
+  .sub {
+    display: block;
+    font-size: 10.5px;
+    line-height: 1.25;
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+  }
+  .stats { display: none; }
+  .meta { display: none; }
+  .downloadBtn { display: none; }
+
+  .mobileSearchRow {
+    order: 3;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex: 1 1 100%;
+    min-width: 0;
+  }
+
+  .mobileSearchWrap {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--surface2);
+    border: 1px solid var(--border2);
+    border-radius: 20px;
+    padding: 7px 12px;
+    flex: 1;
+    min-width: 0;
+    color: var(--text2);
+  }
+
+  .mobileSearchInput {
+    background: none;
+    border: none;
+    outline: none;
+    color: var(--text);
+    font-size: 13px;
+    font-family: var(--font);
+    width: 100%;
+  }
+
+  .mobileSearchInput::placeholder { color: var(--text3); }
+
+  .mobileFilterBtn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--surface2);
+    border: 1px solid var(--border2);
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    color: var(--text2);
+    flex-shrink: 0;
+  }
+
+  .mobileFilterBadge {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    background: var(--accent);
+    color: #fff;
+    font-size: 9px;
+    font-weight: 700;
+    border-radius: 8px;
+    padding: 1px 4px;
+    min-width: 14px;
+    text-align: center;
+  }
 }

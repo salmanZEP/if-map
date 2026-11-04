@@ -1,6 +1,7 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import mapboxgl from 'mapbox-gl'
 import { getStatusColor, markerSize } from '../constants.js'
+import styles from './MapView.module.css'
 
 mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_TOKEN || ''
 
@@ -10,12 +11,25 @@ const STYLES = {
   satellite: 'mapbox://styles/mapbox/satellite-streets-v12',
 }
 
-export default function MapView({ projects, onProjectClick, selectedId, mapStyle, onMapStyleChange }) {
+const STYLE_OPTIONS = [
+  { key: 'dark',      label: '🌙', title: 'Dark' },
+  { key: 'light',     label: '☀️', title: 'Light' },
+  { key: 'satellite', label: '🛰️', title: 'Satellite' },
+]
+
+const INITIAL_VIEW = { center: [9.5, 52], zoom: 3.2 }
+
+export default function MapView({ projects, onProjectClick, selectedId, mapStyle, onMapStyleChange, onOpenDisclaimer, filterOpen }) {
   const containerRef  = useRef(null)
   const mapRef        = useRef(null)
   const markersRef    = useRef([])
   const onClickRef    = useRef(onProjectClick)
   const selectedIdRef = useRef(selectedId)
+  const [toolsOpen, setToolsOpen] = useState(false)
+
+  function resetView() {
+    mapRef.current?.flyTo({ ...INITIAL_VIEW, duration: 800, essential: true })
+  }
 
   useEffect(() => { onClickRef.current = onProjectClick }, [onProjectClick])
 
@@ -23,8 +37,8 @@ export default function MapView({ projects, onProjectClick, selectedId, mapStyle
     const map = new mapboxgl.Map({
       container: containerRef.current,
       style: STYLES[mapStyle] || STYLES.dark,
-      center: [9.5, 52],
-      zoom: 3.2,
+      center: INITIAL_VIEW.center,
+      zoom: INITIAL_VIEW.zoom,
       minZoom: 2,
       maxZoom: 18,
       projection: 'mercator',
@@ -155,45 +169,71 @@ export default function MapView({ projects, onProjectClick, selectedId, mapStyle
         style={{ position: 'fixed', top: 'var(--header-h)', left: 0, right: 0, bottom: 0, zIndex: 0 }}
       />
 
-      {/* Style toggle */}
-      <div style={{
-        position:       'fixed',
-        top:            'calc(var(--header-h) + 130px)',
-        right:          '10px',
-        zIndex:         100,
-        display:        'flex',
-        flexDirection:  'column',
-        gap:            '2px',
-        background:     'var(--surface-glass)',
-        border:         '1px solid var(--border2)',
-        borderRadius:   '8px',
-        padding:        '4px',
-        backdropFilter: 'blur(8px)',
-      }}>
-        {[
-          { key: 'dark',      label: '🌙', title: 'Dark' },
-          { key: 'light',     label: '☀️', title: 'Light' },
-          { key: 'satellite', label: '🛰️', title: 'Satellite' },
-        ].map(({ key, label, title }) => (
+      {/* Style toggle — desktop/tablet: always-visible vertical stack */}
+      <div className={styles.themeStack}>
+        {STYLE_OPTIONS.map(({ key, label, title }) => (
           <button
             key={key}
             title={title}
             onClick={() => onMapStyleChange(key)}
-            style={{
-              background:   mapStyle === key ? 'rgba(59,130,246,0.2)' : 'none',
-              border:       mapStyle === key ? '1px solid rgba(59,130,246,0.6)' : '1px solid transparent',
-              borderRadius: '5px',
-              color:        mapStyle === key ? '#3b82f6' : 'var(--text2)',
-              cursor:       'pointer',
-              fontSize:     '16px',
-              padding:      '5px 7px',
-              lineHeight:   1,
-              transition:   'all 0.15s',
-            }}
+            className={`${styles.themeBtn} ${mapStyle === key ? styles.active : ''}`}
           >{label}</button>
         ))}
       </div>
+
+      {/* Style toggle — mobile: collapsible drawer, also holds the Disclaimer trigger.
+          Hidden while a project sheet or the filter panel is open, to avoid overlap. */}
+      <div className={`${styles.drawer} ${toolsOpen ? styles.open : ''} ${selectedId ? styles.drawerHidden : ''} ${filterOpen ? styles.drawerHidden : ''}`}>
+        <div className={styles.panel}>
+          {STYLE_OPTIONS.map(({ key, label, title }) => (
+            <button
+              key={key}
+              title={title}
+              onClick={() => onMapStyleChange(key)}
+              className={`${styles.panelBtn} ${mapStyle === key ? styles.active : ''}`}
+            >
+              <span>{label}</span>
+              <span>{title}</span>
+            </button>
+          ))}
+          <div className={styles.panelDivider} />
+          <button className={styles.panelBtn} onClick={onOpenDisclaimer}>
+            <span>⚠</span>
+            <span>Disclaimer</span>
+          </button>
+        </div>
+        <button
+          className={styles.arrow}
+          onClick={() => setToolsOpen(o => !o)}
+          aria-label="Map tools"
+        >
+          <svg className={styles.arrowIcon} width="10" height="10" viewBox="0 0 10 10" fill="none">
+            <path d="M6.5 1L2.5 5l4 4" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+        </button>
+      </div>
+
+      {/* Reset view — standalone, bottom-right corner, styled to match the theme buttons */}
+      <button
+        className={`${styles.resetBtn} ${selectedId ? styles.resetShifted : ''} ${filterOpen ? styles.resetFilterHidden : ''}`}
+        onClick={resetView}
+        title="Reset view"
+        aria-label="Reset view"
+      >
+        <CompressIcon />
+      </button>
     </>
+  )
+}
+
+function CompressIcon() {
+  return (
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+      <polyline points="4 14 10 14 10 20" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+      <polyline points="20 10 14 10 14 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+      <line x1="14" y1="10" x2="21" y2="3" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+      <line x1="3" y1="21" x2="10" y2="14" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+    </svg>
   )
 }
 

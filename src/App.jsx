@@ -25,9 +25,19 @@ export default function App() {
   const [filters, setFilters]             = useState(DEFAULT_FILTERS)
   const [selectedProject, setSelectedProject] = useState(null)
   const [filterOpen, setFilterOpen]       = useState(false)
+  const [listOpen, setListOpen]           = useState(false)
 
   const [mapStyle, setMapStyle] = useState('dark')
+  const [disclaimerOpen, setDisclaimerOpen] = useState(false)
   const isLight = mapStyle === 'light' || mapStyle === 'satellite'
+
+  // Desktop only: opening the filter panel also reveals the project list.
+  // On mobile this looks cluttered (both become full-width sheets), so skip it there.
+  useEffect(() => {
+    if (filterOpen && window.matchMedia('(min-width: 769px)').matches) {
+      setListOpen(true)
+    }
+  }, [filterOpen])
 
   useEffect(() => {
     const root = document.documentElement
@@ -137,6 +147,16 @@ export default function App() {
     }
   }, [filteredProjects, selectedProject])
 
+  const filterActiveCount = (
+    (filters.countries?.length  || 0) +
+    (filters.statuses?.length   || 0) +
+    (filters.scales?.length     || 0) +
+    (filters.calls?.length      || 0) +
+    (filters.sectors?.length    || 0) +
+    (filters.categories?.length || 0) +
+    (filters.search ? 1 : 0)
+  )
+
   const handleProjectClick = (project) => {
     setSelectedProject(prev => prev?.Project === project.Project ? null : project)
   }
@@ -161,7 +181,15 @@ export default function App() {
 
   return (
     <>
-      <StatsBar projects={filteredProjects} total={allProjects.length} isLight={isLight} />
+      <StatsBar
+        projects={filteredProjects}
+        total={allProjects.length}
+        isLight={isLight}
+        filters={filters}
+        onFilterChange={setFilters}
+        onToggleFilter={() => setFilterOpen(o => !o)}
+        filterActiveCount={filterActiveCount}
+      />
 
       <MapView
         projects={filteredProjects}
@@ -169,6 +197,8 @@ export default function App() {
         selectedId={selectedProject?.Project}
         mapStyle={mapStyle}
         onMapStyleChange={setMapStyle}
+        onOpenDisclaimer={() => setDisclaimerOpen(true)}
+        filterOpen={filterOpen}
       />
 
       <FilterPanel
@@ -191,10 +221,17 @@ export default function App() {
         onProjectClick={handleProjectClick}
         selectedId={selectedProject?.Project}
         filterOpen={filterOpen}
+        hasSelection={!!selectedProject}
+        open={listOpen}
+        onToggle={() => setListOpen(o => !o)}
       />
 
       <Legend hasSelection={!!selectedProject} />
-      <Disclaimer hasSelection={!!selectedProject} isLight={isLight} />
+      <Disclaimer
+        hasSelection={!!selectedProject}
+        open={disclaimerOpen}
+        onOpenChange={setDisclaimerOpen}
+      />
     </>
   )
 }

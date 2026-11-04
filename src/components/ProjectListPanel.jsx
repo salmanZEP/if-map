@@ -1,10 +1,8 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { getStatusColor, getCategoryColor, formatEuro } from '../constants.js'
 import styles from './ProjectListPanel.module.css'
 
-export default function ProjectListPanel({ projects, onProjectClick, selectedId, filterOpen }) {
-  const [open, setOpen] = useState(false)
-  useEffect(() => { if (filterOpen) setOpen(true)}, [filterOpen])
+export default function ProjectListPanel({ projects, onProjectClick, selectedId, filterOpen, hasSelection, open, onToggle }) {
   const [sort, setSort] = useState('grant')
 
   const sorted = [...projects].sort((a, b) => {
@@ -16,16 +14,16 @@ export default function ProjectListPanel({ projects, onProjectClick, selectedId,
   })
 
   return (
-    <div className={`${styles.panel} ${open ? styles.open : ''}`} style={{ left: filterOpen ? 'calc(var(--filter-w) + 12px)' : '16px', transition: 'left 0.25s cubic-bezier(0.4, 0, 0.2, 1)',}}>
-      <button className={styles.toggle} onClick={() => setOpen(o => !o)}>
+    <div className={`${styles.panel} ${open ? styles.open : ''} ${filterOpen ? styles.shifted : ''} ${hasSelection ? styles.hiddenMobile : ''}`}>
+      <button className={styles.toggle} onClick={onToggle}>
         <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
           <rect x="1" y="2" width="12" height="2" rx="1" fill="currentColor"/>
           <rect x="1" y="6" width="8"  height="2" rx="1" fill="currentColor"/>
           <rect x="1" y="10" width="10" height="2" rx="1" fill="currentColor"/>
         </svg>
-        <span>Project List</span>
+        <span className={styles.toggleLabel}>Project List</span>
         <span className={styles.count}>{projects.length}</span>
-        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+        <svg className={styles.chevron} width="12" height="12" viewBox="0 0 12 12" fill="none"
           style={{ transform: open ? 'rotate(180deg)' : 'none', transition: 'transform 0.2s', marginLeft: 'auto' }}>
           <path d="M2 4l4 4 4-4" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round"/>
         </svg>

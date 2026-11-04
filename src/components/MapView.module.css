@@ -1,0 +1,193 @@
+.themeStack {
+  position: fixed;
+  top: calc(var(--header-h) + 130px);
+  right: 10px;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  background: var(--surface-glass);
+  border: 1px solid var(--border2);
+  border-radius: 8px;
+  padding: 4px;
+  backdrop-filter: blur(8px);
+}
+
+.themeBtn {
+  background: none;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  color: var(--text2);
+  cursor: pointer;
+  font-size: 16px;
+  padding: 5px 7px;
+  line-height: 1;
+  transition: all 0.15s;
+}
+
+.themeBtn.active {
+  background: rgba(59, 130, 246, 0.2);
+  border-color: rgba(59, 130, 246, 0.6);
+  color: #3b82f6;
+}
+
+.resetBtn {
+  position: fixed;
+  right: 16px;
+  bottom: 96px;
+  z-index: 150;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--surface-glass);
+  border: 1px solid var(--border2);
+  border-radius: 50%;
+  color: var(--text2);
+  backdrop-filter: blur(8px);
+  transition: right 0.25s cubic-bezier(0.4, 0, 0.2, 1), color 0.15s, border-color 0.15s;
+}
+
+.resetBtn:hover {
+  color: var(--text);
+  border-color: var(--accent);
+}
+
+/* Light basemap is near-white, so a plain fill disappears into the map.
+   A soft glassmorphism treatment — translucent tint, heavier blur, and a
+   faint inner top sheen — reads clearly while staying light and elegant. */
+/* Liquid-glass: a bright specular highlight top-left, a soft inner shadow
+   along the bottom edge for convex depth, and a deeper outer lift shadow —
+   same base color, just rendered as a glossy glass surface. */
+:global(.theme-light) .resetBtn {
+  background: radial-gradient(150% 150% at 28% 15%, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0) 50%), #CCD4FF;
+  backdrop-filter: blur(16px) saturate(1.8);
+  -webkit-backdrop-filter: blur(16px) saturate(1.8);
+  border-width: 0.5px;
+  border-color: rgba(19, 15, 69, 0.4);
+  box-shadow: 0 10px 26px rgba(8, 5, 46, 0.2), inset 0 1px 1px rgba(255, 255, 255, 0.9), inset 0 -2px 4px rgba(19, 15, 69, 0.18);
+  color: rgba(19, 15, 69, 0.85);
+}
+
+:global(.theme-light) .resetBtn:hover {
+  color: #130F45;
+  border-color: rgba(19, 15, 69, 0.55);
+}
+
+/* Project sidebar open: shift clear of it, same as Legend/Disclaimer */
+.resetBtn.resetShifted {
+  right: calc(var(--sidebar-w) + 12px);
+}
+
+.drawer { display: none; }
+
+/* Mobile: collapsible drawer — a thin arrow tab on the right edge that
+   slides open to reveal theme buttons + the Disclaimer trigger */
+@media (max-width: 768px) {
+  .themeStack { display: none; }
+
+  .resetBtn {
+    right: 12px;
+    bottom: 54px;
+    width: 38px;
+    height: 38px;
+  }
+
+  /* Project sheet covers the whole bottom on mobile — hide instead of shifting */
+  .resetBtn.resetShifted {
+    display: none;
+  }
+
+  /* Filter panel is a full-screen sheet on mobile — hide while it's open */
+  .resetBtn.resetFilterHidden {
+    display: none;
+  }
+
+  .drawer {
+    display: flex;
+    align-items: flex-start;
+    position: fixed;
+    top: calc(var(--header-h) + 28px);
+    right: 0;
+    z-index: 210;
+    transition: opacity 0.15s ease;
+  }
+
+  /* Project sheet or filter panel is open: hide to avoid overlapping it */
+  .drawer.drawerHidden {
+    display: none;
+  }
+
+  .arrow {
+    width: 26px;
+    height: 44px;
+    flex-shrink: 0;
+    background: var(--surface-glass);
+    border: 1px solid var(--border2);
+    border-right: none;
+    border-radius: 8px 0 0 8px;
+    color: var(--text2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(8px);
+  }
+
+  .arrowIcon {
+    transition: transform 0.2s ease;
+  }
+
+  .drawer.open .arrowIcon {
+    transform: rotate(180deg);
+  }
+
+  .panel {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 0;
+    overflow: hidden;
+    opacity: 0;
+    padding: 8px 0;
+    background: var(--surface-glass);
+    border: 1px solid var(--border2);
+    border-right: none;
+    border-radius: 8px 0 0 8px;
+    backdrop-filter: blur(8px);
+    transition: width 0.2s ease, opacity 0.2s ease, padding 0.2s ease;
+  }
+
+  .drawer.open .panel {
+    width: 132px;
+    opacity: 1;
+    padding: 8px;
+  }
+
+  .panelBtn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: none;
+    border: 1px solid var(--border2);
+    border-radius: 6px;
+    color: var(--text2);
+    font-size: 12px;
+    padding: 7px 10px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .panelBtn.active {
+    background: rgba(59, 130, 246, 0.15);
+    border-color: rgba(59, 130, 246, 0.5);
+    color: #60a5fa;
+  }
+
+  .panelDivider {
+    height: 1px;
+    background: var(--border);
+    margin: 2px 0;
+    flex-shrink: 0;
+  }
+}

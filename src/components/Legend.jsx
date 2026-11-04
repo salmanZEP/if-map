@@ -19,7 +19,7 @@ const STATUS_DESCRIPTIONS = {
   'Operational':
     'Facility in operation under normal commercial conditions.',
   'On Hold / Cancelled':
-    'Project on hold, cancelled, withdrawn, or relocated; no active progress evident.',
+    'Project on hold, cancelled, withdrawn, or possibly relocated; no active progress evident.',
 }
 
 const SIZE_TIERS = [

@@ -1,0 +1,115 @@
+.trigger {
+  position: fixed;
+  bottom: 12px;
+  right: 16px;
+  z-index: 300;
+  background: var(--surface);
+  border: 1px solid var(--border2);
+  border-radius: 20px;
+  color: var(--text2);
+  font-size: 12.5px;
+  font-weight: 500;
+  padding: 7px 18px;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  letter-spacing: 0.02em;
+  transition: right 0.25s cubic-bezier(0.4, 0, 0.2, 1), color 0.15s, border-color 0.15s;
+}
+
+.trigger:hover {
+  color: var(--text);
+  border-color: var(--accent);
+}
+
+.trigger.shifted {
+  right: calc(var(--sidebar-w) + 12px);
+}
+
+/* Light basemap is near-white, so a plain fill disappears into the map.
+   A soft glassmorphism treatment — translucent tint, heavier blur, and a
+   faint inner top sheen — reads clearly while staying light and elegant. */
+/* Liquid-glass: a bright specular highlight top-left, a soft inner shadow
+   along the bottom edge for convex depth, and a deeper outer lift shadow —
+   same base color, just rendered as a glossy glass surface. */
+:global(.theme-light) .trigger {
+  background: radial-gradient(130% 150% at 18% -10%, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0) 45%), #CCD4FF;
+  backdrop-filter: blur(16px) saturate(1.8);
+  -webkit-backdrop-filter: blur(16px) saturate(1.8);
+  border-width: 0.5px;
+  border-color: rgba(19, 15, 69, 0.4);
+  box-shadow: 0 12px 32px rgba(8, 5, 46, 0.2), inset 0 1px 1px rgba(255, 255, 255, 0.9), inset 0 -2px 5px rgba(19, 15, 69, 0.18);
+  color: rgba(19, 15, 69, 0.85);
+}
+
+:global(.theme-light) .trigger:hover {
+  color: #130F45;
+  border-color: rgba(19, 15, 69, 0.55);
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 500;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(4px);
+}
+
+.modal {
+  background: var(--surface);
+  border: 1px solid var(--border2);
+  border-radius: 14px;
+  padding: 32px 36px;
+  max-width: 520px;
+  width: 90%;
+  max-height: 85vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: none;
+  border: none;
+  color: var(--text3);
+  font-size: 18px;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.heading {
+  font-size: 16px;
+  color: var(--text2);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.body {
+  font-size: 13.5px;
+  color: var(--text2);
+  line-height: 1.75;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: justify;
+}
+
+.body a {
+  color: var(--accent2);
+}
+
+.icon { display: none; }
+
+/* Mobile: the trigger moves into the map tools drawer (see MapView.module.css) */
+@media (max-width: 768px) {
+  .trigger,
+  .trigger.shifted {
+    display: none;
+  }
+
+  .modal { padding: 24px 20px; width: 94%; }
+}

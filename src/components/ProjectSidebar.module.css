@@ -337,3 +337,66 @@
   color: #b45309 !important;
   -webkit-text-stroke: 0.1px #8fb409;
 }
+
+.handle { display: none; }
+
+/* Mobile: Google Maps style — project detail becomes a draggable bottom sheet.
+   Tapping the handle/header, or dragging it, toggles between a compact
+   "peek" state (name/status/location only) and a fully expanded sheet. */
+@media (max-width: 768px) {
+  .sidebar {
+    top: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    border-left: none;
+    border-top: 2px solid var(--border2);
+    border-radius: 16px 16px 0 0;
+    transition: height 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: slideUp 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .sidebar.peek {
+    height: 168px;
+  }
+
+  .sidebar.expanded {
+    height: 82vh;
+  }
+
+  .sidebar.dragging {
+    transition: none;
+  }
+
+  .sidebar.peek .body {
+    display: none;
+  }
+
+  .handle {
+    display: flex;
+    justify-content: center;
+    padding: 8px 0 2px;
+    cursor: grab;
+    touch-action: none;
+    flex-shrink: 0;
+  }
+
+  .handleBar {
+    width: 40px;
+    height: 4px;
+    border-radius: 2px;
+    background: var(--border2);
+  }
+
+  .header {
+    padding-top: 6px;
+    touch-action: none;
+    cursor: grab;
+  }
+
+  @keyframes slideUp {
+    from { transform: translateY(100%); opacity: 0; }
+    to   { transform: translateY(0); opacity: 1; }
+  }
+}

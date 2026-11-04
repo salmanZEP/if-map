@@ -78,3 +78,25 @@ button { cursor: pointer; font-family: var(--font); }
   background: var(--surface3) !important;
   border-radius: 4px !important;
 }
+
+/* Tablet: shrink side panels so nothing feels cramped, keep desktop layout */
+@media (max-width: 1024px) {
+  :root {
+    --sidebar-w: 360px;
+    --filter-w: 260px;
+  }
+}
+
+/* Mobile: full "Google Maps"-style layout — see per-component CSS for details */
+@media (max-width: 768px) {
+  :root {
+    --sidebar-w: 100%;
+    --filter-w: 100%;
+    --header-h: 116px;
+  }
+
+  /* Zoom +/- and compass are redundant with pinch/rotate touch gestures */
+  .mapboxgl-ctrl-top-right {
+    display: none;
+  }
+}

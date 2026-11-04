@@ -1,6 +1,7 @@
 .toggleBtn {
   position: fixed;
   top: calc(var(--header-h) + 12px);
+  left: 16px;
   z-index: 200;
   display: flex;
   align-items: center;
@@ -12,8 +13,12 @@
   font-size: 13px;
   font-weight: 500;
   padding: 8px 14px;
-  transition: background 0.15s, border-color 0.15s;
+  transition: background 0.15s, border-color 0.15s, left 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   backdrop-filter: blur(8px);
+}
+
+.toggleBtn.shifted {
+  left: calc(var(--filter-w) + 16px);
 }
 
 .toggleBtn:hover {
@@ -69,6 +74,26 @@
   font-weight: 600;
   color: var(--text);
   letter-spacing: 0.02em;
+}
+
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.mobileClose {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: var(--surface2);
+  border: 1px solid var(--border2);
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  color: var(--text2);
+  font-size: 14px;
+  flex-shrink: 0;
 }
 
 .clearBtn {
@@ -313,16 +338,79 @@
   margin-top: 4px;
 }
 
-/* Light mode only — Filter panel matches the same blue-grey accent as Legend and Project List */
+/* Light mode: crisp white panels with a navy accent border, echoing the
+   header's navy banner instead of the old flat lavender fill. */
 :global(.theme-light) .panel {
-  border-right-color: rgba(118, 146, 159, 0.94);
+  border-right-color: rgba(46, 44, 130, 0.22);
 }
 
 :global(.theme-light) .header {
-  background: rgba(229, 228, 255, 0.94);
+  background: rgba(255, 255, 255, 0.96);
 }
 
+/* The collapsed button floats directly over the map, so give it the same
+   glassmorphism treatment as the other floating controls (unlike the panel
+   header, which sits on its own white panel). */
+/* Liquid-glass: a bright specular highlight top-left, a soft inner shadow
+   along the bottom edge for convex depth, and a deeper outer lift shadow —
+   same base color, just rendered as a glossy glass surface. */
 :global(.theme-light) .toggleBtn {
-  background: rgba(229, 228, 255, 0.94);
+  background: radial-gradient(130% 150% at 18% -10%, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0) 45%), #CCD4FF;
+  backdrop-filter: blur(16px) saturate(1.8);
+  -webkit-backdrop-filter: blur(16px) saturate(1.8);
+  border-width: 0.5px;
+  border-color: rgba(19, 15, 69, 0.4);
+  box-shadow: 0 12px 32px rgba(8, 5, 46, 0.2), inset 0 1px 1px rgba(255, 255, 255, 0.9), inset 0 -2px 5px rgba(19, 15, 69, 0.18);
+  color: rgba(19, 15, 69, 0.85);
+}
+
+:global(.theme-light) .toggleBtn:hover {
+  background: radial-gradient(130% 150% at 18% -10%, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0) 45%), #bcc6fb;
+  border-color: rgba(19, 15, 69, 0.55);
+  color: #130F45;
+}
+
+/* Tablet: show the close button since panel now covers more of the map */
+@media (max-width: 1024px) {
+  .mobileClose { display: flex; }
+}
+
+/* Mobile: Google Maps style — filter panel becomes a full-screen sheet
+   triggered from the search bar's filter icon, sliding up from the bottom */
+@media (max-width: 768px) {
+  .toggleBtn { display: none; }
+
+  .panel {
+    left: 0;
+    right: 0;
+    top: auto;
+    bottom: 0;
+    width: 100%;
+    height: 88vh;
+    border-right: none;
+    border-top: 2px solid var(--border2);
+    border-radius: 16px 16px 0 0;
+    transform: translateY(100%);
+  }
+
+  .panel.open {
+    transform: translateY(0);
+  }
+
+  .panel::before {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 4px;
+    border-radius: 2px;
+    background: var(--border2);
+  }
+
+  .header {
+    padding-top: 22px;
+  }
 }
 

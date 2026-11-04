@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { getStatusColor, getCategoryColor, formatEuro, formatCO2, CALL_COLORS } from '../constants.js'
 import { projectsToCSV, downloadCSV } from '../utils/csvExport.js'
 import styles from './ProjectSidebar.module.css'
+
+const PEEK_HEIGHT = 168
 
 function Badge({ children, color, status }) {
   return (
@@ -22,6 +24,13 @@ function MetricCard({ label, value, sub, color, group }) {
 }
 
 export default function ProjectSidebar({ project, onClose }) {
+  const sheetRef  = useRef(null)
+  const dragRef   = useRef(null)
+  const [expanded, setExpanded] = useState(false)
+  const [dragging, setDragging] = useState(false)
+
+  useEffect(() => { setExpanded(false) }, [project?.Project])
+
   if (!project) return null
 
   const statusColor = getStatusColor(project.Status)
@@ -34,10 +43,77 @@ export default function ProjectSidebar({ project, onClose }) {
   const co2Util    = parseFloat(project['CO₂ Util (Mt/yr)'])
   const co2TotCap  = parseFloat(project['CO₂ Capture Total (Mt)'])
 
+  function expandedHeight() {
+    return Math.round(window.innerHeight * 0.82)
+  }
+
+  function toggleExpanded() {
+    setExpanded(v => !v)
+  }
+
+  function handlePointerDown(e) {
+    const el = sheetRef.current
+    if (!el) return
+    // Suppress the CSS snap transition immediately (imperative, not via React
+    // state) so the sheet follows the finger instantly instead of lagging —
+    // waiting for a re-render here is what caused the "stuck" drag feel.
+    el.style.transition = 'none'
+    dragRef.current = { startY: e.clientY, startHeight: el.getBoundingClientRect().height, moved: false }
+    setDragging(true)
+    el.setPointerCapture?.(e.pointerId)
+  }
+
+  function handlePointerMove(e) {
+    if (!dragRef.current || !sheetRef.current) return
+    const { startY, startHeight } = dragRef.current
+    const delta = startY - e.clientY
+    if (Math.abs(delta) > 6) dragRef.current.moved = true
+    const next = Math.min(expandedHeight(), Math.max(100, startHeight + delta))
+    sheetRef.current.style.height = `${next}px`
+  }
+
+  function handlePointerUp() {
+    const el = sheetRef.current
+    if (!dragRef.current || !el) { setDragging(false); return }
+    const { moved } = dragRef.current
+    const height = el.getBoundingClientRect().height
+    const threshold = (PEEK_HEIGHT + expandedHeight()) / 2
+    dragRef.current = null
+    setDragging(false)
+    setExpanded(moved ? height > threshold : !expanded)
+    // Let the snapped class height take over on the next frame, with the
+    // transition restored so it animates smoothly to the final state.
+    requestAnimationFrame(() => {
+      el.style.transition = ''
+      el.style.height = ''
+    })
+  }
+
   return (
-    <aside className={styles.sidebar}>
-      {/* Header */}
-      <div className={styles.header}>
+    <aside
+      ref={sheetRef}
+      className={`${styles.sidebar} ${expanded ? styles.expanded : styles.peek} ${dragging ? styles.dragging : ''}`}
+    >
+      {/* Drag handle — mobile only; toggles/drags between peek and expanded */}
+      <div
+        className={styles.handle}
+        onPointerDown={handlePointerDown}
+        onPointerMove={handlePointerMove}
+        onPointerUp={handlePointerUp}
+        onPointerCancel={handlePointerUp}
+      >
+        <span className={styles.handleBar} />
+      </div>
+
+      {/* Header — also draggable (not just the handle bar), since that's where
+          people naturally try to swipe */}
+      <div
+        className={styles.header}
+        onPointerDown={handlePointerDown}
+        onPointerMove={handlePointerMove}
+        onPointerUp={handlePointerUp}
+        onPointerCancel={handlePointerUp}
+      >
         <div className={styles.headerTop}>
           <div className={styles.badges}>
             <div className={styles.badgeGroup}>
@@ -51,7 +127,12 @@ export default function ProjectSidebar({ project, onClose }) {
               </div>
             )}
           </div>
-          <button className={styles.closeBtn} onClick={onClose} aria-label="Close">
+          <button
+            className={styles.closeBtn}
+            onPointerDown={e => e.stopPropagation()}
+            onClick={e => { e.stopPropagation(); onClose() }}
+            aria-label="Close"
+          >
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
               <path d="M3 3l10 10M13 3L3 13" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
             </svg>

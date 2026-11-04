@@ -1,89 +1,27 @@
-import React, { useState } from 'react'
+import React from 'react'
+import styles from './Disclaimer.module.css'
 
-export default function Disclaimer({ hasSelection, isLight }) {
-  const [open, setOpen] = useState(false)
-
+export default function Disclaimer({ hasSelection, open, onOpenChange }) {
   return (
     <>
-      {/* Trigger button */}
+      {/* Trigger button (hidden on mobile — triggered from the map tools drawer there instead) */}
       <button
-        onClick={() => setOpen(true)}
-        style={{
-          position:       'fixed',
-          bottom:         '12px',
-          right:      hasSelection ? 'calc(var(--sidebar-w) + 12px)' : '12px',
-          transition: 'right 0.25s cubic-bezier(0.4, 0, 0.2, 1), color 0.15s, border-color 0.15s',
-        //   left:           '50%',
-        //   transform:      'translateX(-50%)',
-          zIndex:         300,
-          background:     isLight ? 'rgba(229, 228, 255, 0.94)' : 'var(--surface)',
-          border:         '1px solid var(--border2)',
-          borderRadius:   '20px',
-          color:          isLight ? 'rgba(112, 109, 114, 0.94)' : 'var(--text2)',
-          fontSize:       '12.5px',
-          fontWeight:     500,
-          padding:        '7px 18px',
-          cursor:         'pointer',
-          backdropFilter: 'blur(8px)',
-          letterSpacing:  '0.02em',
-        }}
-        onMouseEnter={e => { e.currentTarget.style.color = 'var(--text)'; e.currentTarget.style.borderColor = 'var(--accent)' }}
-        onMouseLeave={e => { e.currentTarget.style.color = 'var(--text3)'; e.currentTarget.style.borderColor = 'var(--border2)' }}
+        onClick={() => onOpenChange(true)}
+        className={`${styles.trigger} ${hasSelection ? styles.shifted : ''}`}
       >
-        ⚠ Disclaimer
+        <span className={styles.icon}>⚠</span>
+        <span className={styles.label}>⚠ Disclaimer</span>
       </button>
 
       {/* Modal overlay */}
       {open && (
-        <div
-          onClick={() => setOpen(false)}
-          style={{
-            position:        'fixed',
-            inset:           0,
-            zIndex:          500,
-            background:      'rgba(0,0,0,0.55)',
-            display:         'flex',
-            alignItems:      'center',
-            justifyContent:  'center',
-            backdropFilter:  'blur(4px)',
-          }}
-        >
-          <div
-            onClick={e => e.stopPropagation()}
-            style={{
-              background:   'var(--surface)',
-              border:       '1px solid var(--border2)',
-              borderRadius: '14px',
-              padding:      '32px 36px',
-              maxWidth:     '520px',
-              width:        '90%',
-              position:     'relative',
-            }}
-          >
-            <button
-              onClick={() => setOpen(false)}
-              style={{
-                position:   'absolute',
-                top:        '14px',
-                right:      '14px',
-                background: 'none',
-                border:     'none',
-                color:      'var(--text3)',
-                fontSize:   '18px',
-                cursor:     'pointer',
-                lineHeight: 1,
-              }}
-            >✕</button>
+        <div className={styles.overlay} onClick={() => onOpenChange(false)}>
+          <div className={styles.modal} onClick={e => e.stopPropagation()}>
+            <button className={styles.closeBtn} onClick={() => onOpenChange(false)}>✕</button>
 
-            <div style={{ fontSize: '16px', color: 'var(--text2)', fontWeight: 700, marginBottom: '10px' }}>
-              Data Sources & Accuracy
-            </div>
+            <div className={styles.heading}>Data Sources & Accuracy</div>
 
-            {/* <div style={{ fontSize: '16px', fontWeight: 500, color: 'var(--text2)', marginBottom: '16px', lineHeight: 1.3 }}>
-              Data Sources & Accuracy
-            </div> */}
-
-            <div style={{ fontSize: '13.5px', color: 'var(--text2)', lineHeight: 1.75, display: 'flex', flexDirection: 'column', gap: '12px', textAlign: 'justify' }}>
+            <div className={styles.body}>
               <p>
                 All project data presented in this tool is sourced exclusively from publicly available information, including publications by the European Commission, CINEA, and official press releases and announcements of the company.
               </p>
@@ -97,12 +35,8 @@ export default function Disclaimer({ hasSelection, isLight }) {
                 The sector classification used in this tool refers to the industrial origin of the CO₂ (i.e., the sector from which CO₂ is captured or sourced), rather than the final product or application.
               </p>
               <p>
-                In case of any discrepancies or questions regarding the data, please contact us at <a href="mailto:salman.muhammad@cmeurope.org" style={{ color: 'var(--accent2)' }}>salman.muhammad@cmeurope.org</a>.
+                In case of any discrepancies or questions regarding the data, please contact us at <a href="mailto:salman.muhammad@cmeurope.org">salman.muhammad@cmeurope.org</a>.
               </p>
-            </div>
-
-            <div style={{ marginTop: '24px', paddingTop: '16px', borderTop: '1px solid var(--border)', fontSize: '11px', color: 'var(--text3)' }}>
-              {/* Last reviewed April 2026 · Carbon Management Europe */}
             </div>
           </div>
         </div>
